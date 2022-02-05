@@ -21,6 +21,7 @@ function App() {
     } else {
       setElements(elements);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
