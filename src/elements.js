@@ -231,6 +231,36 @@ const elements = [
     position: { x: window.innerWidth / 2 + 100, y: 540 },
   },
   {
+    id: "start",
+    type: "input",
+    data: {
+      label: `
+      Start here!
+      You can also click this box to reset the pathways!`,
+    },
+    targetPosition: "bottom",
+    sourcePosition: "bottom",
+    style: {
+      backgroundColor: "white",
+    },
+    position: { x: window.innerWidth / 2 - 250, y: -70 },
+  },
+  {
+    id: "note",
+    type: "output",
+    data: {
+      label:
+        "~ depending on your grade in MTH 123, you may take MTH 130 next, or MTH 230 in place of MTH 231.",
+    },
+    selectable: false,
+    targetPosition: "bottom",
+    sourcePosition: "bottom",
+    style: {
+      backgroundColor: "white",
+    },
+    position: { x: window.innerWidth / 2 - 650, y: -100 },
+  },
+  {
     id: "e1-2",
     source: "1",
     target: "2",

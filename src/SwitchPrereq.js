@@ -7,7 +7,7 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
   } else if (element.id === "2") {
@@ -23,7 +23,7 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
   } else if (element.id === "3") {
@@ -34,7 +34,7 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[2].style = {
@@ -45,7 +45,7 @@ export const SwitchPrereq = (updateElements, element) => {
   } else if (element.id === "4") {
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[0].style = {
@@ -61,17 +61,17 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[5].style = {
       ...updateElements[5].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[6].style = {
       ...updateElements[6].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
   } else if (element.id === "7") {
@@ -82,22 +82,22 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[5].style = {
       ...updateElements[5].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[6].style = {
       ...updateElements[6].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[7].style = {
       ...updateElements[7].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
   } else if (element.id === "8") {
@@ -113,12 +113,12 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[8].style = {
       ...updateElements[8].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
   } else if (element.id === "9") {
@@ -129,7 +129,7 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[2].style = {
@@ -150,7 +150,7 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[10].style = {
@@ -170,7 +170,7 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[10].style = {
@@ -196,7 +196,7 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[10].style = {
@@ -227,27 +227,27 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[5].style = {
       ...updateElements[5].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[6].style = {
       ...updateElements[6].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[7].style = {
       ...updateElements[7].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[14].style = {
       ...updateElements[14].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
   } else if (element.id === "14") {
@@ -258,27 +258,27 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[5].style = {
       ...updateElements[5].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[6].style = {
       ...updateElements[6].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[7].style = {
       ...updateElements[7].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[15].style = {
       ...updateElements[15].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
   } else if (element.id === "15") {
@@ -289,7 +289,7 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[3].style = {
       ...updateElements[3].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[2].style = {
@@ -299,7 +299,7 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[8].style = {
       ...updateElements[8].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[9].style = {
@@ -314,17 +314,17 @@ export const SwitchPrereq = (updateElements, element) => {
     };
     updateElements[5].style = {
       ...updateElements[5].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[6].style = {
       ...updateElements[6].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
     updateElements[7].style = {
       ...updateElements[7].style,
-      backgroundColor: "#03C03C",
+      backgroundColor: "#dc143c",
       color: "white",
     };
   } else if (element.id === "16") {

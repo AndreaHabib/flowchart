@@ -14,7 +14,7 @@ import { SwitchPrereq } from "./SwitchPrereq";
 
 const style = {
   width: "97%",
-  height: "70vh",
+  height: "75vh",
 };
 
 function App() {
@@ -66,10 +66,12 @@ function App() {
         preventScrolling={false}
         translateExtent={[
           [-500, -500],
-          [2000, 1000],
+          [1700, 1000],
         ]}
         onLoad={onLoad}
         style={style}
+        defaultPosition={[100, 100]}
+        onlyRenderVisibleElements={true}
         arrowHeadColor="black"
         paneMoveable={true}
         nodesConnectable={false}
@@ -304,19 +306,17 @@ function App() {
         </Button>
       </Box>
       <Typography className="description" variant="h6">
-        ~ depending on your grade in MTH 123, you may take MTH 130 next, or MTH
-        230 in place of MTH 231. <br></br>* 8-10 CSC elective credits; this
-        consists of either two 400-electives = 8 credits, or one 400-elective
-        and two 200-electives = 10 credits. You may sub. one additional
-        upper-level MTH course (beyond the two that you will take after MTH 232)
-        for one 400-elective. This is limited to one instance. <br></br> # after
-        MTH 232, you complete two upper level MTH courses, which have MTH 232 or
-        higher as a prerequisite (excluding MTH 306). See your advisor for
-        recommendations, though you may choose the courses. <br></br>**
-        pre-requisites are senior class standing, CSC 330 and ENG 151. You must
-        earn a minimum “C” or higher grade in CSC courses which are
-        pre-requisites to other CSC courses If your major catalog year is
-        2017-18 or earlier, please reference that flowchart.
+        * 8-10 CSC elective credits; this consists of either two 400-electives =
+        8 credits, or one 400-elective and two 200-electives = 10 credits. You
+        may sub. one additional upper-level MTH course (beyond the two that you
+        will take after MTH 232) for one 400-elective. This is limited to one
+        instance. <br></br> # after MTH 232, you complete two upper level MTH
+        courses, which have MTH 232 or higher as a prerequisite (excluding MTH
+        306). See your advisor for recommendations, though you may choose the
+        courses. <br></br>** pre-requisites are senior class standing, CSC 330
+        and ENG 151. You must earn a minimum “C” or higher grade in CSC courses
+        which are pre-requisites to other CSC courses If your major catalog year
+        is 2017-18 or earlier, please reference that flowchart.
       </Typography>
     </div>
   );
