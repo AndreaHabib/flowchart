@@ -1,10 +1,9 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState, useCallback } from "react";
 import ReactFlow, { MiniMap, Background } from "react-flow-renderer";
 import elements from "./elements";
-import elementsMobile from "./elementsMobile";
-import useWindowDimensions from "./useWindowDimensions";
 import { Typography } from "@mui/material";
+import { SwitchPrereq } from "./SwitchPrereq";
 
 const style = {
   width: "97%",
@@ -12,21 +11,34 @@ const style = {
 };
 
 function App() {
-  const [elements_flow, setElements] = useState([]);
-  const { height, width } = useWindowDimensions();
+  const [elements_flow, setElements] = useState(elements);
+  const [reactflowInstance, setReactflowInstance] = useState(null);
 
-  useEffect(() => {
-    if (width < 768) {
-      setElements(elementsMobile);
-    } else {
-      setElements(elements);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const onLoad = useCallback(
+    (rfi) => {
+      if (!reactflowInstance) {
+        setReactflowInstance(rfi);
+      }
+    },
+    [reactflowInstance]
+  );
+
+  const onClickElement = useCallback(
+    (event, element) => {
+      const updateElements = JSON.parse(JSON.stringify(elements));
+      SwitchPrereq(updateElements, element);
+      setElements(updateElements);
+    },
+    [elements_flow]
+  );
 
   return (
     <div className="App">
       <Typography variant="h4">CSI Computer Science Flowchart</Typography>
+      <Typography variant="h6">
+        - It is recommended to view this flowchart on a laptop or desktop for
+        the best experience.
+      </Typography>
       <Typography variant="h6">
         - The flowchart is based on the official CS curriculum at CSI.
       </Typography>
@@ -42,14 +54,19 @@ function App() {
         class.
       </Typography>
       <ReactFlow
+        onElementClick={onClickElement}
         preventScrolling={false}
+        translateExtent={[
+          [-500, -500],
+          [2000, 1000],
+        ]}
+        onLoad={onLoad}
         style={style}
         arrowHeadColor="black"
         paneMoveable={true}
         nodesConnectable={false}
         minZoom={1}
         maxZoom={1}
-        elementsSelectable={false}
         nodesDraggable={false}
         elements={elements_flow}
       >

@@ -4,150 +4,231 @@ const elements = [
     data: { label: "CSC 126" },
     targetPosition: "left",
     sourcePosition: "bottom",
+    style: {
+      backgroundColor: "white",
+    },
     position: { x: window.innerWidth / 2 - 250, y: 20 },
   },
   {
     id: "2",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "200 level elective*" },
     position: { x: window.innerWidth / 2 - 400, y: 120 },
   },
   {
     id: "3",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 211" },
     position: { x: window.innerWidth / 2 - 100, y: 120 },
   },
   {
     id: "4",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "MTH 123 ~" },
     targetPosition: "right",
     sourcePosition: "bottom",
-    position: { x: window.innerWidth / 4 - 300, y: 20 },
+    position: { x: window.innerWidth / 2 - 650, y: 20 },
   },
   {
     id: "5",
+    style: {
+      backgroundColor: "white",
+    },
+    selectable: false,
     data: { label: "MTH 231 or MTH 230" },
-    position: { x: window.innerWidth / 4 - 300, y: 120 },
+    position: { x: window.innerWidth / 2 - 650, y: 120 },
   },
   {
     id: "5a",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "MTH 231 or MTH 230" },
     targetPosition: "left",
-    position: { x: window.innerWidth / 4 - 300, y: 120 },
+    position: { x: window.innerWidth / 2 - 650, y: 120 },
   },
   {
     id: "6",
+    style: {
+      backgroundColor: "white",
+    },
     sourcePosition: "left",
     targetPosition: "right",
     data: { label: "MTH 229" },
-    position: { x: window.innerWidth / 5 - 500, y: 120 },
+    position: { x: window.innerWidth / 2 - 900, y: 120 },
   },
   {
     id: "7",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "MTH 232" },
-    position: { x: window.innerWidth / 4 - 300, y: 220 },
+    position: { x: window.innerWidth / 2 - 650, y: 220 },
   },
   {
     id: "8",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC or MTH 228" },
-    position: { x: window.innerWidth / 2 - 350, y: 220 },
+    position: { x: window.innerWidth / 2 - 400, y: 220 },
   },
   {
     id: "9",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 326" },
     position: { x: window.innerWidth / 2, y: 220 },
   },
   {
     id: "10",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 220" },
     targetPosition: "left",
     position: { x: window.innerWidth / 2 + 150, y: 70 },
   },
   {
     id: "11",
+    style: {
+      backgroundColor: "white",
+    },
+    selectable: false,
     data: { label: "CSC 346 or ENS 220" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 + 450, y: 220 },
   },
   {
     id: "11a",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 346 or ENS 220" },
-    sourcePosition: "right",
+    targetPosition: "right",
     position: { x: window.innerWidth / 2 + 450, y: 220 },
   },
   {
     id: "12",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 347" },
     targetPosition: "left",
     position: { x: window.innerWidth / 2 + 700, y: 220 },
   },
   {
     id: "13",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "MTH#" },
     targetPosition: "top",
-    position: { x: window.innerWidth / 4 - 500, y: 320 },
+    position: { x: window.innerWidth / 2 - 900, y: 320 },
   },
   {
     id: "14",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "MTH#" },
     targetPosition: "top",
-    position: { x: window.innerWidth / 4 - 250, y: 320 },
+    position: { x: window.innerWidth / 2 - 650, y: 320 },
   },
   {
     id: "15",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 382" },
     targetPosition: "top",
-    position: { x: window.innerWidth / 4 + 50, y: 320 },
+    position: { x: window.innerWidth / 2 - 400, y: 320 },
   },
   {
     id: "16",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 330" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 - 50, y: 350 },
   },
   {
     id: "17",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 315" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 + 300, y: 320 },
   },
   {
     id: "18",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 446" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 + 600, y: 320 },
   },
   {
     id: "19",
+    style: {
+      backgroundColor: "white",
+    },
+    selectable: false,
     data: { label: "CSC 332" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 + 150, y: 420 },
   },
   {
     id: "19a",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 332" },
-    sourcePosition: "right",
+    targetPosition: "right",
     position: { x: window.innerWidth / 2 + 150, y: 420 },
   },
   {
     id: "20",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 305" },
     targetPosition: "left",
     position: { x: window.innerWidth / 2 + 400, y: 420 },
   },
   {
     id: "21",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "400 level elective*" },
-    position: { x: window.innerWidth / 3 - 50, y: 420 },
+    position: { x: window.innerWidth / 2 - 300, y: 420 },
   },
   {
     id: "22",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 490**" },
-    position: { x: window.innerWidth / 3 + 50, y: 540 },
+    position: { x: window.innerWidth / 2 - 200, y: 540 },
   },
   {
     id: "23",
+    style: {
+      backgroundColor: "white",
+    },
     data: { label: "CSC 430" },
-    position: { x: window.innerWidth / 3 + 350, y: 540 },
+    position: { x: window.innerWidth / 2 + 100, y: 540 },
   },
   {
     id: "e1-2",
