@@ -66,7 +66,7 @@ function App() {
         preventScrolling={false}
         translateExtent={[
           [-500, -500],
-          [1700, 1000],
+          [2000, 1000],
         ]}
         onLoad={onLoad}
         style={style}
