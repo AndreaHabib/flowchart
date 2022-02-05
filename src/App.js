@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useCallback } from "react";
-import ReactFlow, { MiniMap, Background } from "react-flow-renderer";
+import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 import elements from "./elements";
 import {
   Typography,
@@ -82,6 +82,7 @@ function App() {
       >
         <MiniMap />
         <Background />
+        <Controls showZoom={false} />
       </ReactFlow>
       <Box className="classes-container" component="div">
         <Grid container spacing={1}>
