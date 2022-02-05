@@ -2,7 +2,14 @@ import "./App.css";
 import { useState, useCallback } from "react";
 import ReactFlow, { MiniMap, Background } from "react-flow-renderer";
 import elements from "./elements";
-import { Typography } from "@mui/material";
+import {
+  Typography,
+  Box,
+  Card,
+  CardContent,
+  Grid,
+  Button,
+} from "@mui/material";
 import { SwitchPrereq } from "./SwitchPrereq";
 
 const style = {
@@ -50,8 +57,9 @@ function App() {
         - You can also click on any of the classes to view the prerequisites.
       </Typography>
       <Typography variant="h6">
-        - By clicking on the class, you can also view the description of the
-        class.
+        - To view the description of any of the classes on the flowchart, you
+        can find a list of all the classes below the flowchart where you can see
+        the description of each individual class.
       </Typography>
       <ReactFlow
         onElementClick={onClickElement}
@@ -73,6 +81,228 @@ function App() {
         <MiniMap />
         <Background />
       </ReactFlow>
+      <Box className="classes-container" component="div">
+        <Grid container spacing={1}>
+          <Grid item xs={12} md={6}>
+            <Card className="classes-card" variant="outlined">
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  CSC
+                </Typography>
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/current/Undergraduate-Catalog/Courses/CSC-Computer-Science/100/CSC-126"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 126
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-211"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 211
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-220"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 220
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-228"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 228
+                </Typography>{" "}
+                <br></br>
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/300/CSC-305"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 305
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/300/CSC-315"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 315
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/300/CSC-326"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 326
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/300/CSC-330"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 330
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/300/CSC-332"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 332
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/300/CSC-346"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 346
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/300/CSC-347"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 347
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/300/CSC-382"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 382
+                </Typography>{" "}
+                <br></br>
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-430"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 430
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-446"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 446
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-490"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  CSC 490
+                </Typography>{" "}
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Card className="classes-card" variant="outlined">
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  MTH
+                </Typography>
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/100/MTH-123"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  MTH 123
+                </Typography>{" "}
+                <br></br>
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-228"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  MTH 228
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-229"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  MTH 229
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-230"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  MTH 230
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-231"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  MTH 231
+                </Typography>{" "}
+                <Typography
+                  target="_blank"
+                  href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-232"
+                  variant="body2"
+                  color="textSecondary"
+                  component="a"
+                >
+                  MTH 232
+                </Typography>{" "}
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+        <Button
+          target="_blank"
+          component="a"
+          href="https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Courses"
+          variant="contained"
+        >
+          View Electives/Others
+        </Button>
+      </Box>
       <Typography className="description" variant="h6">
         ~ depending on your grade in MTH 123, you may take MTH 130 next, or MTH
         230 in place of MTH 231. <br></br>* 8-10 CSC elective credits; this
