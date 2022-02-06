@@ -67,7 +67,7 @@ function App() {
         onElementClick={onClickElement}
         preventScrolling={false}
         translateExtent={[
-          [-500, -500],
+          [-800, -800],
           [2000, 1000],
         ]}
         onLoad={onLoad}
