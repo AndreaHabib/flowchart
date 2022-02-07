@@ -388,6 +388,9 @@ function App() {
           Blank Academic Planner by Michigan Tech
         </Button>
       </Stack>
+      <footer className="footer">
+        <Typography variant="h6">CUNY2X</Typography>
+      </footer>
     </div>
   );
 }
