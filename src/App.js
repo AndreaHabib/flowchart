@@ -9,6 +9,7 @@ import "./App.css";
 import { useState, useCallback } from "react";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 import elements from "./elements";
+import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import {
   Typography,
   Box,
@@ -20,6 +21,7 @@ import {
   Chip,
 } from "@mui/material";
 import { SwitchPrereq } from "./SwitchPrereq";
+import WarningAmber from "@mui/icons-material/WarningAmber";
 
 const style = {
   width: "97%",
@@ -370,6 +372,26 @@ function App() {
                 <Typography gutterBottom variant="h5" component="div">
                   CSC Electives
                 </Typography>
+                <div
+                  style={{
+                    marginTop: "20px",
+                    marginBottom: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                    width: "100%",
+                    justifyContent: "center",
+                  }}
+                >
+                  <WarningAmber />
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Electives offered depend from semester to semester
+                  </Typography>
+                </div>
                 <Stack
                   justifyContent="center"
                   alignItems="center"
