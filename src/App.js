@@ -164,6 +164,14 @@ function App() {
                 </Stack>
               </CardContent>
             </Card>
+            <Button
+              target="_blank"
+              component="a"
+              href="https://csicuny.smartcatalogiq.com/current/Undergraduate-Catalog/Courses/MTH-Mathematics"
+              variant="contained"
+            >
+              View MTH Catalog
+            </Button>
           </Grid>
           <Grid item xs={12} md={6}>
             <Card className="classes-card" variant="outlined">
@@ -316,16 +324,16 @@ function App() {
                 </Stack>
               </CardContent>
             </Card>
+            <Button
+              target="_blank"
+              component="a"
+              href="https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
+              variant="contained"
+            >
+              View CSC Catalog
+            </Button>
           </Grid>
         </Grid>
-        <Button
-          target="_blank"
-          component="a"
-          href="https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Courses"
-          variant="contained"
-        >
-          View Electives/Others
-        </Button>
       </Box>
       <Typography className="description" variant="h6">
         * 8-10 CSC elective credits; this consists of either two 400-electives =

@@ -261,6 +261,21 @@ const elements = [
     position: { x: window.innerWidth / 2 - 650, y: -100 },
   },
   {
+    id: "note",
+    type: "output",
+    data: {
+      label:
+        "Two additional MTH courses having MTH 232 or higher as a prerequisite (except MTH 306)",
+    },
+    selectable: false,
+    targetPosition: "bottom",
+    sourcePosition: "bottom",
+    style: {
+      backgroundColor: "white",
+    },
+    position: { x: window.innerWidth / 2 - 780, y: 380 },
+  },
+  {
     id: "e1-2",
     source: "1",
     target: "2",
