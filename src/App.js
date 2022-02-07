@@ -336,17 +336,18 @@ function App() {
         </Grid>
       </Box>
       <Typography className="description" variant="h6">
-        * 8-10 CSC elective credits; this consists of either two 400-electives =
-        8 credits, or one 400-elective and two 200-electives = 10 credits. You
-        may sub. one additional upper-level MTH course (beyond the two that you
-        will take after MTH 232) for one 400-elective. This is limited to one
-        instance. <br></br> # after MTH 232, you complete two upper level MTH
-        courses, which have MTH 232 or higher as a prerequisite (excluding MTH
-        306). See your advisor for recommendations, though you may choose the
-        courses. <br></br>** pre-requisites are senior class standing, CSC 330
-        and ENG 151. You must earn a minimum “C” or higher grade in CSC courses
-        which are pre-requisites to other CSC courses If your major catalog year
-        is 2017-18 or earlier, please reference that flowchart.
+        * 12-14 CSC elective credits; this consists of either three
+        400-electives = 12 credits, or two 400-elective and two 200-electives =
+        14 credits. You may sub. one additional upper-level MTH course (beyond
+        the two that you will take after MTH 232) for one 400-elective. This is
+        limited to one instance. <br></br> # after MTH 232, you complete two
+        upper level MTH courses, which have MTH 232 or higher as a prerequisite
+        (excluding MTH 306). See your advisor for recommendations, though you
+        may choose the courses. <br></br>** pre-requisites are senior class
+        standing, CSC 330 and ENG 151. You must earn a minimum “C” or higher
+        grade in CSC courses which are pre-requisites to other CSC courses If
+        your major catalog year is 2017-18 or earlier, please reference that
+        flowchart.
       </Typography>
     </div>
   );

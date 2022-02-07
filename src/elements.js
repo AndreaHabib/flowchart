@@ -261,19 +261,34 @@ const elements = [
     position: { x: window.innerWidth / 2 - 650, y: -100 },
   },
   {
-    id: "note",
+    id: "29",
     type: "output",
     data: {
       label:
         "Two additional MTH courses having MTH 232 or higher as a prerequisite (except MTH 306)",
     },
     selectable: false,
-    targetPosition: "bottom",
-    sourcePosition: "bottom",
+    targetPosition: "top",
+    sourcePosition: "top",
     style: {
       backgroundColor: "white",
     },
-    position: { x: window.innerWidth / 2 - 780, y: 380 },
+    position: { x: window.innerWidth / 2 - 780, y: 400 },
+  },
+  {
+    id: "28",
+    type: "output",
+    data: {
+      label:
+        "CSC 490 is for a senior standing only. Must get waiver from advisor before registering.",
+    },
+    selectable: false,
+    targetPosition: "top",
+    sourcePosition: "top",
+    style: {
+      backgroundColor: "white",
+    },
+    position: { x: window.innerWidth / 2 - 200, y: 600 },
   },
   {
     id: "e1-2",
@@ -457,6 +472,11 @@ const elements = [
     source: "16",
     target: "23",
     arrowHeadType: "arrowclosed",
+  },
+  {
+    id: "e23-28",
+    source: "22",
+    target: "28",
   },
 ];
 
