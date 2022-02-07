@@ -390,6 +390,10 @@ function App() {
       </Stack>
       <footer className="footer">
         <Typography variant="h6">CUNY2X</Typography>
+        <Typography variant="h6">
+          This is intended to be only used as a guide, please refer to
+          undergraduate catalog and degreeworks.
+        </Typography>
       </footer>
     </div>
   );
