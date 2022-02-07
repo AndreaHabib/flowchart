@@ -44,14 +44,14 @@ function App() {
   return (
     <div className="App">
       <Typography variant="h4">CSI CSC Prerequisites Flowchart</Typography>
-      <Typography variant="h4">
+      <Typography variant="h5">
         Applies to Fall 2021 - Spring 2022 Major Catalog
       </Typography>
       <Typography variant="h6">
         - It is recommended to view this flowchart on a laptop or desktop for
         the best experience.
       </Typography>
-      <Typography variant="h5">
+      <Typography variant="h6">
         - The flowchart is based on the official CS curriculum at CSI{" "}
         <a
           target="_blank"
