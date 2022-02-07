@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <Typography variant="h4">CSI CSC Prerequisites Flowchart</Typography>
-      <Typography variant="h5">
+      <Typography variant="h4">
         Applies to Fall 2021 - Spring 2022 Major Catalog
       </Typography>
       <Typography variant="h6">
