@@ -94,7 +94,78 @@ function App() {
       </ReactFlow>
       <Box className="classes-container" component="div">
         <Grid container spacing={1}>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={6}>
+            <Card className="classes-card" variant="outlined">
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  MTH
+                </Typography>
+                <Stack
+                  justifyContent="center"
+                  alignItems="center"
+                  direction="row"
+                  spacing={1}
+                >
+                  <Chip
+                    target="_blank"
+                    href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/100/MTH-123"
+                    component="a"
+                    label="MTH 123"
+                    clickable
+                  />
+                </Stack>
+                <Stack
+                  justifyContent="center"
+                  alignItems="center"
+                  mt={2}
+                  direction={{
+                    xs: "column",
+                    sm: "column",
+                    md: "row",
+                    lg: "row",
+                  }}
+                  spacing={1}
+                >
+                  <Chip
+                    target="_blank"
+                    href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-228"
+                    label="MTH 228"
+                    clickable
+                    component="a"
+                  />
+                  <Chip
+                    target="_blank"
+                    href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-229"
+                    label="MTH 229"
+                    clickable
+                    component="a"
+                  />
+                  <Chip
+                    target="_blank"
+                    href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-230"
+                    label="MTH 230"
+                    clickable
+                    component="a"
+                  />
+                  <Chip
+                    target="_blank"
+                    href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-231"
+                    label="MTH 231"
+                    clickable
+                    component="a"
+                  />
+                  <Chip
+                    target="_blank"
+                    href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-232"
+                    label="MTH 232"
+                    clickable
+                    component="a"
+                  />
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6}>
             <Card className="classes-card" variant="outlined">
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -240,77 +311,6 @@ function App() {
                     href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-490"
                     clickable
                     label="CSC 490"
-                    component="a"
-                  />
-                </Stack>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={5}>
-            <Card className="classes-card" variant="outlined">
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  MTH
-                </Typography>
-                <Stack
-                  justifyContent="center"
-                  alignItems="center"
-                  direction="row"
-                  spacing={1}
-                >
-                  <Chip
-                    target="_blank"
-                    href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/100/MTH-123"
-                    component="a"
-                    label="MTH 123"
-                    clickable
-                  />
-                </Stack>
-                <Stack
-                  justifyContent="center"
-                  alignItems="center"
-                  mt={2}
-                  direction={{
-                    xs: "column",
-                    sm: "column",
-                    md: "row",
-                    lg: "row",
-                  }}
-                  spacing={1}
-                >
-                  <Chip
-                    target="_blank"
-                    href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-228"
-                    label="MTH 228"
-                    clickable
-                    component="a"
-                  />
-                  <Chip
-                    target="_blank"
-                    href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-229"
-                    label="MTH 229"
-                    clickable
-                    component="a"
-                  />
-                  <Chip
-                    target="_blank"
-                    href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-230"
-                    label="MTH 230"
-                    clickable
-                    component="a"
-                  />
-                  <Chip
-                    target="_blank"
-                    href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-231"
-                    label="MTH 231"
-                    clickable
-                    component="a"
-                  />
-                  <Chip
-                    target="_blank"
-                    href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-232"
-                    label="MTH 232"
-                    clickable
                     component="a"
                   />
                 </Stack>
