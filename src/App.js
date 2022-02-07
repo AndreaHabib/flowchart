@@ -94,7 +94,7 @@ function App() {
       </ReactFlow>
       <Box className="classes-container" component="div">
         <Grid container spacing={1}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={5}>
             <Card className="classes-card" variant="outlined">
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -173,7 +173,7 @@ function App() {
               View MTH Catalog
             </Button>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={7}>
             <Card className="classes-card" variant="outlined">
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -340,7 +340,9 @@ function App() {
         400-electives = 12 credits, or two 400-elective and two 200-electives =
         14 credits. You may sub. one additional upper-level MTH course (beyond
         the two that you will take after MTH 232) for one 400-elective. This is
-        limited to one instance.
+        limited to one instance.<br></br>
+        ** You must earn a minimum “C” or higher grade in CSC courses which are
+        pre-requisites to other CSC courses.
       </Typography>
     </div>
   );
