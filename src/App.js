@@ -1,3 +1,10 @@
+/*
+author: Andrea Habib
+distributed under MIT license
+Feel free to use, however please give credit to the original author
+email: andrea.atef@yahoo.com
+*/
+
 import "./App.css";
 import { useState, useCallback } from "react";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
