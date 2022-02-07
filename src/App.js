@@ -344,6 +344,47 @@ function App() {
         ** You must earn a minimum “C” or higher grade in CSC courses which are
         pre-requisites to other CSC courses.
       </Typography>
+      <Typography variant="h4">
+        Aditional Tools for Planning out your CSC courses
+      </Typography>
+      <Stack
+        justifyContent="center"
+        alignItems="center"
+        mt={2}
+        mb={8}
+        direction={{
+          xs: "column",
+          sm: "column",
+          md: "row",
+          lg: "row",
+        }}
+        spacing={1}
+      >
+        <Button
+          target="_blank"
+          component="a"
+          href="https://degreeworks.cuny.edu/Dashboard_si/dashboard"
+          variant="contained"
+        >
+          DegreeWorks
+        </Button>
+        <Button
+          target="_blank"
+          component="a"
+          href="http://www.cs.csi.cuny.edu/content/CSC_BS_Pathways_checklist_2021-22-major-catalog.pdf"
+          variant="contained"
+        >
+          Pathway Checklist 2021-2022 Catalog
+        </Button>
+        <Button
+          target="_blank"
+          component="a"
+          href="https://www.mtu.edu/cs/undergraduate/advising/pdfs/blank-academic-plan.pdf"
+          variant="contained"
+        >
+          Blank Academic Planner by Michigan Tech
+        </Button>
+      </Stack>
     </div>
   );
 }
