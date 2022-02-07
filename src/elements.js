@@ -104,7 +104,7 @@ const elements = [
     selectable: false,
     data: { label: "CSC 346 or ENS 220" },
     targetPosition: "top",
-    position: { x: window.innerWidth / 2 + 450, y: 220 },
+    position: { x: window.innerWidth / 2 + 350, y: 180 },
   },
   {
     id: "11a",
@@ -113,7 +113,7 @@ const elements = [
     },
     data: { label: "CSC 346 or ENS 220" },
     targetPosition: "right",
-    position: { x: window.innerWidth / 2 + 450, y: 220 },
+    position: { x: window.innerWidth / 2 + 350, y: 180 },
   },
   {
     id: "12",
@@ -122,7 +122,7 @@ const elements = [
     },
     data: { label: "CSC 347" },
     targetPosition: "left",
-    position: { x: window.innerWidth / 2 + 700, y: 220 },
+    position: { x: window.innerWidth / 2 + 600, y: 180 },
   },
   {
     id: "13",
@@ -158,7 +158,7 @@ const elements = [
     },
     data: { label: "CSC 330" },
     targetPosition: "top",
-    position: { x: window.innerWidth / 2 - 50, y: 350 },
+    position: { x: window.innerWidth / 2 - 100, y: 380 },
   },
   {
     id: "17",
@@ -167,7 +167,7 @@ const elements = [
     },
     data: { label: "CSC 315" },
     targetPosition: "top",
-    position: { x: window.innerWidth / 2 + 300, y: 320 },
+    position: { x: window.innerWidth / 2 + 120, y: 380 },
   },
   {
     id: "18",
@@ -176,7 +176,7 @@ const elements = [
     },
     data: { label: "CSC 446" },
     targetPosition: "top",
-    position: { x: window.innerWidth / 2 + 600, y: 320 },
+    position: { x: window.innerWidth / 2 + 550, y: 300 },
   },
   {
     id: "19",
@@ -186,7 +186,7 @@ const elements = [
     selectable: false,
     data: { label: "CSC 332" },
     targetPosition: "top",
-    position: { x: window.innerWidth / 2 + 150, y: 420 },
+    position: { x: window.innerWidth / 2 + 350, y: 420 },
   },
   {
     id: "19a",
@@ -195,7 +195,7 @@ const elements = [
     },
     data: { label: "CSC 332" },
     targetPosition: "right",
-    position: { x: window.innerWidth / 2 + 150, y: 420 },
+    position: { x: window.innerWidth / 2 + 350, y: 420 },
   },
   {
     id: "20",
@@ -204,7 +204,7 @@ const elements = [
     },
     data: { label: "CSC 305" },
     targetPosition: "left",
-    position: { x: window.innerWidth / 2 + 400, y: 420 },
+    position: { x: window.innerWidth / 2 + 600, y: 420 },
   },
   {
     id: "21",
@@ -477,6 +477,12 @@ const elements = [
     id: "e23-28",
     source: "22",
     target: "28",
+  },
+  {
+    id: "e17-23",
+    source: "17",
+    target: "23",
+    arrowHeadType: "arrowclosed",
   },
 ];
 
