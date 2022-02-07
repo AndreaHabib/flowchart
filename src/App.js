@@ -394,13 +394,21 @@ function App() {
         >
           Blank Academic Planner by Michigan Tech
         </Button>
+        <Button
+          target="_blank"
+          component="a"
+          href="http://www.cs.csi.cuny.edu/content/Sample_cs_4_yr_degree-career-map.pdf"
+          variant="contained"
+        >
+          Sample Degree Milestone Map
+        </Button>
       </Stack>
       <footer className="footer">
         <Typography variant="h6">
           CUNY2X - CSI Computer Science Department
         </Typography>
         <Typography variant="h6">
-          This is intended to be only used as a guide.
+          This is intended to be used only as a guide.
         </Typography>
       </footer>
     </div>
