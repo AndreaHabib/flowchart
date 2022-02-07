@@ -345,7 +345,7 @@ function App() {
         pre-requisites to other CSC courses.
       </Typography>
       <Typography variant="h4">
-        Aditional Tools for Planning out your CSC courses
+        Additional Tools for Planning out your CSC courses
       </Typography>
       <Stack
         justifyContent="center"
