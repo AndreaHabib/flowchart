@@ -389,7 +389,9 @@ function App() {
         </Button>
       </Stack>
       <footer className="footer">
-        <Typography variant="h6">CUNY2X</Typography>
+        <Typography variant="h6">
+          CUNY2X - CSI Computer Science Department
+        </Typography>
         <Typography variant="h6">
           This is intended to be only used as a guide.
         </Typography>
