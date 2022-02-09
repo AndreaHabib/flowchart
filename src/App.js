@@ -49,6 +49,15 @@ function App() {
 
   return (
     <div className="App">
+      <div
+        style={{
+          width: "100%",
+          height: "10vh",
+          backgroundColor: "#1e90ff",
+          marginBottom: "50px",
+          borderBottom: "10px solid rgb(39, 78, 160)",
+        }}
+      ></div>
       <Typography variant="h4">CSI CSC Prerequisites Flowchart</Typography>
       <Typography variant="h4">
         Applies to Fall 2021 - Spring 2022 Major Catalog

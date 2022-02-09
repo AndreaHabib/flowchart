@@ -14,6 +14,7 @@
 }
 
 .footer {
+  border-top: 10px solid rgb(39, 78, 160);
   display: flex;
   justify-content: center;
   align-items: center;
