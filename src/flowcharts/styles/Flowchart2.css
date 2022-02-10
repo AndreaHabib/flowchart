@@ -1,0 +1,35 @@
+.flowchart2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left: 5px solid #f4a460;
+  border-right: 5px solid #f4a460;
+}
+
+.flowchart2 .react-flow {
+  border: 5px solid #f4a460;
+  border-radius: 18px;
+  margin-top: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flowchart2 .classes-card {
+  border: 5px solid #f4a460 !important;
+  margin: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flowchart2 .footer {
+  border-top: 10px solid rgb(204, 123, 17);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  padding: 5px;
+  height: 10vh;
+  color: white;
+  background-color: #f4a460;
+}
