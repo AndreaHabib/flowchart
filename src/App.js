@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FLOW_CHART_2018_2020 from "./flowcharts/FLOW_CHART_2018_2020";
 import FLOW_CHART_2021_2022 from "./flowcharts/FLOW_CHART_2021_2022";
 import FLOW_CHART_2013_2018 from "./flowcharts/FLOW_CHART_2013_2018";
+import FLOW_CHART_2020_2021 from "./flowcharts/FLOW_CHART_2020_2021";
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
           <Route
             path="flowchart-cat2013-2018"
             element={<FLOW_CHART_2013_2018 />}
+          />
+          <Route
+            path="flowchart-cat2020-2021"
+            element={<FLOW_CHART_2020_2021 />}
           />
         </Routes>
       </BrowserRouter>

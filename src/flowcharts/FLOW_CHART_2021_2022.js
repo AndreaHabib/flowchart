@@ -13,7 +13,7 @@ import {
   Stack,
   Chip,
 } from "@mui/material";
-import { SwitchPrereq } from "./switches/SwitchPrereq";
+import { SwitchPrereq } from "./switches/SwitchPrereq1";
 import WarningAmber from "@mui/icons-material/WarningAmber";
 
 const style = {

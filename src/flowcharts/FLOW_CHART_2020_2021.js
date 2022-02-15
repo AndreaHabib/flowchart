@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import { useState, useCallback } from "react";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
-import elements from "./elements/Flowchart3";
-import "./styles/Flowchart2.css";
+import elements from "./elements/Flowchart1";
+import { deepPurple } from "@mui/material/colors";
+import "./styles/Flowchart4.css";
 import {
   Typography,
   Box,
@@ -13,7 +14,7 @@ import {
   Stack,
   Chip,
 } from "@mui/material";
-import { SwitchPrereq } from "./switches/SwitchPrereq3";
+import { SwitchPrereq } from "./switches/SwitchPrereq1";
 import WarningAmber from "@mui/icons-material/WarningAmber";
 
 const style = {
@@ -21,7 +22,9 @@ const style = {
   height: "75vh",
 };
 
-export default function FLOW_CHART_2018_2020() {
+const purple = deepPurple["700"];
+
+export default function FLOW_CHART_2020_2021() {
   const [elements_flow, setElements] = useState(elements);
   const [reactflowInstance, setReactflowInstance] = useState(null);
 
@@ -39,22 +42,21 @@ export default function FLOW_CHART_2018_2020() {
     SwitchPrereq(updateElements, element);
     setElements(updateElements);
   }, []);
-
   return (
     <Fragment>
-      <div className="flowchart2">
+      <div className="flowchart4">
         <div
           style={{
             width: "100%",
             height: "10vh",
-            backgroundColor: "#F4A460",
+            backgroundColor: "#663399",
             marginBottom: "50px",
-            borderBottom: "10px solid rgb(204, 123, 17)",
+            borderBottom: "10px solid rgb(75,0,130)",
           }}
         ></div>
         <Typography variant="h4">CSI CSC Prerequisites Flowchart</Typography>
         <Typography variant="h4">
-          Applies to Fall 2018 - Spring 2019, Fall 2019 - Spring 2020
+          Applies to Fall 2020 - Spring 2021 Major Catalog
         </Typography>
         <Typography variant="h6">
           - It is recommended to view this flowchart on a laptop or desktop for
@@ -65,9 +67,9 @@ export default function FLOW_CHART_2018_2020() {
           <a
             target="_blank"
             rel="noreferrer noopener"
-            href="https://csicuny.smartcatalogiq.com/2019-2020/Undergraduate-Catalog"
+            href="https://csicuny.smartcatalogiq.com/2020-2021/Undergraduate-Catalog"
           >
-            Fall 2018 through Spring 2020 Catalog
+            Fall 2020 - Spring 2021 Catalog
           </a>
         </Typography>
         <Typography variant="h6">
@@ -185,8 +187,8 @@ export default function FLOW_CHART_2018_2020() {
               </Card>
               <Button
                 target="_blank"
+                style={{ background: purple }}
                 component="a"
-                color="warning"
                 href="https://csicuny.smartcatalogiq.com/current/Undergraduate-Catalog/Courses/MTH-Mathematics"
                 variant="contained"
               >
@@ -362,7 +364,7 @@ export default function FLOW_CHART_2018_2020() {
               <Button
                 target="_blank"
                 component="a"
-                color="warning"
+                style={{ background: purple }}
                 href="https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
                 variant="contained"
               >
@@ -663,11 +665,7 @@ export default function FLOW_CHART_2018_2020() {
           that you will take after MTH 232) for one 400-elective. This is
           limited to one instance.<br></br>
           ** You must earn a minimum “C” or higher grade in CSC courses which
-          are pre-requisites to other CSC courses.<br></br>
-          If your major catalog year is 2018 - 2019, 2019 - 2020 one of your CSC
-          electives must have a database component: CSC 226, 315, or 424 fit
-          this criteria. CSC 315 is considered a 400-elective per dept.
-          chairperson.
+          are pre-requisites to other CSC courses.
         </Typography>
         <Typography variant="h4">
           Additional Tools for Planning out your CSC courses
@@ -687,8 +685,8 @@ export default function FLOW_CHART_2018_2020() {
         >
           <Button
             target="_blank"
-            color="warning"
             component="a"
+            style={{ background: purple }}
             rel="noreferrer noopener"
             href="https://degreeworks.cuny.edu/Dashboard_si/dashboard"
             variant="contained"
@@ -697,18 +695,18 @@ export default function FLOW_CHART_2018_2020() {
           </Button>
           <Button
             target="_blank"
-            color="warning"
             component="a"
+            style={{ background: purple }}
             rel="noreferrer noopener"
             href="https://drive.google.com/file/d/1rXvHfgEx0nHZp_5HxVJJ9xOPPm5MxBnk/view?usp=sharing"
             variant="contained"
           >
-            Pathway Checklist 2018-2019, 2019-2020 Catalog
+            Pathway Checklist 2020-2021 Catalog
           </Button>
           <Button
             target="_blank"
-            color="warning"
             component="a"
+            style={{ background: purple }}
             rel="noreferrer noopener"
             href="https://www.mtu.edu/cs/undergraduate/advising/pdfs/blank-academic-plan.pdf"
             variant="contained"
@@ -717,8 +715,8 @@ export default function FLOW_CHART_2018_2020() {
           </Button>
           <Button
             target="_blank"
-            color="warning"
             component="a"
+            style={{ background: purple }}
             rel="noreferrer noopener"
             href="http://www.cs.csi.cuny.edu/content/Sample_cs_4_yr_degree-career-map.pdf"
             variant="contained"
@@ -740,13 +738,13 @@ export default function FLOW_CHART_2018_2020() {
         >
           <Button
             target="_blank"
-            color="warning"
             component="a"
+            style={{ background: purple }}
             rel="noreferrer noopener"
-            href="https://drive.google.com/file/d/1bqnFqzkRXWrQHJ9JTUdXOPmm7F6wnt_R/view?usp=sharing"
+            href="https://drive.google.com/file/d/11zOvh76IvKtESsXPg_LRAnOl_duii92V/view?usp=sharing"
             variant="contained"
           >
-            Catalog 2018-2019, 2019-2020 CSC Prerequisites Flowchart
+            Catalog 2020-2021 CSC Prerequisites Flowchart
           </Button>
         </Stack>
         <footer className="footer">
