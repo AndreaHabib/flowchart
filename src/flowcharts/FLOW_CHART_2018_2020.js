@@ -50,6 +50,9 @@ export default function FLOW_CHART_2018_2020() {
             backgroundColor: "#F4A460",
             marginBottom: "50px",
             borderBottom: "10px solid rgb(204, 123, 17)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         ></div>
         <Typography variant="h4">CSI CSC Prerequisites Flowchart</Typography>
