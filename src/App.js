@@ -7,8 +7,9 @@ email: andrea.atef@yahoo.com
 
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import FLOW_CHART_2018_2021 from "./flowcharts/FLOW_CHART_2018_2021";
+import FLOW_CHART_2018_2020 from "./flowcharts/FLOW_CHART_2018_2020";
 import FLOW_CHART_2021_2022 from "./flowcharts/FLOW_CHART_2021_2022";
+import FLOW_CHART_2013_2018 from "./flowcharts/FLOW_CHART_2013_2018";
 
 function App() {
   return (
@@ -16,12 +17,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="flowchart-cat2018-2021"
-            element={<FLOW_CHART_2018_2021 />}
+            path="flowchart-cat2018-2020"
+            element={<FLOW_CHART_2018_2020 />}
           />
           <Route
             path="flowchart-cat2021-2022"
             element={<FLOW_CHART_2021_2022 />}
+          />
+          <Route
+            path="flowchart-cat2013-2018"
+            element={<FLOW_CHART_2013_2018 />}
           />
         </Routes>
       </BrowserRouter>

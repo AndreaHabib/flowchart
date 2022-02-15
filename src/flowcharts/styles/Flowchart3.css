@@ -1,4 +1,4 @@
-.flowchart1 {
+.flowchart3 {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -6,21 +6,21 @@
   flex-direction: column;
 }
 
-.flowchart1 .react-flow {
-  border: 5px solid #1e90ff;
+.flowchart3 .react-flow {
+  border: 5px solid #32cd32;
   border-radius: 18px;
   margin-top: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.flowchart1 .classes-card {
-  border: 5px solid #1e90ff !important;
+.flowchart3 .classes-card {
+  border: 5px solid #32cd32 !important;
   margin: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.flowchart1 .footer {
-  border-top: 10px solid rgb(39, 78, 160);
+.flowchart3 .footer {
+  border-top: 10px solid rgb(0, 158, 96);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,5 +28,5 @@
   flex-direction: column;
   padding: 18px;
   color: white;
-  background-color: #1e90ff;
+  background-color: #32cd32;
 }

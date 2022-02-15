@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import { useState, useCallback } from "react";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
-import elements from "./Flowchart1";
-import "./styles/Flowchart2.css";
+import elements from "./elements/Flowchart2";
+import { green } from "@mui/material/colors";
+import "./styles/Flowchart3.css";
 import {
   Typography,
   Box,
@@ -13,7 +14,7 @@ import {
   Stack,
   Chip,
 } from "@mui/material";
-import { SwitchPrereq } from "./SwitchPrereq1";
+import { SwitchPrereq } from "./switches/SwitchPrereq";
 import WarningAmber from "@mui/icons-material/WarningAmber";
 
 const style = {
@@ -21,7 +22,9 @@ const style = {
   height: "75vh",
 };
 
-export default function FLOW_CHART_2018_2021() {
+const lightGreen = green["500"];
+
+export default function FLOW_CHART_2013_2018() {
   const [elements_flow, setElements] = useState(elements);
   const [reactflowInstance, setReactflowInstance] = useState(null);
 
@@ -39,37 +42,26 @@ export default function FLOW_CHART_2018_2021() {
     SwitchPrereq(updateElements, element);
     setElements(updateElements);
   }, []);
-
   return (
     <Fragment>
-      <div className="flowchart2">
+      <div className="flowchart3">
         <div
           style={{
             width: "100%",
             height: "10vh",
-            backgroundColor: "#F4A460",
+            backgroundColor: "#32cd32",
             marginBottom: "50px",
-            borderBottom: "10px solid rgb(204, 123, 17)",
+            borderBottom: "10px solid rgb(0,158,96)",
           }}
         ></div>
         <Typography variant="h4">CSI CSC Prerequisites Flowchart</Typography>
         <Typography variant="h4">
-          Applies to Fall 2019 - Spring 2020, Fall 2020 - Spring 2021 Major
-          Catalog
+          Applies to Fall 2013 - Spring 2014 through Fall 2017 - Spring 2018
+          Major Catalog
         </Typography>
         <Typography variant="h6">
           - It is recommended to view this flowchart on a laptop or desktop for
           the best experience.
-        </Typography>
-        <Typography variant="h6">
-          - The flowchart is based on the official CS curriculum at CSI{" "}
-          <a
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://csicuny.smartcatalogiq.com/2019-2020/Undergraduate-Catalog"
-          >
-            Fall 2019 - Spring 2021 Catalog.
-          </a>
         </Typography>
         <Typography variant="h6">
           - You can drag the flowchart using your mouse to view all of classes,
@@ -87,8 +79,8 @@ export default function FLOW_CHART_2018_2021() {
           onElementClick={onClickElement}
           preventScrolling={false}
           translateExtent={[
-            [-800, -800],
-            [2000, 1000],
+            [-1500, -1500],
+            [2000, 1500],
           ]}
           onLoad={onLoad}
           style={style}
@@ -186,6 +178,7 @@ export default function FLOW_CHART_2018_2021() {
               </Card>
               <Button
                 target="_blank"
+                style={{ background: lightGreen }}
                 component="a"
                 href="https://csicuny.smartcatalogiq.com/current/Undergraduate-Catalog/Courses/MTH-Mathematics"
                 variant="contained"
@@ -362,6 +355,7 @@ export default function FLOW_CHART_2018_2021() {
               <Button
                 target="_blank"
                 component="a"
+                style={{ background: lightGreen }}
                 href="https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
                 variant="contained"
               >
@@ -662,7 +656,11 @@ export default function FLOW_CHART_2018_2021() {
           (beyond the two that you will take after MTH 232) for one
           400-elective. This is limited to one instance.<br></br>
           ** You must earn a minimum “C” or higher grade in CSC courses which
-          are pre-requisites to other CSC courses.
+          are pre-requisites to other CSC courses.<br></br>
+          If your major catalog year is 2015-16, 2016-17, or 2017-18, one of
+          your CSC electives must have a database component: CSC 226, 315, or
+          424 fit this criteria. CSC 315 is considered a 400-elective per dept.
+          chairperson.
         </Typography>
         <Typography variant="h4">
           Additional Tools for Planning out your CSC courses
@@ -671,6 +669,59 @@ export default function FLOW_CHART_2018_2021() {
           justifyContent="center"
           alignItems="center"
           mt={2}
+          mb={1}
+          direction={{
+            xs: "column",
+            sm: "column",
+            md: "row",
+            lg: "row",
+          }}
+          spacing={1}
+        >
+          <Button
+            target="_blank"
+            component="a"
+            style={{ background: lightGreen }}
+            rel="noreferrer noopener"
+            href="https://degreeworks.cuny.edu/Dashboard_si/dashboard"
+            variant="contained"
+          >
+            DegreeWorks
+          </Button>
+          <Button
+            target="_blank"
+            component="a"
+            style={{ background: lightGreen }}
+            rel="noreferrer noopener"
+            href="https://docs.google.com/document/d/1RJb8bq-f9Atk7jfLt2n-higf2kUA-oHMmFuHtE2UoM4/edit?usp=sharing"
+            variant="contained"
+          >
+            Pathway Checklist 2013-2018 Catalog
+          </Button>
+          <Button
+            target="_blank"
+            component="a"
+            style={{ background: lightGreen }}
+            rel="noreferrer noopener"
+            href="https://www.mtu.edu/cs/undergraduate/advising/pdfs/blank-academic-plan.pdf"
+            variant="contained"
+          >
+            Blank Academic Planner by Michigan Tech
+          </Button>
+          <Button
+            target="_blank"
+            component="a"
+            style={{ background: lightGreen }}
+            rel="noreferrer noopener"
+            href="http://www.cs.csi.cuny.edu/content/Sample_cs_4_yr_degree-career-map.pdf"
+            variant="contained"
+          >
+            Sample Degree Milestone Map
+          </Button>
+        </Stack>
+        <Stack
+          justifyContent="center"
+          alignItems="center"
           mb={8}
           direction={{
             xs: "column",
@@ -683,38 +734,12 @@ export default function FLOW_CHART_2018_2021() {
           <Button
             target="_blank"
             component="a"
+            style={{ background: lightGreen }}
             rel="noreferrer noopener"
-            href="https://degreeworks.cuny.edu/Dashboard_si/dashboard"
+            href="https://drive.google.com/file/d/1cHunbWo2OYLeat7zT-pni-hEIEtTYH-C/view?usp=sharing"
             variant="contained"
           >
-            DegreeWorks
-          </Button>
-          <Button
-            target="_blank"
-            component="a"
-            rel="noreferrer noopener"
-            href="http://www.cs.csi.cuny.edu/content/CSC_BS_Pathways_checklist_2021-22-major-catalog.pdf"
-            variant="contained"
-          >
-            Pathway Checklist 2021-2022 Catalog
-          </Button>
-          <Button
-            target="_blank"
-            component="a"
-            rel="noreferrer noopener"
-            href="https://www.mtu.edu/cs/undergraduate/advising/pdfs/blank-academic-plan.pdf"
-            variant="contained"
-          >
-            Blank Academic Planner by Michigan Tech
-          </Button>
-          <Button
-            target="_blank"
-            component="a"
-            rel="noreferrer noopener"
-            href="http://www.cs.csi.cuny.edu/content/Sample_cs_4_yr_degree-career-map.pdf"
-            variant="contained"
-          >
-            Sample Degree Milestone Map
+            Catalog 2013-2018 CSC Prerequisites Flowchart
           </Button>
         </Stack>
         <footer className="footer">

@@ -4,8 +4,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-left: 5px solid #f4a460;
-  border-right: 5px solid #f4a460;
 }
 
 .flowchart2 .react-flow {
@@ -28,8 +26,7 @@
   align-items: center;
   width: 100%;
   flex-direction: column;
-  padding: 5px;
-  height: 10vh;
+  padding: 18px;
   color: white;
   background-color: #f4a460;
 }

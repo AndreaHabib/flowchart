@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { useState, useCallback } from "react";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
-import elements from "./elements/Flowchart1";
-import "./styles/Flowchart1.css";
+import elements from "./elements/Flowchart2";
+import "./styles/Flowchart2.css";
 import {
   Typography,
   Box,
@@ -21,7 +21,7 @@ const style = {
   height: "75vh",
 };
 
-export default function FLOW_CHART_2021_2022() {
+export default function FLOW_CHART_2018_2020() {
   const [elements_flow, setElements] = useState(elements);
   const [reactflowInstance, setReactflowInstance] = useState(null);
 
@@ -39,21 +39,22 @@ export default function FLOW_CHART_2021_2022() {
     SwitchPrereq(updateElements, element);
     setElements(updateElements);
   }, []);
+
   return (
     <Fragment>
-      <div className="flowchart1">
+      <div className="flowchart2">
         <div
           style={{
             width: "100%",
             height: "10vh",
-            backgroundColor: "#1e90ff",
+            backgroundColor: "#F4A460",
             marginBottom: "50px",
-            borderBottom: "10px solid rgb(39, 78, 160)",
+            borderBottom: "10px solid rgb(204, 123, 17)",
           }}
         ></div>
         <Typography variant="h4">CSI CSC Prerequisites Flowchart</Typography>
         <Typography variant="h4">
-          Applies to Fall 2021 - Spring 2022 Major Catalog
+          Applies to Fall 2018 - Spring 2019, Fall 2019 - Spring 2020
         </Typography>
         <Typography variant="h6">
           - It is recommended to view this flowchart on a laptop or desktop for
@@ -64,9 +65,9 @@ export default function FLOW_CHART_2021_2022() {
           <a
             target="_blank"
             rel="noreferrer noopener"
-            href="https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
+            href="https://csicuny.smartcatalogiq.com/2019-2020/Undergraduate-Catalog"
           >
-            Fall 2021 - Spring 2022 Catalog.
+            Fall 2018 through Spring 2020 Catalog
           </a>
         </Typography>
         <Typography variant="h6">
@@ -185,6 +186,7 @@ export default function FLOW_CHART_2021_2022() {
               <Button
                 target="_blank"
                 component="a"
+                color="warning"
                 href="https://csicuny.smartcatalogiq.com/current/Undergraduate-Catalog/Courses/MTH-Mathematics"
                 variant="contained"
               >
@@ -360,6 +362,7 @@ export default function FLOW_CHART_2021_2022() {
               <Button
                 target="_blank"
                 component="a"
+                color="warning"
                 href="https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
                 variant="contained"
               >
@@ -654,13 +657,17 @@ export default function FLOW_CHART_2021_2022() {
           </Grid>
         </Box>
         <Typography className="description" variant="h6">
-          * 12-14 CSC elective credits; this consists of either three
-          400-electives = 12 credits, or two 400-elective and two 200-electives
-          = 14 credits. You may sub. one additional upper-level MTH course
-          (beyond the two that you will take after MTH 232) for one
-          400-elective. This is limited to one instance.<br></br>
+          * 8-10 CSC elective credits; this consists of either two 400-electives
+          = 8 credits, or one 400-elective and two 200-electives = 10 credits.
+          You may sub. one additional upper-level MTH course (beyond the two
+          that you will take after MTH 232) for one 400-elective. This is
+          limited to one instance.<br></br>
           ** You must earn a minimum “C” or higher grade in CSC courses which
-          are pre-requisites to other CSC courses.
+          are pre-requisites to other CSC courses.<br></br>
+          If your major catalog year is 2018 - 2019, 2019 - 2020 one of your CSC
+          electives must have a database component: CSC 226, 315, or 424 fit
+          this criteria. CSC 315 is considered a 400-elective per dept.
+          chairperson.
         </Typography>
         <Typography variant="h4">
           Additional Tools for Planning out your CSC courses
@@ -680,6 +687,7 @@ export default function FLOW_CHART_2021_2022() {
         >
           <Button
             target="_blank"
+            color="warning"
             component="a"
             rel="noreferrer noopener"
             href="https://degreeworks.cuny.edu/Dashboard_si/dashboard"
@@ -689,15 +697,17 @@ export default function FLOW_CHART_2021_2022() {
           </Button>
           <Button
             target="_blank"
+            color="warning"
             component="a"
             rel="noreferrer noopener"
-            href="http://www.cs.csi.cuny.edu/content/CSC_BS_Pathways_checklist_2021-22-major-catalog.pdf"
+            href="https://drive.google.com/file/d/1rXvHfgEx0nHZp_5HxVJJ9xOPPm5MxBnk/view?usp=sharing"
             variant="contained"
           >
-            Pathway Checklist 2021-2022 Catalog
+            Pathway Checklist 2018-2019, 2019-2020 Catalog
           </Button>
           <Button
             target="_blank"
+            color="warning"
             component="a"
             rel="noreferrer noopener"
             href="https://www.mtu.edu/cs/undergraduate/advising/pdfs/blank-academic-plan.pdf"
@@ -707,6 +717,7 @@ export default function FLOW_CHART_2021_2022() {
           </Button>
           <Button
             target="_blank"
+            color="warning"
             component="a"
             rel="noreferrer noopener"
             href="http://www.cs.csi.cuny.edu/content/Sample_cs_4_yr_degree-career-map.pdf"
@@ -729,12 +740,13 @@ export default function FLOW_CHART_2021_2022() {
         >
           <Button
             target="_blank"
+            color="warning"
             component="a"
             rel="noreferrer noopener"
-            href="https://drive.google.com/file/d/1TJcRvkwxBQTW5z38E1H0XHHXFASUT93L/view?usp=sharing"
+            href="https://drive.google.com/file/d/1bqnFqzkRXWrQHJ9JTUdXOPmm7F6wnt_R/view?usp=sharing"
             variant="contained"
           >
-            Catalog 2021-2022 CSC Prerequisites Flowchart
+            Catalog 2018-2019, 2019-2020 CSC Prerequisites Flowchart
           </Button>
         </Stack>
         <footer className="footer">
