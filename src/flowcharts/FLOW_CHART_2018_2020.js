@@ -59,6 +59,86 @@ export default function FLOW_CHART_2018_2020() {
         <Typography variant="h4">
           Applies to Fall 2018 - Spring 2019, Fall 2019 - Spring 2020
         </Typography>
+        <Typography mt={1} variant="h4">
+          Tools for Planning out your CSC courses
+        </Typography>
+        <Stack
+          justifyContent="center"
+          alignItems="center"
+          mt={2}
+          mb={1}
+          direction={{
+            xs: "column",
+            sm: "column",
+            md: "row",
+            lg: "row",
+          }}
+          spacing={1}
+        >
+          <Button
+            target="_blank"
+            color="warning"
+            component="a"
+            rel="noreferrer noopener"
+            href="https://degreeworks.cuny.edu/Dashboard_si/dashboard"
+            variant="contained"
+          >
+            DegreeWorks
+          </Button>
+          <Button
+            target="_blank"
+            color="warning"
+            component="a"
+            rel="noreferrer noopener"
+            href="https://drive.google.com/file/d/1rXvHfgEx0nHZp_5HxVJJ9xOPPm5MxBnk/view?usp=sharing"
+            variant="contained"
+          >
+            Pathway Checklist 2018-2019, 2019-2020 Catalog
+          </Button>
+          <Button
+            target="_blank"
+            color="warning"
+            component="a"
+            rel="noreferrer noopener"
+            href="https://www.mtu.edu/cs/undergraduate/advising/pdfs/blank-academic-plan.pdf"
+            variant="contained"
+          >
+            Blank Academic Planner by Michigan Tech
+          </Button>
+          <Button
+            target="_blank"
+            color="warning"
+            component="a"
+            rel="noreferrer noopener"
+            href="http://www.cs.csi.cuny.edu/content/Sample_cs_4_yr_degree-career-map.pdf"
+            variant="contained"
+          >
+            Sample Degree Milestone Map
+          </Button>
+        </Stack>
+        <Stack
+          justifyContent="center"
+          alignItems="center"
+          mb={2}
+          direction={{
+            xs: "column",
+            sm: "column",
+            md: "row",
+            lg: "row",
+          }}
+          spacing={1}
+        >
+          <Button
+            target="_blank"
+            color="warning"
+            component="a"
+            rel="noreferrer noopener"
+            href="https://drive.google.com/file/d/1JY0IewKGbLJo-1TNqxx9LKbJBBWEqt0-/view?usp=sharing"
+            variant="contained"
+          >
+            Catalog 2018-2019, 2019-2020 CSC Prerequisites Flowchart
+          </Button>
+        </Stack>
         <Typography variant="h6">
           - It is recommended to view this flowchart on a laptop or desktop for
           the best experience.
@@ -672,86 +752,6 @@ export default function FLOW_CHART_2018_2020() {
           this criteria. CSC 315 is considered a 400-elective per dept.
           chairperson.
         </Typography>
-        <Typography variant="h4">
-          Additional Tools for Planning out your CSC courses
-        </Typography>
-        <Stack
-          justifyContent="center"
-          alignItems="center"
-          mt={2}
-          mb={1}
-          direction={{
-            xs: "column",
-            sm: "column",
-            md: "row",
-            lg: "row",
-          }}
-          spacing={1}
-        >
-          <Button
-            target="_blank"
-            color="warning"
-            component="a"
-            rel="noreferrer noopener"
-            href="https://degreeworks.cuny.edu/Dashboard_si/dashboard"
-            variant="contained"
-          >
-            DegreeWorks
-          </Button>
-          <Button
-            target="_blank"
-            color="warning"
-            component="a"
-            rel="noreferrer noopener"
-            href="https://drive.google.com/file/d/1rXvHfgEx0nHZp_5HxVJJ9xOPPm5MxBnk/view?usp=sharing"
-            variant="contained"
-          >
-            Pathway Checklist 2018-2019, 2019-2020 Catalog
-          </Button>
-          <Button
-            target="_blank"
-            color="warning"
-            component="a"
-            rel="noreferrer noopener"
-            href="https://www.mtu.edu/cs/undergraduate/advising/pdfs/blank-academic-plan.pdf"
-            variant="contained"
-          >
-            Blank Academic Planner by Michigan Tech
-          </Button>
-          <Button
-            target="_blank"
-            color="warning"
-            component="a"
-            rel="noreferrer noopener"
-            href="http://www.cs.csi.cuny.edu/content/Sample_cs_4_yr_degree-career-map.pdf"
-            variant="contained"
-          >
-            Sample Degree Milestone Map
-          </Button>
-        </Stack>
-        <Stack
-          justifyContent="center"
-          alignItems="center"
-          mb={8}
-          direction={{
-            xs: "column",
-            sm: "column",
-            md: "row",
-            lg: "row",
-          }}
-          spacing={1}
-        >
-          <Button
-            target="_blank"
-            color="warning"
-            component="a"
-            rel="noreferrer noopener"
-            href="https://drive.google.com/file/d/1bqnFqzkRXWrQHJ9JTUdXOPmm7F6wnt_R/view?usp=sharing"
-            variant="contained"
-          >
-            Catalog 2018-2019, 2019-2020 CSC Prerequisites Flowchart
-          </Button>
-        </Stack>
         <footer className="footer">
           <Typography variant="h6">
             CUNY2X - CSI Computer Science Department

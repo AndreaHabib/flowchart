@@ -55,6 +55,81 @@ export default function FLOW_CHART_2021_2022() {
         <Typography variant="h4">
           Applies to Fall 2021 - Spring 2022 Major Catalog
         </Typography>
+        <Typography mt={1} variant="h4">
+          Tools for Planning out your CSC courses
+        </Typography>
+        <Stack
+          justifyContent="center"
+          alignItems="center"
+          mt={2}
+          mb={1}
+          direction={{
+            xs: "column",
+            sm: "column",
+            md: "row",
+            lg: "row",
+          }}
+          spacing={1}
+        >
+          <Button
+            target="_blank"
+            component="a"
+            rel="noreferrer noopener"
+            href="https://degreeworks.cuny.edu/Dashboard_si/dashboard"
+            variant="contained"
+          >
+            DegreeWorks
+          </Button>
+          <Button
+            target="_blank"
+            component="a"
+            rel="noreferrer noopener"
+            href="http://www.cs.csi.cuny.edu/content/CSC_BS_Pathways_checklist_2021-22-major-catalog.pdf"
+            variant="contained"
+          >
+            Pathway Checklist 2021-2022 Catalog
+          </Button>
+          <Button
+            target="_blank"
+            component="a"
+            rel="noreferrer noopener"
+            href="https://www.mtu.edu/cs/undergraduate/advising/pdfs/blank-academic-plan.pdf"
+            variant="contained"
+          >
+            Blank Academic Planner by Michigan Tech
+          </Button>
+          <Button
+            target="_blank"
+            component="a"
+            rel="noreferrer noopener"
+            href="http://www.cs.csi.cuny.edu/content/Sample_cs_4_yr_degree-career-map.pdf"
+            variant="contained"
+          >
+            Sample Degree Milestone Map
+          </Button>
+        </Stack>
+        <Stack
+          justifyContent="center"
+          alignItems="center"
+          mb={1}
+          direction={{
+            xs: "column",
+            sm: "column",
+            md: "row",
+            lg: "row",
+          }}
+          spacing={1}
+        >
+          <Button
+            target="_blank"
+            component="a"
+            rel="noreferrer noopener"
+            href="https://drive.google.com/file/d/1TJcRvkwxBQTW5z38E1H0XHHXFASUT93L/view?usp=sharing"
+            variant="contained"
+          >
+            Catalog 2021-2022 CSC Prerequisites Flowchart
+          </Button>
+        </Stack>
         <Typography variant="h6">
           - It is recommended to view this flowchart on a laptop or desktop for
           the best experience.
@@ -662,81 +737,6 @@ export default function FLOW_CHART_2021_2022() {
           ** You must earn a minimum “C” or higher grade in CSC courses which
           are pre-requisites to other CSC courses.
         </Typography>
-        <Typography variant="h4">
-          Additional Tools for Planning out your CSC courses
-        </Typography>
-        <Stack
-          justifyContent="center"
-          alignItems="center"
-          mt={2}
-          mb={1}
-          direction={{
-            xs: "column",
-            sm: "column",
-            md: "row",
-            lg: "row",
-          }}
-          spacing={1}
-        >
-          <Button
-            target="_blank"
-            component="a"
-            rel="noreferrer noopener"
-            href="https://degreeworks.cuny.edu/Dashboard_si/dashboard"
-            variant="contained"
-          >
-            DegreeWorks
-          </Button>
-          <Button
-            target="_blank"
-            component="a"
-            rel="noreferrer noopener"
-            href="http://www.cs.csi.cuny.edu/content/CSC_BS_Pathways_checklist_2021-22-major-catalog.pdf"
-            variant="contained"
-          >
-            Pathway Checklist 2021-2022 Catalog
-          </Button>
-          <Button
-            target="_blank"
-            component="a"
-            rel="noreferrer noopener"
-            href="https://www.mtu.edu/cs/undergraduate/advising/pdfs/blank-academic-plan.pdf"
-            variant="contained"
-          >
-            Blank Academic Planner by Michigan Tech
-          </Button>
-          <Button
-            target="_blank"
-            component="a"
-            rel="noreferrer noopener"
-            href="http://www.cs.csi.cuny.edu/content/Sample_cs_4_yr_degree-career-map.pdf"
-            variant="contained"
-          >
-            Sample Degree Milestone Map
-          </Button>
-        </Stack>
-        <Stack
-          justifyContent="center"
-          alignItems="center"
-          mb={8}
-          direction={{
-            xs: "column",
-            sm: "column",
-            md: "row",
-            lg: "row",
-          }}
-          spacing={1}
-        >
-          <Button
-            target="_blank"
-            component="a"
-            rel="noreferrer noopener"
-            href="https://drive.google.com/file/d/1TJcRvkwxBQTW5z38E1H0XHHXFASUT93L/view?usp=sharing"
-            variant="contained"
-          >
-            Catalog 2021-2022 CSC Prerequisites Flowchart
-          </Button>
-        </Stack>
         <footer className="footer">
           <Typography variant="h6">
             CUNY2X - CSI Computer Science Department
