@@ -53,7 +53,10 @@ export default function HeaderMenu() {
           Flowchart 2013-2018
         </MenuItem>
         <MenuItem onClick={() => handleClose("flowchart-cat2018-2020")}>
-          Flowchart 2018-2020
+          Flowchart 2018-2019
+        </MenuItem>
+        <MenuItem onClick={() => handleClose("flowchart-cat2018-2020")}>
+          Flowchart 2019-2020
         </MenuItem>
         <MenuItem onClick={() => handleClose("flowchart-cat2020-2021")}>
           Flowchart 2020-2021
