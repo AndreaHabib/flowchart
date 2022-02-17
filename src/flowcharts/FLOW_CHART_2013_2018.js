@@ -13,6 +13,7 @@ import {
   Button,
   Stack,
   Chip,
+  Alert,
 } from "@mui/material";
 import { SwitchPrereq } from "./switches/SwitchPrereq2";
 import WarningAmber from "@mui/icons-material/WarningAmber";
@@ -59,7 +60,61 @@ export default function FLOW_CHART_2013_2018() {
           Applies to Fall 2013 - Spring 2014 through Fall 2017 - Spring 2018
           Major Catalog
         </Typography>
-        <Typography mt={1} variant="h4">
+        <Stack mt={2} sx={{ width: "80%", textAlign: "left" }} spacing={2}>
+          <Alert variant="outlined" severity="info">
+            It is recommended to view this flowchart on a laptop or desktop for
+            the best experience.
+          </Alert>
+          <Alert variant="outlined" severity="info">
+            You can drag the flowchart using your mouse to view all of classes,
+            especially when you are on the phone!
+          </Alert>
+          <Alert variant="outlined" severity="info">
+            You can also click on any of the classes to view the prerequisites.
+          </Alert>
+          <Alert variant="outlined" severity="info">
+            To view the description of any of the classes on the flowchart, you
+            can find a list of all the classes below the flowchart where you can
+            see the description of each individual class.
+          </Alert>
+          <Alert variant="outlined" severity="error">
+            * 12-14 CSC elective credits; this consists of either three
+            400-electives = 12 credits, or two 400-elective and two
+            200-electives = 14 credits. You may sub. one additional upper-level
+            MTH course (beyond the two that you will take after MTH 232) for one
+            400-elective. This is limited to one instance.<br></br>
+            ** You must earn a minimum “C” or higher grade in CSC courses which
+            are pre-requisites to other CSC courses.<br></br>
+            If your major catalog year is 2015-16, 2016-17, or 2017-18, one of
+            your CSC electives must have a database component: CSC 226, 315, or
+            424 fit this criteria. CSC 315 is considered a 400-elective per
+            dept. chairperson.
+          </Alert>
+        </Stack>
+        <ReactFlow
+          onElementClick={onClickElement}
+          preventScrolling={false}
+          translateExtent={[
+            [-1500, -1500],
+            [2000, 1500],
+          ]}
+          onLoad={onLoad}
+          style={style}
+          defaultPosition={[100, 100]}
+          onlyRenderVisibleElements={true}
+          arrowHeadColor="black"
+          paneMoveable={true}
+          nodesConnectable={false}
+          minZoom={1}
+          maxZoom={1}
+          nodesDraggable={false}
+          elements={elements_flow}
+        >
+          <MiniMap />
+          <Background />
+          <Controls showZoom={false} />
+        </ReactFlow>
+        <Typography mt={5} variant="h4">
           Tools for Planning out your CSC courses
         </Typography>
         <Stack
@@ -139,45 +194,6 @@ export default function FLOW_CHART_2013_2018() {
             Catalog 2013-2018 CSC Prerequisites Flowchart
           </Button>
         </Stack>
-        <Typography variant="h6">
-          - It is recommended to view this flowchart on a laptop or desktop for
-          the best experience.
-        </Typography>
-        <Typography variant="h6">
-          - You can drag the flowchart using your mouse to view all of classes,
-          especially when you are on the phone!
-        </Typography>
-        <Typography variant="h6">
-          - You can also click on any of the classes to view the prerequisites.
-        </Typography>
-        <Typography variant="h6">
-          - To view the description of any of the classes on the flowchart, you
-          can find a list of all the classes below the flowchart where you can
-          see the description of each individual class.
-        </Typography>
-        <ReactFlow
-          onElementClick={onClickElement}
-          preventScrolling={false}
-          translateExtent={[
-            [-1500, -1500],
-            [2000, 1500],
-          ]}
-          onLoad={onLoad}
-          style={style}
-          defaultPosition={[100, 100]}
-          onlyRenderVisibleElements={true}
-          arrowHeadColor="black"
-          paneMoveable={true}
-          nodesConnectable={false}
-          minZoom={1}
-          maxZoom={1}
-          nodesDraggable={false}
-          elements={elements_flow}
-        >
-          <MiniMap />
-          <Background />
-          <Controls showZoom={false} />
-        </ReactFlow>
         <Box className="classes-container" component="div">
           <Grid container spacing={1}>
             <Grid item xs={12} md={5}>
@@ -729,19 +745,6 @@ export default function FLOW_CHART_2013_2018() {
             </Grid>
           </Grid>
         </Box>
-        <Typography className="description" variant="h6">
-          * 12-14 CSC elective credits; this consists of either three
-          400-electives = 12 credits, or two 400-elective and two 200-electives
-          = 14 credits. You may sub. one additional upper-level MTH course
-          (beyond the two that you will take after MTH 232) for one
-          400-elective. This is limited to one instance.<br></br>
-          ** You must earn a minimum “C” or higher grade in CSC courses which
-          are pre-requisites to other CSC courses.<br></br>
-          If your major catalog year is 2015-16, 2016-17, or 2017-18, one of
-          your CSC electives must have a database component: CSC 226, 315, or
-          424 fit this criteria. CSC 315 is considered a 400-elective per dept.
-          chairperson.
-        </Typography>
         <footer className="footer">
           <Typography variant="h6">
             CUNY2X - CSI Computer Science Department
