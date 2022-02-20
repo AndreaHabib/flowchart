@@ -463,12 +463,6 @@ const elements = [
     source: "22",
     target: "28",
   },
-  {
-    id: "e17-23",
-    source: "17",
-    target: "23",
-    arrowHeadType: "arrowclosed",
-  },
 ];
 
 export default elements;

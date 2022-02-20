@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import { Stack, Alert, Typography, List, ListItem } from "@mui/material";
+import { Stack, Alert, Typography, List, ListItem, Box } from "@mui/material";
 
 export default function Home() {
   return (
     <Fragment>
-      <Stack mt={12} sx={{ width: "80%" }} spacing={2}>
+      <Stack mt={12} sx={{ width: "90%" }} spacing={2}>
         <Alert variant="outlined" severity="info">
           <Typography variant="h6">
             How to find your respective flowchart:
@@ -28,11 +28,28 @@ export default function Home() {
                 same line as Bacholar of Computer Science:
               </Typography>
             </ListItem>
-            <img
-              style={{ width: "100%", height: "auto" }}
-              src="https://res.cloudinary.com/andreahabib/image/upload/v1645115452/Screen_Shot_2022-02-17_at_11.17.59_AM_j0gxlb.png"
-              alt="degreeworks"
-            ></img>
+            <Box
+              sx={{
+                display: { xs: "none", sm: "none", md: "block", lg: "block" },
+              }}
+            >
+              <img
+                style={{ width: "80%", height: "auto" }}
+                src="https://res.cloudinary.com/andreahabib/image/upload/v1645115452/Screen_Shot_2022-02-17_at_11.17.59_AM_j0gxlb.png"
+                alt="degreeworks"
+              ></img>
+            </Box>
+            <Box
+              sx={{
+                display: { xs: "block", sm: "block", md: "none", lg: "none" },
+              }}
+            >
+              <img
+                style={{ width: "100%", height: "auto" }}
+                src="https://res.cloudinary.com/andreahabib/image/upload/v1645382846/Screen_Shot_2022-02-20_at_1.42.55_PM_oaidcl.png"
+                alt="degreeworks"
+              ></img>
+            </Box>
             <ListItem>
               <Typography variant="body1">
                 3. Select the flowchart based on the year specified on your
@@ -41,8 +58,12 @@ export default function Home() {
             </ListItem>
           </List>
         </Alert>
-        <Alert variant="outlined" severity="info"></Alert>
-        <Alert variant="outlined" severity="info"></Alert>
+        <Alert variant="outlined" severity="info">
+          <Typography variant="h6">What is a flowchart?</Typography>
+        </Alert>
+        <Alert variant="outlined" severity="info">
+          <Typography variant="h6">What is a checklist?</Typography>
+        </Alert>
         <Alert variant="outlined" severity="info"></Alert>
         <Alert variant="outlined" severity="info"></Alert>
       </Stack>

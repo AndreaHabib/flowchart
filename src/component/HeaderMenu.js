@@ -1,21 +1,37 @@
 import React from "react";
-import { Menu, MenuItem, Button } from "@mui/material";
+import {
+  MenuItem,
+  Button,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  DialogActions,
+  Dialog,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 export default function HeaderMenu() {
   const navigate = useNavigate();
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
   };
-  const handleClose = (location) => {
-    setAnchorEl(null);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleNavigate = (location) => {
+    setOpen(false);
     navigate(`/${location}`);
   };
-  const handleCloseMenu = () => {
-    setAnchorEl(null);
+
+  const handleHome = () => {
+    setOpen(false);
+    navigate(`/`);
   };
+
   return (
     <div
       style={{
@@ -33,38 +49,90 @@ export default function HeaderMenu() {
         id="basic-button"
         color="primary"
         variant="contained"
-        aria-controls={open ? "basic-menu" : undefined}
+        aria-controls={open ? "dialog" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
+        onClick={handleClickOpen}
       >
-        Click here to select Flowchart
+        Click here to select Flowchart/Checklist
       </Button>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
+      <Dialog
+        scroll="paper"
+        fullWidth={true}
+        maxWidth="lg"
         open={open}
-        onClose={handleCloseMenu}
-        MenuListProps={{
-          "aria-labelledby": "basic-button",
-        }}
+        onClose={handleClose}
+        transitionDuration={0.5}
       >
-        <MenuItem onClick={() => handleClose("flowchart-cat2013-2018")}>
-          Flowchart 2013-2018
-        </MenuItem>
-        <MenuItem onClick={() => handleClose("flowchart-cat2018-2020")}>
-          Flowchart 2018-2019
-        </MenuItem>
-        <MenuItem onClick={() => handleClose("flowchart-cat2018-2020")}>
-          Flowchart 2019-2020
-        </MenuItem>
-        <MenuItem onClick={() => handleClose("flowchart-cat2020-2021")}>
-          Flowchart 2020-2021
-        </MenuItem>
-        <MenuItem onClick={() => handleClose("flowchart-cat2021-2022")}>
-          Flowchart 2021-2022
-        </MenuItem>
-      </Menu>
+        <DialogActions>
+          <Button onClick={handleHome}>Home</Button>
+        </DialogActions>
+        <DialogTitle id="form-dialog-title">
+          Select Flowchart/Checklist
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText>Select Flowchart</DialogContentText>
+          <MenuItem onClick={() => handleNavigate("flowchart-cat2013-2018")}>
+            Flowchart 2013-2018
+          </MenuItem>
+          <MenuItem onClick={() => handleNavigate("flowchart-cat2018-2020")}>
+            Flowchart 2018-2019
+          </MenuItem>
+          <MenuItem onClick={() => handleNavigate("flowchart-cat2018-2020")}>
+            Flowchart 2019-2020
+          </MenuItem>
+          <MenuItem onClick={() => handleNavigate("flowchart-cat2020-2021")}>
+            Flowchart 2020-2021
+          </MenuItem>
+          <MenuItem onClick={() => handleNavigate("flowchart-cat2021-2022")}>
+            Flowchart 2021-2022
+          </MenuItem>
+          <DialogContentText>Select Checklist</DialogContentText>
+          <MenuItem
+            rel="noopener noreferrer"
+            target="_blank"
+            component="a"
+            href="https://docs.google.com/document/d/1RJb8bq-f9Atk7jfLt2n-higf2kUA-oHMmFuHtE2UoM4/edit?usp=sharing"
+          >
+            Checklist 2013-2018
+          </MenuItem>
+          <MenuItem
+            rel="noopener noreferrer"
+            target="_blank"
+            component="a"
+            href="https://drive.google.com/file/d/1rXvHfgEx0nHZp_5HxVJJ9xOPPm5MxBnk/view?usp=sharing"
+          >
+            Checklist 2018-2019
+          </MenuItem>
+          <MenuItem
+            rel="noopener noreferrer"
+            target="_blank"
+            component="a"
+            href="https://drive.google.com/file/d/1rXvHfgEx0nHZp_5HxVJJ9xOPPm5MxBnk/view?usp=sharing"
+          >
+            Checklist 2019-2020
+          </MenuItem>
+          <MenuItem
+            rel="noopener noreferrer"
+            target="_blank"
+            component="a"
+            href="https://drive.google.com/file/d/1rXvHfgEx0nHZp_5HxVJJ9xOPPm5MxBnk/view?usp=sharing"
+          >
+            Checklist 2020-2021
+          </MenuItem>
+          <MenuItem
+            rel="noopener noreferrer"
+            target="_blank"
+            component="a"
+            href="http://www.cs.csi.cuny.edu/content/CSC_BS_Pathways_checklist_2021-22-major-catalog.pdf"
+          >
+            Checklist 2021-2022
+          </MenuItem>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Close</Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }
