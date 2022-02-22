@@ -14,6 +14,20 @@ export default function Home() {
             required and for which you are eligible.
           </Typography>
         </Alert>
+        <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
+          <Typography variant="h6">What is a flowchart?</Typography>
+          <Typography variant="body1">
+            A flowchart is a visual representation of the prerequisites to help
+            you understand the required CSC curriculum and their prerequisites.
+          </Typography>
+        </Alert>
+        <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
+          <Typography variant="h6">What is a checklist?</Typography>
+          <Typography variant="body1">
+            A checklist is a list of required courses that you must take and
+            complete according to your CSC catalog year.
+          </Typography>
+        </Alert>
         <Alert variant="outlined" severity="info">
           <Typography variant="h6">
             How to find your respective prerequisite flowchart:
@@ -66,20 +80,6 @@ export default function Home() {
               </Typography>
             </ListItem>
           </List>
-        </Alert>
-        <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
-          <Typography variant="h6">What is a flowchart?</Typography>
-          <Typography variant="body1">
-            A flowchart is a visual representation of the prerequisites to help
-            you understand the required CSC curriculum and their prerequisites.
-          </Typography>
-        </Alert>
-        <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
-          <Typography variant="h6">What is a checklist?</Typography>
-          <Typography variant="body1">
-            A checklist is a list of required courses that you must take and
-            complete according to your CSC catalog year.
-          </Typography>
         </Alert>
         <Alert variant="outlined" severity="error">
           The information is intended to inform and is not a replacement for a
