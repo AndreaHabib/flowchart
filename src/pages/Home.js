@@ -4,7 +4,7 @@ import { Stack, Alert, Typography, List, ListItem, Box } from "@mui/material";
 export default function Home() {
   return (
     <Fragment>
-      <Stack mt={12} sx={{ width: "90%" }} spacing={2}>
+      <Stack mb={5} mt={12} sx={{ width: "90%" }} spacing={2}>
         <Alert variant="outlined" severity="info">
           <Typography variant="h6">CS Advisement toolkit</Typography>
           <Typography variant="body1">
