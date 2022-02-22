@@ -71,7 +71,7 @@ export default function HeaderMenu() {
           Select Flowchart/Checklist
         </DialogTitle>
         <DialogContent>
-          <DialogContentText>Select Flowchart</DialogContentText>
+          <DialogContentText>Select Prerequisite Flowchart</DialogContentText>
           <MenuItem onClick={() => handleNavigate("flowchart-cat2013-2018")}>
             Flowchart 2013-2018
           </MenuItem>

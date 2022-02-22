@@ -6,8 +6,17 @@ export default function Home() {
     <Fragment>
       <Stack mt={12} sx={{ width: "90%" }} spacing={2}>
         <Alert variant="outlined" severity="info">
+          <Typography variant="h6">CS Advisement toolkit</Typography>
+          <Typography variant="body1">
+            This toolkit is designed to assist students in the process of course
+            selection and planning. You will use Degreeworks, pathway checklist
+            and prerequisite flowchart to see which CSC courses are required and
+            which you are eligible for.
+          </Typography>
+        </Alert>
+        <Alert variant="outlined" severity="info">
           <Typography variant="h6">
-            How to find your respective flowchart:
+            How to find your respective prerequisite flowchart:
           </Typography>
           <List>
             <ListItem>
@@ -25,7 +34,7 @@ export default function Home() {
             <ListItem>
               <Typography variant="body1">
                 2. You will be able to see your academic catalog year on the
-                same line as Bacholar of Computer Science:
+                same line as Bachelor of Computer Science:
               </Typography>
             </ListItem>
             <Box
