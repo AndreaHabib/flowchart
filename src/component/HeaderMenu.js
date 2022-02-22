@@ -68,7 +68,7 @@ export default function HeaderMenu() {
           <Button onClick={handleHome}>Home</Button>
         </DialogActions>
         <DialogTitle id="form-dialog-title">
-          Select Flowchart/Checklist
+          Select Prereq Flowchart/Checklist
         </DialogTitle>
         <DialogContent>
           <DialogContentText>Select Prerequisite Flowchart</DialogContentText>
