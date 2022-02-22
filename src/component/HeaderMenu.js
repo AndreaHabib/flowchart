@@ -54,7 +54,7 @@ export default function HeaderMenu() {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClickOpen}
       >
-        Click here to select Flowchart/Checklist
+        Click here to select Prereq Flowchart/Checklist
       </Button>
       <Dialog
         scroll="paper"
