@@ -9,9 +9,9 @@ export default function Home() {
           <Typography variant="h6">CS Advisement toolkit</Typography>
           <Typography variant="body1">
             This toolkit is designed to assist students in the process of course
-            selection and planning. You will use Degreeworks, pathway checklist
-            and prerequisite flowchart to see which CSC courses are required and
-            for which you are eligible.
+            selection and planning. You will use Degreeworks, a pathway
+            checklist and a prerequisite flowchart to see which CSC courses are
+            required and for which you are eligible.
           </Typography>
         </Alert>
         <Alert variant="outlined" severity="info">
@@ -67,14 +67,14 @@ export default function Home() {
             </ListItem>
           </List>
         </Alert>
-        <Alert variant="outlined" severity="info">
+        <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
           <Typography variant="h6">What is a flowchart?</Typography>
           <Typography variant="body1">
             A flowchart is a visual representation of the prerequisites to help
             you understand the required CSC curriculum and their prerequisites.
           </Typography>
         </Alert>
-        <Alert variant="outlined" severity="info">
+        <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
           <Typography variant="h6">What is a checklist?</Typography>
           <Typography variant="body1">
             A checklist is a list of required courses that you must take and
