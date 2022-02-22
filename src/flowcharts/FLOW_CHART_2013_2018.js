@@ -60,22 +60,23 @@ export default function FLOW_CHART_2013_2018() {
           Applies to Fall 2013 - Spring 2014 through Fall 2017 - Spring 2018
           Major Catalog
         </Typography>
-        <Stack mt={2} sx={{ width: "80%", textAlign: "left" }} spacing={2}>
+        <Stack mt={2} sx={{ width: "85%", textAlign: "left" }} spacing={2}>
           <Alert variant="outlined" severity="info">
-            It is recommended to view this flowchart on a laptop or desktop for
-            the best experience.
-          </Alert>
-          <Alert variant="outlined" severity="info">
-            You can drag the flowchart using your mouse to view all of classes,
-            especially when you are on the phone!
-          </Alert>
-          <Alert variant="outlined" severity="info">
-            You can also click on any of the classes to view the prerequisites.
-          </Alert>
-          <Alert variant="outlined" severity="info">
-            To view the description of any of the classes on the flowchart, you
-            can find a list of all the classes below the flowchart where you can
-            see the description of each individual class.
+            <ul>
+              <li>
+                It is recommended to view this flowchart on a laptop or desktop
+                for the best experience.
+              </li>
+              <li>
+                You can drag the flowchart using your mouse to view all of
+                classes, especially when you are on the phone!
+              </li>
+              <li>
+                To view the description of any of the classes on the flowchart,
+                you can find a list of all the classes below the flowchart where
+                you can see the description of each individual class.
+              </li>
+            </ul>
           </Alert>
           <Alert variant="outlined" severity="error">
             * 12-14 CSC elective credits; this consists of either three
