@@ -4,6 +4,7 @@ import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 import elements from "./elements/Flowchart1";
 import { deepPurple } from "@mui/material/colors";
 import HeaderMenu from "../component/HeaderMenu";
+import Legend from "../component/Legend";
 import "./styles/Flowchart4.css";
 import {
   Typography,
@@ -100,6 +101,7 @@ export default function FLOW_CHART_2020_2021(props) {
             are pre-requisites to other CSC courses.
           </Alert>
         </Stack>
+        <Legend />
         <ReactFlow
           onElementClick={onClickElement}
           preventScrolling={false}

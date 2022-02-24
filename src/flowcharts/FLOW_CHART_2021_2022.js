@@ -4,6 +4,7 @@ import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 import elements from "./elements/Flowchart1";
 import "./styles/Flowchart1.css";
 import HeaderMenu from "../component/HeaderMenu";
+import Legend from "../component/Legend";
 import {
   Typography,
   Box,
@@ -97,6 +98,7 @@ export default function FLOW_CHART_2021_2022(props) {
             are pre-requisites to other CSC courses.
           </Alert>
         </Stack>
+        <Legend />
         <ReactFlow
           onElementClick={onClickElement}
           preventScrolling={false}

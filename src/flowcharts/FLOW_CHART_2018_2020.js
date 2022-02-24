@@ -3,6 +3,7 @@ import { useState, useCallback } from "react";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 import elements from "./elements/Flowchart3";
 import HeaderMenu from "../component/HeaderMenu";
+import Legend from "../component/Legend";
 import "./styles/Flowchart2.css";
 import {
   Typography,
@@ -102,6 +103,7 @@ export default function FLOW_CHART_2018_2020(props) {
             chairperson.
           </Alert>
         </Stack>
+        <Legend />
         <ReactFlow
           onElementClick={onClickElement}
           preventScrolling={false}

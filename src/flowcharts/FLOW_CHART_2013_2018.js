@@ -3,6 +3,7 @@ import { useState, useCallback } from "react";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 import elements from "./elements/Flowchart2";
 import { green } from "@mui/material/colors";
+import Legend from "../component/Legend";
 import "./styles/Flowchart3.css";
 import HeaderMenu from "../component/HeaderMenu";
 import {
@@ -89,6 +90,7 @@ export default function FLOW_CHART_2013_2018(props) {
             dept. chairperson.
           </Alert>
         </Stack>
+        <Legend />
         <ReactFlow
           onElementClick={onClickElement}
           preventScrolling={false}
