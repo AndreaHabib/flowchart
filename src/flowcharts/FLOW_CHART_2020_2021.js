@@ -114,8 +114,8 @@ export default function FLOW_CHART_2020_2021(props) {
           arrowHeadColor="black"
           paneMoveable={true}
           nodesConnectable={false}
-          minZoom={0.8}
-          defaultZoom={0.8}
+          minZoom={0.6}
+          defaultZoom={0.6}
           maxZoom={1}
           nodesDraggable={false}
           elements={elements_flow}
