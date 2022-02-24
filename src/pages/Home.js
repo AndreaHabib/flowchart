@@ -1,5 +1,13 @@
 import React, { Fragment } from "react";
-import { Stack, Alert, Typography, Button, Box } from "@mui/material";
+import {
+  Stack,
+  Alert,
+  Typography,
+  Button,
+  Box,
+  List,
+  ListItem,
+} from "@mui/material";
 
 export default function Home() {
   return (
@@ -18,6 +26,7 @@ export default function Home() {
           <Typography variant="h6">Step 1:</Typography>
           <Typography mb={3} variant="body1">
             Obtain your catalog year from DegreeWorks and return to this page.
+            Refer to the picture below on where to find your catalog year.
           </Typography>
           <Button
             variant="contained"
@@ -37,7 +46,30 @@ export default function Home() {
             catalog year obtained in step 1.
           </Typography>
         </Alert>
+        <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
+          <Typography variant="h6">Step 3:</Typography>
+          <Typography mb={3} variant="body1">
+            You will select your classes using two tools: your catalog flowchart
+            and DegreeWorks
+          </Typography>
+          <List>
+            <ListItem>
+              <Typography variant="body1">
+                1. You will use your flowchart for the suggest order in which
+                major requirements should be taken.
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography variant="body1">
+                2. You will use your DegreeWorks to what requiremenst you have
+                completed/are completing and have left to complete by checking
+                your degree audit.
+              </Typography>
+            </ListItem>
+          </List>
+        </Alert>
         <Alert variant="outlined" severity="info">
+          {/* Add arrows diagonal and more arrows pointing towards the year*/}
           <Typography variant="h6">Where to find your catalog year:</Typography>
           <Box
             sx={{
@@ -69,66 +101,6 @@ export default function Home() {
             you understand the required CSC curriculum and their prerequisites.
           </Typography>
         </Alert>
-        {/* <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
-          <Typography variant="h6">What is a checklist?</Typography>
-          <Typography variant="body1">
-            A checklist is a list of required courses that you must take and
-            complete according to your CSC catalog year.
-          </Typography>
-        </Alert> */}
-        {/* <Alert variant="outlined" severity="info">
-          <Typography variant="h6">
-            How to find your respective prerequisite flowchart:
-          </Typography>
-          <List>
-            <ListItem>
-              <Typography variant="body1">
-                1. Go to Degreeworks:{" "}
-                <a
-                  rel="noreferrer noopener"
-                  target="_blank"
-                  href="https://degreeworks.cuny.edu/Dashboard_si/dashboard"
-                >
-                  Click here to go to Degreeworks
-                </a>
-              </Typography>
-            </ListItem>
-            <ListItem>
-              <Typography variant="body1">
-                2. You will be able to see your academic catalog year on the
-                same line as Bachelor of Computer Science:
-              </Typography>
-            </ListItem>
-            <Box
-              sx={{
-                display: { xs: "none", sm: "none", md: "block", lg: "block" },
-              }}
-            >
-              <img
-                style={{ width: "80%", height: "auto" }}
-                src="https://res.cloudinary.com/andreahabib/image/upload/v1645115452/Screen_Shot_2022-02-17_at_11.17.59_AM_j0gxlb.png"
-                alt="degreeworks"
-              ></img>
-            </Box>
-            <Box
-              sx={{
-                display: { xs: "block", sm: "block", md: "none", lg: "none" },
-              }}
-            >
-              <img
-                style={{ width: "100%", height: "auto" }}
-                src="https://res.cloudinary.com/andreahabib/image/upload/v1645382846/Screen_Shot_2022-02-20_at_1.42.55_PM_oaidcl.png"
-                alt="degreeworks"
-              ></img>
-            </Box>
-            <ListItem>
-              <Typography variant="body1">
-                3. Select the flowchart based on the year specified on your
-                degreeworks
-              </Typography>
-            </ListItem>
-          </List>
-        </Alert> */}
         <Alert variant="outlined" severity="error">
           The information is intended to inform and is not a replacement for a
           degree audit conducted with an academic advisor
