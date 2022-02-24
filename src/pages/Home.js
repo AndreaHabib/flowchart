@@ -8,11 +8,12 @@ import {
   List,
   ListItem,
 } from "@mui/material";
+import HeaderMenu from "../component/HeaderMenu";
 
 export default function Home() {
   return (
     <Fragment>
-      <Stack mb={5} mt={12} sx={{ width: "90%" }} spacing={2}>
+      <Stack mb={5} mt={4} sx={{ width: "90%" }} spacing={2}>
         <Alert variant="outlined" severity="info">
           <Typography variant="h6">CS Advisement toolkit</Typography>
           <Typography variant="body1">
@@ -63,6 +64,7 @@ export default function Home() {
               </Typography>
             </ListItem>
           </List>
+          <HeaderMenu />
         </Alert>
         <Alert variant="outlined" severity="info">
           {/* Add arrows diagonal and more arrows pointing towards the year*/}

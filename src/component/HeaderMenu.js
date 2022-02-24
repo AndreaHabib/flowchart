@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   MenuItem,
   Button,
@@ -7,11 +7,13 @@ import {
   DialogActions,
   Dialog,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import "./styles/HeaderMenu.css";
 
 export default function HeaderMenu() {
   const navigate = useNavigate();
-  const [open, setOpen] = React.useState(false);
+  const location = useLocation();
+  const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -32,18 +34,7 @@ export default function HeaderMenu() {
   };
 
   return (
-    <div
-      style={{
-        position: "absolute",
-        zIndex: "1",
-        width: "100vw",
-        height: "10vh",
-        marginBottom: "50px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div className="flowcharts">
       <Button
         id="basic-button"
         color="primary"

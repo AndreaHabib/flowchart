@@ -3,6 +3,7 @@ import { useState, useCallback } from "react";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 import elements from "./elements/Flowchart1";
 import "./styles/Flowchart1.css";
+import HeaderMenu from "../component/HeaderMenu";
 import {
   Typography,
   Box,
@@ -45,15 +46,9 @@ export default function FLOW_CHART_2021_2022() {
   return (
     <Fragment>
       <div className="flowchart1">
-        <div
-          style={{
-            width: "100%",
-            height: "10vh",
-            backgroundColor: "#1e90ff",
-            marginBottom: "50px",
-            borderBottom: "10px solid rgb(39, 78, 160)",
-          }}
-        ></div>
+        <div className="flowchart-header">
+          <HeaderMenu />
+        </div>
         <Typography variant="h4">CSI CSC Prerequisites Flowchart</Typography>
         <Typography variant="h4">
           Applies to Fall 2021 - Spring 2022 Major Catalog

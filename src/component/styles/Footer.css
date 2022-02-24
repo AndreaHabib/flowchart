@@ -1,0 +1,30 @@
+.footer1 {
+  border-top: 10px solid rgb(39, 78, 160);
+  background-color: #1e90ff;
+}
+
+.footer2 {
+  border-top: 10px solid rgb(204, 123, 17);
+  background-color: #f4a460;
+}
+
+.footer3 {
+  border-top: 10px solid rgb(0, 158, 96);
+  background-color: #32cd32;
+}
+
+.footer4 {
+  border-top: 10px solid rgb(75, 0, 130);
+  background-color: #663399;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  color: white;
+}

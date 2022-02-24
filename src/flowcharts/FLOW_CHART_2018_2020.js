@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { useState, useCallback } from "react";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 import elements from "./elements/Flowchart3";
+import HeaderMenu from "../component/HeaderMenu";
 import "./styles/Flowchart2.css";
 import {
   Typography,
@@ -46,18 +47,9 @@ export default function FLOW_CHART_2018_2020() {
   return (
     <Fragment>
       <div className="flowchart2">
-        <div
-          style={{
-            width: "100%",
-            height: "10vh",
-            backgroundColor: "#F4A460",
-            marginBottom: "50px",
-            borderBottom: "10px solid rgb(204, 123, 17)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        ></div>
+        <div className="flowchart-header">
+          <HeaderMenu />
+        </div>
         <Typography variant="h4">CSI CSC Prerequisites Flowchart</Typography>
         <Typography variant="h4">
           Applies to Fall 2018 - Spring 2019, Fall 2019 - Spring 2020

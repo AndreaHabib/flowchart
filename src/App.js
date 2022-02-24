@@ -12,14 +12,12 @@ import FLOW_CHART_2021_2022 from "./flowcharts/FLOW_CHART_2021_2022";
 import FLOW_CHART_2013_2018 from "./flowcharts/FLOW_CHART_2013_2018";
 import FLOW_CHART_2020_2021 from "./flowcharts/FLOW_CHART_2020_2021";
 import Home from "./pages/Home";
-import HeaderMenu from "./component/HeaderMenu";
 import Footer from "./component/Footer";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <HeaderMenu />
         <Routes>
           <Route
             path="flowchart-cat2018-2020"

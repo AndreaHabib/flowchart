@@ -4,6 +4,7 @@ import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 import elements from "./elements/Flowchart2";
 import { green } from "@mui/material/colors";
 import "./styles/Flowchart3.css";
+import HeaderMenu from "../component/HeaderMenu";
 import {
   Typography,
   Box,
@@ -48,15 +49,9 @@ export default function FLOW_CHART_2013_2018() {
   return (
     <Fragment>
       <div className="flowchart3">
-        <div
-          style={{
-            width: "100%",
-            height: "10vh",
-            backgroundColor: "#32cd32",
-            marginBottom: "50px",
-            borderBottom: "10px solid rgb(0,158,96)",
-          }}
-        ></div>
+        <div className="flowchart-header">
+          <HeaderMenu />
+        </div>
         <Typography variant="h4">CSI CSC Prerequisites Flowchart</Typography>
         <Typography variant="h4">
           Applies to Fall 2013 - Spring 2014 through Fall 2017 - Spring 2018

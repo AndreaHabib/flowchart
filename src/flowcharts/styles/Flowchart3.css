@@ -19,13 +19,13 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.flowchart3 .footer {
-  border-top: 10px solid rgb(0, 158, 96);
+.flowchart3 .flowchart-header {
+  width: 100%;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 18px;
-  color: white;
+  margin-bottom: 50px;
   background-color: #32cd32;
+  border-bottom: 10px solid rgb(0, 158, 96);
 }
