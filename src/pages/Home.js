@@ -45,9 +45,6 @@ export default function Home() {
             Select your prerequisite flowchart from the menu below based on your
             catalog year obtained in step 1.
           </Typography>
-        </Alert>
-        <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
-          <Typography variant="h6">Step 3:</Typography>
           <Typography mb={3} variant="body1">
             You will select your classes using two tools: your catalog flowchart
             and DegreeWorks
@@ -55,15 +52,14 @@ export default function Home() {
           <List>
             <ListItem>
               <Typography variant="body1">
-                1. You will use your flowchart for the suggest order in which
+                1. You will use your flowchart for the suggested order in which
                 major requirements should be taken.
               </Typography>
             </ListItem>
             <ListItem>
               <Typography variant="body1">
-                2. You will use your DegreeWorks to what requiremenst you have
-                completed/are completing and have left to complete by checking
-                your degree audit.
+                2. You will use DegreeWorks to determine what requiremenst you
+                have left to complete.
               </Typography>
             </ListItem>
           </List>
