@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   MenuItem,
   Button,
@@ -7,12 +7,11 @@ import {
   DialogActions,
   Dialog,
 } from "@mui/material";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./styles/HeaderMenu.css";
 
 export default function HeaderMenu() {
   const navigate = useNavigate();
-  const location = useLocation();
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {

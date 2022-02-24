@@ -28,7 +28,7 @@ const style = {
 
 const purple = deepPurple["700"];
 
-export default function FLOW_CHART_2020_2021() {
+export default function FLOW_CHART_2020_2021(props) {
   const [elements_flow, setElements] = useState(elements);
   const [reactflowInstance, setReactflowInstance] = useState(null);
 
@@ -109,7 +109,7 @@ export default function FLOW_CHART_2020_2021() {
           ]}
           onLoad={onLoad}
           style={style}
-          defaultPosition={[100, 100]}
+          defaultPosition={[props.x, props.y]}
           onlyRenderVisibleElements={true}
           arrowHeadColor="black"
           paneMoveable={true}

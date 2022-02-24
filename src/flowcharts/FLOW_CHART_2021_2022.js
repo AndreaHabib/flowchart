@@ -25,7 +25,7 @@ const style = {
   height: "75vh",
 };
 
-export default function FLOW_CHART_2021_2022() {
+export default function FLOW_CHART_2021_2022(props) {
   const [elements_flow, setElements] = useState(elements);
   const [reactflowInstance, setReactflowInstance] = useState(null);
 
@@ -106,7 +106,7 @@ export default function FLOW_CHART_2021_2022() {
           ]}
           onLoad={onLoad}
           style={style}
-          defaultPosition={[100, 100]}
+          defaultPosition={[props.x, props.y]}
           onlyRenderVisibleElements={true}
           arrowHeadColor="black"
           paneMoveable={true}

@@ -20,7 +20,6 @@ import {
 } from "@mui/material";
 import { SwitchPrereq } from "./switches/SwitchPrereq2";
 import WarningAmber from "@mui/icons-material/WarningAmber";
-
 const style = {
   width: "97%",
   height: "75vh",
@@ -28,7 +27,7 @@ const style = {
 
 const lightGreen = green["500"];
 
-export default function FLOW_CHART_2013_2018() {
+export default function FLOW_CHART_2013_2018(props) {
   const [elements_flow, setElements] = useState(elements);
   const [reactflowInstance, setReactflowInstance] = useState(null);
 
@@ -46,6 +45,7 @@ export default function FLOW_CHART_2013_2018() {
     SwitchPrereq(updateElements, element);
     setElements(updateElements);
   }, []);
+
   return (
     <Fragment>
       <div className="flowchart3">
@@ -98,7 +98,7 @@ export default function FLOW_CHART_2013_2018() {
           ]}
           onLoad={onLoad}
           style={style}
-          defaultPosition={[window.innerWidth / 2 - 300, 100]}
+          defaultPosition={[props.x, props.y]}
           onlyRenderVisibleElements={true}
           arrowHeadColor="black"
           paneMoveable={true}
@@ -149,6 +149,7 @@ export default function FLOW_CHART_2013_2018() {
           >
             Pathway Checklist 2013-2018 Catalog
           </Button>
+          {/* ooga booga - g */}
           <Button
             target="_blank"
             component="a"
