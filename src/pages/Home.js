@@ -9,9 +9,9 @@ export default function Home() {
           <Typography variant="h6">CS Advisement toolkit</Typography>
           <Typography variant="body1">
             This toolkit is designed to assist students in the process of course
-            selection and planning. You will use Degreeworks, a pathway
-            checklist and a prerequisite flowchart to see which CSC courses are
-            required and for which you are eligible.
+            selection and planning. You will use Degreeworks, and a prerequisite
+            flowchart to see which CSC courses are required and for which you
+            are eligible. Please follow the steps below to get started.
           </Typography>
         </Alert>
         <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
@@ -21,13 +21,13 @@ export default function Home() {
             you understand the required CSC curriculum and their prerequisites.
           </Typography>
         </Alert>
-        <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
+        {/* <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
           <Typography variant="h6">What is a checklist?</Typography>
           <Typography variant="body1">
             A checklist is a list of required courses that you must take and
             complete according to your CSC catalog year.
           </Typography>
-        </Alert>
+        </Alert> */}
         <Alert variant="outlined" severity="info">
           <Typography variant="h6">
             How to find your respective prerequisite flowchart:

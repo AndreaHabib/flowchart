@@ -14,6 +14,8 @@ import {
   Stack,
   Chip,
   Alert,
+  List,
+  ListItem,
 } from "@mui/material";
 import { SwitchPrereq } from "./switches/SwitchPrereq1";
 import WarningAmber from "@mui/icons-material/WarningAmber";
@@ -61,30 +63,35 @@ export default function FLOW_CHART_2020_2021() {
         </Typography>
         <Stack mt={2} sx={{ width: "80%", textAlign: "left" }} spacing={2}>
           <Alert variant="outlined" severity="info">
-            It is recommended to view this flowchart on a laptop or desktop for
-            the best experience.
-          </Alert>
-          <Alert variant="outlined" severity="info">
-            The flowchart is based on the official CS curriculum at CSI{" "}
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              href="https://csicuny.smartcatalogiq.com/2020-2021/Undergraduate-Catalog"
-            >
-              Fall 2020 - Spring 2021 Catalog
-            </a>
-          </Alert>
-          <Alert variant="outlined" severity="info">
-            You can drag the flowchart using your mouse to view all of classes,
-            especially when you are on the phone!
-          </Alert>
-          <Alert variant="outlined" severity="info">
-            You can also click on any of the classes to view the prerequisites.
-          </Alert>
-          <Alert variant="outlined" severity="info">
-            To view the description of any of the classes on the flowchart, you
-            can find a list of all the classes below the flowchart where you can
-            see the description of each individual class.
+            <List>
+              <ListItem>
+                It is recommended to view this flowchart on a laptop or desktop
+                for the best experience.
+              </ListItem>
+              <ListItem>
+                The flowchart is based on the official CS curriculum at CSI{" "}
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href="https://csicuny.smartcatalogiq.com/2020-2021/Undergraduate-Catalog"
+                >
+                  Fall 2020 - Spring 2021 Catalog
+                </a>
+              </ListItem>
+              <ListItem>
+                You can drag the flowchart using your mouse to view all of
+                classes, especially when you are on the phone!
+              </ListItem>
+              <ListItem>
+                You can also click on any of the classes to view the
+                prerequisites.
+              </ListItem>
+              <ListItem>
+                To view the description of any of the classes on the flowchart,
+                you can find a list of all the classes below the flowchart where
+                you can see the description of each individual class.
+              </ListItem>
+            </List>
           </Alert>
           <Alert variant="outlined" severity="error">
             * 8-10 CSC elective credits; this consists of either two
@@ -751,14 +758,6 @@ export default function FLOW_CHART_2020_2021() {
             </Grid>
           </Grid>
         </Box>
-        <footer className="footer">
-          <Typography variant="h6">
-            CUNY2X - CSI Computer Science Department
-          </Typography>
-          <Typography variant="h6">
-            This is intended to be used only as a guide.
-          </Typography>
-        </footer>
       </div>
     </Fragment>
   );

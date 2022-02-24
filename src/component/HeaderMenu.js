@@ -3,7 +3,6 @@ import {
   MenuItem,
   Button,
   DialogContent,
-  DialogContentText,
   DialogTitle,
   DialogActions,
   Dialog,
@@ -37,7 +36,7 @@ export default function HeaderMenu() {
       style={{
         position: "absolute",
         zIndex: "1",
-        width: "100%",
+        width: "100vw",
         height: "10vh",
         marginBottom: "50px",
         display: "flex",
@@ -54,7 +53,7 @@ export default function HeaderMenu() {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClickOpen}
       >
-        Click here to select Prereq Flowchart/Checklist
+        Click here to select Prereq Flowchart
       </Button>
       <Dialog
         scroll="paper"
@@ -68,10 +67,10 @@ export default function HeaderMenu() {
           <Button onClick={handleHome}>Home</Button>
         </DialogActions>
         <DialogTitle id="form-dialog-title">
-          Select Prereq Flowchart/Checklist
+          Select Prereq Flowchart
         </DialogTitle>
         <DialogContent>
-          <DialogContentText>Select Prerequisite Flowchart</DialogContentText>
+          {/* <DialogContentText>Select Prerequisite Flowchart</DialogContentText> */}
           <MenuItem onClick={() => handleNavigate("flowchart-cat2013-2018")}>
             Flowchart 2013-2018
           </MenuItem>
@@ -87,7 +86,7 @@ export default function HeaderMenu() {
           <MenuItem onClick={() => handleNavigate("flowchart-cat2021-2022")}>
             Flowchart 2021-2022
           </MenuItem>
-          <DialogContentText>Select Checklist</DialogContentText>
+          {/* <DialogContentText>Select Checklist</DialogContentText>
           <MenuItem
             rel="noopener noreferrer"
             target="_blank"
@@ -127,7 +126,7 @@ export default function HeaderMenu() {
             href="http://www.cs.csi.cuny.edu/content/CSC_BS_Pathways_checklist_2021-22-major-catalog.pdf"
           >
             Checklist 2021-2022
-          </MenuItem>
+          </MenuItem> */}
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Close</Button>

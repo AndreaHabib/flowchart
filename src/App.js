@@ -13,6 +13,7 @@ import FLOW_CHART_2013_2018 from "./flowcharts/FLOW_CHART_2013_2018";
 import FLOW_CHART_2020_2021 from "./flowcharts/FLOW_CHART_2020_2021";
 import Home from "./pages/Home";
 import HeaderMenu from "./component/HeaderMenu";
+import Footer from "./component/Footer";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           />
           <Route path="*" element={<Home />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

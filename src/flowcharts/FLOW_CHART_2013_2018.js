@@ -14,6 +14,8 @@ import {
   Stack,
   Chip,
   Alert,
+  List,
+  ListItem,
 } from "@mui/material";
 import { SwitchPrereq } from "./switches/SwitchPrereq2";
 import WarningAmber from "@mui/icons-material/WarningAmber";
@@ -62,21 +64,21 @@ export default function FLOW_CHART_2013_2018() {
         </Typography>
         <Stack mt={2} sx={{ width: "85%", textAlign: "left" }} spacing={2}>
           <Alert variant="outlined" severity="info">
-            <ul>
-              <li>
+            <List>
+              <ListItem>
                 It is recommended to view this flowchart on a laptop or desktop
                 for the best experience.
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
                 You can drag the flowchart using your mouse to view all of
                 classes, especially when you are on the phone!
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
                 To view the description of any of the classes on the flowchart,
                 you can find a list of all the classes below the flowchart where
                 you can see the description of each individual class.
-              </li>
-            </ul>
+              </ListItem>
+            </List>
           </Alert>
           <Alert variant="outlined" severity="error">
             * 12-14 CSC elective credits; this consists of either three
@@ -747,14 +749,6 @@ export default function FLOW_CHART_2013_2018() {
             </Grid>
           </Grid>
         </Box>
-        <footer className="footer">
-          <Typography variant="h6">
-            CUNY2X - CSI Computer Science Department
-          </Typography>
-          <Typography variant="h6">
-            This is intended to be used only as a guide.
-          </Typography>
-        </footer>
       </div>
     </Fragment>
   );
