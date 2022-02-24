@@ -61,14 +61,16 @@ export default function FLOW_CHART_2021_2022() {
                 for the best experience.
               </ListItem>
               <ListItem>
-                The flowchart is based on the official CS curriculum at CSI
-                <a
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  href="https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
-                >
-                  Fall 2021 - Spring 2022 Catalog.
-                </a>
+                <Typography variant="body2">
+                  The flowchart is based on the official CS curriculum at CSI{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    href="https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
+                  >
+                    Fall 2021 - Spring 2022 Catalog.
+                  </a>
+                </Typography>
               </ListItem>
               <ListItem>
                 You can drag the flowchart using your mouse to view all of

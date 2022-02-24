@@ -98,7 +98,7 @@ export default function FLOW_CHART_2013_2018() {
           ]}
           onLoad={onLoad}
           style={style}
-          defaultPosition={[window.innerWidth / 2 - 50, 100]}
+          defaultPosition={[window.innerWidth / 2 - 300, 100]}
           onlyRenderVisibleElements={true}
           arrowHeadColor="black"
           paneMoveable={true}

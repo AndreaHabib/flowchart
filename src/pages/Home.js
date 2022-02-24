@@ -59,7 +59,7 @@ export default function Home() {
             </ListItem>
             <ListItem>
               <Typography variant="body1">
-                2. You will use DegreeWorks to determine what requiremenst you
+                2. You will use DegreeWorks to determine what requirements you
                 have left to complete.
               </Typography>
             </ListItem>
