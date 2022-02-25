@@ -3,6 +3,7 @@ import { Chip, Paper, ListItem, Typography } from "@mui/material";
 import "./styles/Legend.css";
 
 export default function Legend() {
+  // eslint-disable-next-line
   const [chipData, setChipData] = React.useState([
     { key: 0, label: "CSC126", color: "#03C03C" },
     { key: 1, label: "Any MTH", color: "#dc143c" },
