@@ -70,6 +70,10 @@ export default function FLOW_CHART_2013_2018(props) {
                 classes, especially when you are on the phone!
               </ListItem>
               <ListItem>
+                You can also click on any of the classes to view the
+                prerequisites. The colors are for grouping purposes only.
+              </ListItem>
+              <ListItem>
                 To view the description of any of the classes on the flowchart,
                 you can find a list of all the classes below the flowchart where
                 you can see the description of each individual class.

@@ -18,6 +18,11 @@
   background-color: #663399;
 }
 
+.footer {
+  border-top: 10px solid rgb(172, 12, 7);
+  background-color: #cd4932;
+}
+
 footer {
   display: flex;
   width: 100%;

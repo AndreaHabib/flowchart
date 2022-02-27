@@ -16,6 +16,8 @@ export default function Footer() {
       setClassName("footer4");
     } else if (location.pathname === "/flowchart-cat2021-2022") {
       setClassName("footer1");
+    } else {
+      setClassName("footer");
     }
   }, [location]);
 

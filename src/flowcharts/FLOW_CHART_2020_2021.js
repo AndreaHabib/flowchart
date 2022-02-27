@@ -82,7 +82,7 @@ export default function FLOW_CHART_2020_2021(props) {
               </ListItem>
               <ListItem>
                 You can also click on any of the classes to view the
-                prerequisites.
+                prerequisites. The colors are for grouping purposes only.
               </ListItem>
               <ListItem>
                 To view the description of any of the classes on the flowchart,
