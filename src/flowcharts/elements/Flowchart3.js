@@ -246,19 +246,6 @@ const elements = [
     position: { x: window.innerWidth / 2 - 250, y: -70 },
   },
   {
-    id: "guide",
-    type: "input",
-    data: {
-      label: `The colors are grouping purposes only`,
-    },
-    targetPosition: "bottom",
-    sourcePosition: "bottom",
-    style: {
-      backgroundColor: "white",
-    },
-    position: { x: window.innerWidth / 2 - 50, y: 0 },
-  },
-  {
     id: "note",
     type: "output",
     data: {

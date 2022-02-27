@@ -14,9 +14,9 @@ export default function Home() {
   return (
     <Fragment>
       <Stack mb={5} mt={4} sx={{ width: "90%" }} spacing={2}>
-        <Alert variant="outlined" severity="info">
-          <Typography variant="h6">CS Advisement toolkit</Typography>
-          <Typography variant="body1">
+        <Alert variant="filled" severity="info">
+          <Typography variant="h4">CS Advisement toolkit</Typography>
+          <Typography variant="h6">
             This toolkit is designed to assist students in the process of course
             selection and planning. You will use Degreeworks, and a prerequisite
             flowchart to see which CSC courses are required and for which you
