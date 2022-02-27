@@ -5,8 +5,8 @@ import "./styles/Legend.css";
 export default function Legend() {
   // eslint-disable-next-line
   const [chipData, setChipData] = React.useState([
-    { key: 0, label: "Any CSC", color: "#007FFF" },
-    { key: 1, label: "Any MTH", color: "#dc143c" },
+    { key: 0, label: "Any Computer Science (CSC)", color: "#007FFF" },
+    { key: 1, label: "Any Math (MTH)", color: "#dc143c" },
   ]);
   return (
     <Fragment>
