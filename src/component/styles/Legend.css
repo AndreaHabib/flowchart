@@ -1,3 +1,8 @@
 .legend .css-1p823my-MuiListItem-root {
   width: auto !important;
 }
+
+.legend .css-3po0y5-MuiChip-root .MuiChip-avatar {
+  width: 50px !important;
+  height: 50px !important;
+}
