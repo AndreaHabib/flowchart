@@ -98,7 +98,7 @@ export default function FLOW_CHART_2021_2022(props) {
             are pre-requisites to other CSC courses.
           </Alert>
         </Stack>
-        <Legend />
+        <Legend color="#1e90ff" />
         <ReactFlow
           onElementClick={onClickElement}
           preventScrolling={false}

@@ -94,7 +94,7 @@ export default function FLOW_CHART_2013_2018(props) {
             dept. chairperson.
           </Alert>
         </Stack>
-        <Legend />
+        <Legend color="#32cd32" />
         <ReactFlow
           onElementClick={onClickElement}
           preventScrolling={false}

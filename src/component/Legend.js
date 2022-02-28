@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Chip, Paper, ListItem, Typography, Avatar } from "@mui/material";
 import "./styles/Legend.css";
 
-export default function Legend() {
+export default function Legend(props) {
   // eslint-disable-next-line
   const [chipData, setChipData] = React.useState([
     { key: 0, label: "Any Computer Science (CSC)", color: "#007FFF" },
@@ -14,7 +14,7 @@ export default function Legend() {
     {
       key: 0,
       label: "Prereq",
-      color: "#ff4500",
+      color: props.color,
       description:
         "Prerequisite - A course that must be taken before enrolling to the next course.",
       img: "https://res.cloudinary.com/andreahabib/image/upload/v1645988898/prereq_hmtde4.png",
@@ -22,7 +22,7 @@ export default function Legend() {
     {
       key: 1,
       label: "Coreq",
-      color: "#ff4500",
+      color: props.color,
       description: "Corequisite - Has to be taken same semester",
       img: "https://res.cloudinary.com/andreahabib/image/upload/v1645988898/Untitled_design_qekgom.png",
     },
