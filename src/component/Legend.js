@@ -15,8 +15,10 @@ export default function Legend(props) {
       key: 0,
       label: "Prereq",
       color: props.color,
-      description:
-        "Prerequisite - A course that must be taken before enrolling to the next course.",
+      description: `
+      Prerequisite - A course that must be taken
+      before enrolling to the next course.
+      `,
       img: "https://res.cloudinary.com/andreahabib/image/upload/v1645988898/prereq_hmtde4.png",
     },
     {
@@ -76,11 +78,15 @@ export default function Legend(props) {
                 size="medium"
                 avatar={<Avatar alt={data.title} src={data.img} />}
                 sx={{
-                  height: "56px",
+                  height: { xs: "100px", sm: "56px", md: "56px", lg: "56px" },
                   color: "white",
                   background: data.color,
                 }}
-                label={data.description}
+                label={
+                  <Typography style={{ whiteSpace: "normal" }}>
+                    {data.description}
+                  </Typography>
+                }
               />
             </ListItem>
           );
