@@ -130,4 +130,169 @@ const cscClasses = [
   },
 ];
 
-module.exports = { mathClasses, cscClasses };
+const cscElectives = [
+  {
+    key: 0,
+    tooltip: "Computer Hacking Revealed",
+    label: "CSC 223",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-223",
+  },
+  {
+    key: 1,
+    tooltip: "Introduction to Web Development and the Internet",
+    label: "CSC 225",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-225",
+  },
+  {
+    key: 2,
+    tooltip: "Web Database Applications",
+    label: "CSC 226",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-226",
+  },
+  {
+    key: 3,
+    tooltip: "Introductory Computer Game Programming",
+    label: "CSC 227",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-227",
+  },
+  {
+    key: 4,
+    tooltip: "Introduction to High Performance Computing",
+    label: "CSC 229",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-229",
+  },
+  {
+    key: 5,
+    tooltip: "Robotic Explorations",
+    label: "CSC 235",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-235",
+  },
+  {
+    key: 6,
+    tooltip: "Introduction to Data Science",
+    label: "CSC 245",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-245",
+  },
+  {
+    key: 7,
+    tooltip: "Serious Game Development",
+    label: "CSC 250",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-250",
+  },
+  {
+    key: 8,
+    tooltip: "Machine Learning and Knowledge Discovery",
+    label: "CSC 412",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-412",
+  },
+  {
+    key: 9,
+    tooltip: "Concepts of Programming Languages",
+    label: "CSC 420",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-420",
+  },
+  {
+    key: 10,
+    tooltip: "Internet Data Communications",
+    label: "CSC 421",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-421",
+  },
+  {
+    key: 11,
+    tooltip: "Advanced Database Management Systems",
+    label: "CSC 424",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-424",
+  },
+  {
+    key: 12,
+    tooltip: "Shared Memory Parallel Computing",
+    label: "CSC 425",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-425",
+  },
+  {
+    key: 13,
+    tooltip: "Applied Cryptography",
+    label: "CSC 426",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-426",
+  },
+  {
+    key: 14,
+    tooltip: "Advanced Computer Game Programming",
+    label: "CSC 427",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-427",
+  },
+  {
+    key: 15,
+    tooltip: "Advanced High Performance Computing",
+    label: "CSC 429",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-429",
+  },
+  {
+    key: 16,
+    tooltip: "Operating Systems II",
+    label: "CSC 432",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-432",
+  },
+  {
+    key: 17,
+    tooltip: "Compiler Construction",
+    label: "CSC 434",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-434",
+  },
+  {
+    key: 18,
+    tooltip: "Advanced Data Communications",
+    label: "CSC 435",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-435",
+  },
+  {
+    key: 19,
+    tooltip: "Modern Web Development",
+    label: "CSC 436",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-436",
+  },
+  {
+    key: 20,
+    tooltip: "Mobile Application Development",
+    label: "CSC 438",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-438",
+  },
+  {
+    key: 21,
+    tooltip: "Microcontrollers",
+    label: "CSC 462",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-462",
+  },
+  {
+    key: 22,
+    tooltip: "Introductory Computer Graphics",
+    label: "CSC 470",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-470",
+  },
+  {
+    key: 23,
+    tooltip: "Image Processing in Computer Science",
+    label: "CSC 475",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-475",
+  },
+  {
+    key: 24,
+    tooltip: "Artificial Intelligence",
+    label: "CSC 480",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-480",
+  },
+  {
+    key: 25,
+    tooltip: "Discrete Simulation",
+    label: "CSC 482",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-482",
+  },
+  {
+    key: 26,
+    tooltip: "Theory of Computation",
+    label: "CSC 484",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-484",
+  },
+];
+
+module.exports = { mathClasses, cscClasses, cscElectives };

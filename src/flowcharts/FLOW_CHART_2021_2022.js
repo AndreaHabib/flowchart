@@ -4,7 +4,7 @@ import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 import elements from "./elements/Flowchart1";
 import "./styles/Flowchart1.css";
 import HeaderMenu from "../component/HeaderMenu";
-import { mathClasses, cscClasses } from "./classes/Classes";
+import { mathClasses, cscClasses, cscElectives } from "./classes/Classes";
 import Legend from "../component/Legend";
 import {
   Typography,
@@ -404,70 +404,19 @@ export default function FLOW_CHART_2021_2022(props) {
                     }}
                     spacing={1}
                   >
-                    <Chip
-                      clickable
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-223"
-                      component="a"
-                      label="CSC 223"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-225"
-                      component="a"
-                      clickable
-                      label="CSC 225"
-                    />
-                    <Chip
-                      clickable
-                      label="CSC 226"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-226"
-                      component="a"
-                    />
-                    <Chip
-                      clickable
-                      label="CSC 227"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-227"
-                      component="a"
-                    />
-                    <Chip
-                      clickable
-                      label="CSC 229"
-                      rel="noreferrer noopener"
-                      target="_blank"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-229"
-                      component="a"
-                    />
-                    <Chip
-                      clickable
-                      label="CSC 235"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-235"
-                      component="a"
-                    />
-                    <Chip
-                      clickable
-                      label="CSC 245"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-245"
-                      component="a"
-                    />
-                    <Chip
-                      clickable
-                      label="CSC 250"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-250"
-                      component="a"
-                    />
+                    {cscElectives.slice(0, 8).map((csc_class) => (
+                      <Tooltip title={csc_class.tooltip} placement="top">
+                        <Chip
+                          clickable
+                          component="a"
+                          key={csc_class.key}
+                          label={csc_class.label}
+                          href={csc_class.url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        />
+                      </Tooltip>
+                    ))}
                   </Stack>
                   <Stack
                     justifyContent="center"
@@ -481,70 +430,19 @@ export default function FLOW_CHART_2021_2022(props) {
                     }}
                     spacing={1}
                   >
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-412"
-                      clickable
-                      label="CSC 412"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-420"
-                      clickable
-                      label="CSC 420"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-424"
-                      clickable
-                      label="CSC 424"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-421"
-                      clickable
-                      label="CSC 421"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-425"
-                      clickable
-                      label="CSC 425"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-426"
-                      clickable
-                      label="CSC 426"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-427"
-                      clickable
-                      label="CSC 427"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-429"
-                      clickable
-                      label="CSC 429"
-                      component="a"
-                    />
+                    {cscElectives.slice(8, 16).map((csc_class) => (
+                      <Tooltip title={csc_class.tooltip} placement="top">
+                        <Chip
+                          clickable
+                          component="a"
+                          key={csc_class.key}
+                          label={csc_class.label}
+                          href={csc_class.url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        />
+                      </Tooltip>
+                    ))}
                   </Stack>
                   <Stack
                     justifyContent="center"
@@ -558,94 +456,19 @@ export default function FLOW_CHART_2021_2022(props) {
                     }}
                     spacing={1}
                   >
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-432"
-                      clickable
-                      label="CSC 432"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-434"
-                      clickable
-                      label="CSC 434"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-435"
-                      clickable
-                      label="CSC 435"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-436"
-                      clickable
-                      label="CSC 436"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-438"
-                      clickable
-                      label="CSC 438"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-462"
-                      clickable
-                      label="CSC 462"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-470"
-                      clickable
-                      label="CSC 470"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-475"
-                      clickable
-                      label="CSC 475"
-                      component="a"
-                    />
-                    <Chip
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-480"
-                      clickable
-                      label="CSC 480"
-                      component="a"
-                    />
-                    <Chip
-                      rel="noreferrer noopener"
-                      target="_blank"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-482"
-                      clickable
-                      label="CSC 482"
-                      component="a"
-                    />
-                    <Chip
-                      rel="noreferrer noopener"
-                      target="_blank"
-                      href="https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-484"
-                      clickable
-                      label="CSC 484"
-                      component="a"
-                    />
+                    {cscElectives.slice(16).map((csc_class) => (
+                      <Tooltip title={csc_class.tooltip} placement="top">
+                        <Chip
+                          clickable
+                          component="a"
+                          key={csc_class.key}
+                          label={csc_class.label}
+                          href={csc_class.url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        />
+                      </Tooltip>
+                    ))}
                   </Stack>
                 </CardContent>
               </Card>
