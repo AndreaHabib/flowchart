@@ -29,3 +29,7 @@
   background-color: #f4a460;
   border-bottom: 10px solid rgb(204, 123, 17);
 }
+
+.flowchart2 .MuiListItem-root {
+  width: auto !important;
+}

@@ -1,34 +1,51 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Chip, Paper, ListItem, Typography, Avatar } from "@mui/material";
 import "./styles/Legend.css";
 
-export default function Legend(props) {
+export default function Legend() {
+  const location = useLocation();
+
+  const [arrows, setArrows] = React.useState([]);
+
   // eslint-disable-next-line
   const [chipData, setChipData] = React.useState([
     { key: 0, label: "Any Computer Science (CSC)", color: "#007FFF" },
     { key: 1, label: "Any Math (MTH)", color: "#dc143c" },
   ]);
 
-  // eslint-disable-next-line
-  const [arrows, setArrows] = React.useState([
-    {
-      key: 0,
-      label: "Prereq",
-      color: props.color,
-      description: `
-      Prerequisite - A course that must be taken
-      before enrolling to the next course.
-      `,
-      img: "https://res.cloudinary.com/andreahabib/image/upload/v1645988898/prereq_hmtde4.png",
-    },
-    {
-      key: 1,
-      label: "Coreq",
-      color: props.color,
-      description: "Corequisite - Has to be taken same semester",
-      img: "https://res.cloudinary.com/andreahabib/image/upload/v1645988898/Untitled_design_qekgom.png",
-    },
-  ]);
+  useEffect(() => {
+    let color = "";
+    if (location.pathname === "/flowchart-cat2013-2018") {
+      color = "#32cd32";
+    } else if (location.pathname === "/flowchart-cat2018-2020") {
+      color = "#f4a460";
+    } else if (location.pathname === "/flowchart-cat2020-2021") {
+      color = "#663399";
+    } else if (location.pathname === "/flowchart-cat2021-2022") {
+      color = "#1e90ff";
+    }
+    setArrows([
+      {
+        key: 0,
+        label: "Prereq",
+        color: color,
+        description: `
+        Prerequisite - A course that must be taken
+        before enrolling to the next course.
+        `,
+        img: "https://res.cloudinary.com/andreahabib/image/upload/v1645988898/prereq_hmtde4.png",
+      },
+      {
+        key: 1,
+        label: "Coreq",
+        color: color,
+        description: "Corequisite - Has to be taken same semester",
+        img: "https://res.cloudinary.com/andreahabib/image/upload/v1645988898/Untitled_design_qekgom.png",
+      },
+    ]);
+  }, [location]);
+
   return (
     <Fragment>
       <Typography mt={3} variant="h6">
