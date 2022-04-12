@@ -14,6 +14,7 @@ import Footer from "./component/Footer";
 import { ThemeProvider } from "@emotion/react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import ScrollToTop from "./component/ScrollToTop";
 
 function App() {
   const theme = useTheme();
@@ -51,13 +52,14 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route
               path="flowchart-cat2018-2020"
               element={<FLOW_CHART x={x} y={y} />}
             />
             <Route
-              path="flowchart-cat2021-2022"
+              path="flowchart-cat2021-2023"
               element={<FLOW_CHART x={x} y={y} />}
             />
             <Route

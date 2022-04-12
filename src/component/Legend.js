@@ -22,7 +22,7 @@ export default function Legend() {
       color = "#f4a460";
     } else if (location.pathname === "/flowchart-cat2020-2021") {
       color = "#663399";
-    } else if (location.pathname === "/flowchart-cat2021-2022") {
+    } else if (location.pathname === "/flowchart-cat2021-2023") {
       color = "#1e90ff";
     }
     setArrows([

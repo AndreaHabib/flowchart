@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import "./styles/Footer.css";
-import { Typography } from "@mui/material";
+import { Typography, Link } from "@mui/material";
 import { useLocation } from "react-router-dom";
 
 export default function Footer() {
@@ -14,7 +14,7 @@ export default function Footer() {
       setClassName("footer2");
     } else if (location.pathname === "/flowchart-cat2020-2021") {
       setClassName("footer4");
-    } else if (location.pathname === "/flowchart-cat2021-2022") {
+    } else if (location.pathname === "/flowchart-cat2021-2023") {
       setClassName("footer1");
     } else {
       setClassName("footer");
@@ -30,6 +30,9 @@ export default function Footer() {
         <Typography variant="h6">
           This is intended to be used only as a guide.
         </Typography>
+        <Link color="inherit" href="https://andreahabib.netlify.app/">
+          By Andrea Habib
+        </Link>
       </footer>
     </Fragment>
   );

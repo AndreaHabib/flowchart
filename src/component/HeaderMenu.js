@@ -72,8 +72,11 @@ export default function HeaderMenu() {
           <MenuItem onClick={() => handleNavigate("flowchart-cat2020-2021")}>
             Flowchart 2020-2021
           </MenuItem>
-          <MenuItem onClick={() => handleNavigate("flowchart-cat2021-2022")}>
+          <MenuItem onClick={() => handleNavigate("flowchart-cat2021-2023")}>
             Flowchart 2021-2022
+          </MenuItem>
+          <MenuItem onClick={() => handleNavigate("flowchart-cat2021-2023")}>
+            Flowchart 2022-2023
           </MenuItem>
         </DialogContent>
         <DialogActions>

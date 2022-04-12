@@ -118,15 +118,15 @@ export default function FLOW_CHART(props) {
       setTempElement(el1);
       setSwitchFun(() => sw1);
       setClassName("flowchart4");
-    } else if (location.pathname === "/flowchart-cat2021-2022") {
-      setYears("2021-2022");
+    } else if (location.pathname === "/flowchart-cat2021-2023") {
+      setYears("2021-2023");
       setPathway(
         "http://www.cs.csi.cuny.edu/content/CSC_BS_Pathways_checklist_2021-22-major-catalog.pdf"
       );
       setFlowchart(
         "https://drive.google.com/file/d/1TJcRvkwxBQTW5z38E1H0XHHXFASUT93L/view?usp=sharing"
       );
-      setTitle("Fall 2021 - Spring 2022");
+      setTitle("Fall 2021 - Spring 2022, Fall 2022 - Spring 2023");
       setWarningText([
         "* 12-14 CSC elective credits; this consists of either three 400-electives = 12 credits, or two 400-elective and two 200-electives = 14 credits. You may sub. one additional upper-level MTH course (beyond the two that you will take after MTH 232) for one 400-elective. This is limited to one instance.",
         "** You must earn a minimum “C” or higher grade in CSC courses which are pre-requisites to other CSC courses.",
