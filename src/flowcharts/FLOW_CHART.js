@@ -286,17 +286,6 @@ export default function FLOW_CHART(props) {
             sx={{ m: 0.5 }}
             style={{ background: color }}
             rel="noreferrer noopener"
-            href="https://www.mtu.edu/cs/undergraduate/advising/pdfs/blank-academic-plan.pdf"
-            variant="contained"
-          >
-            Blank Academic Planner by Michigan Tech
-          </Button>
-          <Button
-            target="_blank"
-            component="a"
-            sx={{ m: 0.5 }}
-            style={{ background: color }}
-            rel="noreferrer noopener"
             href="http://www.cs.csi.cuny.edu/content/Sample_cs_4_yr_degree-career-map.pdf"
             variant="contained"
           >
