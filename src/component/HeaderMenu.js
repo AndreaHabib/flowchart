@@ -78,6 +78,11 @@ export default function HeaderMenu() {
           <MenuItem onClick={() => handleNavigate("flowchart-cat2021-2023")}>
             Flowchart 2022-2023
           </MenuItem>
+          <MenuItem
+            onClick={() => handleNavigate("flowchart-aas-cat2022-2023")}
+          >
+            Associates (AAS) Flowchart 2022-2023
+          </MenuItem>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Close</Button>

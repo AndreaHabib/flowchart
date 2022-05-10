@@ -5,13 +5,16 @@ import { useLocation } from "react-router-dom";
 import { default as el1 } from "./elements/Flowchart1";
 import { default as el2 } from "./elements/Flowchart2";
 import { default as el3 } from "./elements/Flowchart3";
+import { default as el4 } from "./elements/Flowchart4";
 import { green } from "@mui/material/colors";
 import { deepPurple } from "@mui/material/colors";
+import { teal } from "@mui/material/colors";
 import Legend from "../component/Legend";
 import "./styles/Flowchart1.css";
 import "./styles/Flowchart2.css";
 import "./styles/Flowchart3.css";
 import "./styles/Flowchart4.css";
+import "./styles/Flowchart5.css";
 import { mathClasses, cscClasses, cscElectives } from "./classes/Classes";
 import HeaderMenu from "../component/HeaderMenu";
 import {
@@ -32,6 +35,7 @@ import {
 import { SwitchPrereq as sw1 } from "./switches/SwitchPrereq1";
 import { SwitchPrereq as sw2 } from "./switches/SwitchPrereq2";
 import { SwitchPrereq as sw3 } from "./switches/SwitchPrereq3";
+import { SwitchPrereq as sw4 } from "./switches/SwitchPrereq4";
 import WarningAmber from "@mui/icons-material/WarningAmber";
 
 const style = {
@@ -140,6 +144,24 @@ export default function FLOW_CHART(props) {
       setTempElement(el1);
       setSwitchFun(() => sw1);
       setClassName("flowchart1");
+    } else if (location.pathname === "/flowchart-aas-cat2022-2023") {
+      setYears("2022-2023");
+      setPathway("http://www.cs.csi.cuny.edu/content/checklist_aascs.pdf");
+      setFlowchart("");
+      setTitle("AAS Fall 2022 - Spring 2023");
+      setWarningText([
+        "~ depending on your grade in MTH 123, you may take MTH 130 next, or MTH 230 in place of MTH 231. ",
+        "You must earn a minimum “C” or higher grade in CSC courses which are pre-requisites to other CSC course",
+        "",
+      ]);
+      setUrl(
+        "http://csicuny.smartcatalogiq.com/en/current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Technology-AAS"
+      );
+      setColor(teal["500"]);
+      setElements(el4);
+      setTempElement(el4);
+      setSwitchFun(() => sw4);
+      setClassName("flowchart5");
     }
   }, [location]);
 
@@ -280,17 +302,6 @@ export default function FLOW_CHART(props) {
             Pathway Checklist {years} Catalog
           </Button>
           {/* ooga booga - g */}
-          <Button
-            target="_blank"
-            component="a"
-            sx={{ m: 0.5 }}
-            style={{ background: color }}
-            rel="noreferrer noopener"
-            href="https://www.mtu.edu/cs/undergraduate/advising/pdfs/blank-academic-plan.pdf"
-            variant="contained"
-          >
-            Blank Academic Planner by Michigan Tech
-          </Button>
           <Button
             target="_blank"
             component="a"
@@ -495,7 +506,11 @@ export default function FLOW_CHART(props) {
                 target="_blank"
                 component="a"
                 style={{ background: color }}
-                href="https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
+                href={
+                  location.pathname === "/flowchart-cat2013-2018"
+                    ? "https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
+                    : url
+                }
                 variant="contained"
               >
                 View CSC Catalog
