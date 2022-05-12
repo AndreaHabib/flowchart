@@ -314,6 +314,7 @@ export default function FLOW_CHART(props) {
             Sample Degree Milestone Map
           </Button>
           <Button
+            disabled={location.pathname === "/flowchart-aas-cat2022-2023"}
             target="_blank"
             component="a"
             sx={{ m: 0.5 }}
@@ -373,21 +374,24 @@ export default function FLOW_CHART(props) {
                     }}
                     component="ul"
                   >
-                    {mthChipData.slice(1).map((mth_class) => (
-                      <ListItem key={mth_class.key}>
-                        <Tooltip title={mth_class.tooltip} placement="top">
-                          <Chip
-                            clickable
-                            component="a"
-                            key={mth_class.key}
-                            label={mth_class.label}
-                            href={mth_class.url}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                          />
-                        </Tooltip>
-                      </ListItem>
-                    ))}
+                    {mthChipData.slice(1).map((mth_class) =>
+                      location.pathname === "/flowchart-aas-cat2022-2023" &&
+                      mth_class.label === "MTH 232" ? null : (
+                        <ListItem key={mth_class.key}>
+                          <Tooltip title={mth_class.tooltip} placement="top">
+                            <Chip
+                              clickable
+                              component="a"
+                              key={mth_class.key}
+                              label={mth_class.label}
+                              href={mth_class.url}
+                              target="_blank"
+                              rel="noreferrer noopener"
+                            />
+                          </Tooltip>
+                        </ListItem>
+                      )
+                    )}
                   </Paper>
                 </CardContent>
               </Card>
@@ -450,56 +454,65 @@ export default function FLOW_CHART(props) {
                     }}
                     component="ul"
                   >
-                    {cscChipData.slice(4, 12).map((csc_class) => (
-                      <Tooltip
-                        sx={{ m: 0.5 }}
-                        key={csc_class.key}
-                        title={csc_class.tooltip}
-                        placement="top"
-                      >
-                        <Chip
-                          clickable
-                          component="a"
+                    {cscChipData.slice(4, 12).map((csc_class) =>
+                      (location.pathname === "/flowchart-aas-cat2022-2023" &&
+                        csc_class.label === "CSC 346") ||
+                      csc_class.label === "CSC 347" ||
+                      csc_class.label === "CSC 382" ||
+                      csc_class.label === "CSC 315" ? null : (
+                        <Tooltip
+                          sx={{ m: 0.5 }}
                           key={csc_class.key}
-                          label={csc_class.label}
-                          href={csc_class.url}
-                          target="_blank"
-                          rel="noreferrer noopener"
-                        />
-                      </Tooltip>
-                    ))}
+                          title={csc_class.tooltip}
+                          placement="top"
+                        >
+                          <Chip
+                            clickable
+                            component="a"
+                            key={csc_class.key}
+                            label={csc_class.label}
+                            href={csc_class.url}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                          />
+                        </Tooltip>
+                      )
+                    )}
                   </Paper>
-                  <Paper
-                    elevation={0}
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                      listStyle: "none",
-                      p: 0.5,
-                      m: 0,
-                    }}
-                    component="ul"
-                  >
-                    {cscChipData.slice(12, 16).map((csc_class) => (
-                      <Tooltip
-                        sx={{ m: 0.5 }}
-                        key={csc_class.key}
-                        title={csc_class.tooltip}
-                        placement="top"
-                      >
-                        <Chip
-                          clickable
-                          component="a"
+                  {location.pathname ===
+                  "/flowchart-aas-cat2022-2023" ? null : (
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexWrap: "wrap",
+                        listStyle: "none",
+                        p: 0.5,
+                        m: 0,
+                      }}
+                      component="ul"
+                    >
+                      {cscChipData.slice(12, 16).map((csc_class) => (
+                        <Tooltip
+                          sx={{ m: 0.5 }}
                           key={csc_class.key}
-                          label={csc_class.label}
-                          href={csc_class.url}
-                          target="_blank"
-                          rel="noreferrer noopener"
-                        />
-                      </Tooltip>
-                    ))}
-                  </Paper>
+                          title={csc_class.tooltip}
+                          placement="top"
+                        >
+                          <Chip
+                            clickable
+                            component="a"
+                            key={csc_class.key}
+                            label={csc_class.label}
+                            href={csc_class.url}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                          />
+                        </Tooltip>
+                      ))}
+                    </Paper>
+                  )}
                 </CardContent>
               </Card>
               <Button
@@ -575,68 +588,74 @@ export default function FLOW_CHART(props) {
                       </Tooltip>
                     ))}
                   </Paper>
-                  <Paper
-                    elevation={0}
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                      listStyle: "none",
-                      p: 0.5,
-                      m: 0,
-                    }}
-                    component="ul"
-                  >
-                    {cscElectives.slice(8, 16).map((csc_class) => (
-                      <Tooltip
-                        sx={{ m: 0.5 }}
-                        key={csc_class.key}
-                        title={csc_class.tooltip}
-                        placement="top"
-                      >
-                        <Chip
-                          clickable
-                          component="a"
+                  {location.pathname ===
+                  "/flowchart-aas-cat2022-2023" ? null : (
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexWrap: "wrap",
+                        listStyle: "none",
+                        p: 0.5,
+                        m: 0,
+                      }}
+                      component="ul"
+                    >
+                      {cscElectives.slice(8, 16).map((csc_class) => (
+                        <Tooltip
+                          sx={{ m: 0.5 }}
                           key={csc_class.key}
-                          label={csc_class.label}
-                          href={csc_class.url}
-                          target="_blank"
-                          rel="noreferrer noopener"
-                        />
-                      </Tooltip>
-                    ))}
-                  </Paper>
-                  <Paper
-                    elevation={0}
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                      listStyle: "none",
-                      p: 0.5,
-                      m: 0,
-                    }}
-                    component="ul"
-                  >
-                    {cscElectives.slice(16).map((csc_class) => (
-                      <Tooltip
-                        sx={{ m: 0.5 }}
-                        key={csc_class.key}
-                        title={csc_class.tooltip}
-                        placement="top"
-                      >
-                        <Chip
-                          clickable
-                          component="a"
+                          title={csc_class.tooltip}
+                          placement="top"
+                        >
+                          <Chip
+                            clickable
+                            component="a"
+                            key={csc_class.key}
+                            label={csc_class.label}
+                            href={csc_class.url}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                          />
+                        </Tooltip>
+                      ))}
+                    </Paper>
+                  )}
+                  {location.pathname ===
+                  "/flowchart-aas-cat2022-2023" ? null : (
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexWrap: "wrap",
+                        listStyle: "none",
+                        p: 0.5,
+                        m: 0,
+                      }}
+                      component="ul"
+                    >
+                      {cscElectives.slice(16).map((csc_class) => (
+                        <Tooltip
+                          sx={{ m: 0.5 }}
                           key={csc_class.key}
-                          label={csc_class.label}
-                          href={csc_class.url}
-                          target="_blank"
-                          rel="noreferrer noopener"
-                        />
-                      </Tooltip>
-                    ))}
-                  </Paper>
+                          title={csc_class.tooltip}
+                          placement="top"
+                        >
+                          <Chip
+                            clickable
+                            component="a"
+                            key={csc_class.key}
+                            label={csc_class.label}
+                            href={csc_class.url}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                          />
+                        </Tooltip>
+                      ))}
+                    </Paper>
+                  )}
                 </CardContent>
               </Card>
             </Grid>

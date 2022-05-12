@@ -80,8 +80,8 @@ export const SwitchPrereq = (updateElements, element) => {
       backgroundColor: "#007FFF",
       color: "white",
     };
-    updateElements[1].style = {
-      ...updateElements[1].style,
+    updateElements[2].style = {
+      ...updateElements[2].style,
       backgroundColor: "#007FFF",
       color: "white",
     };

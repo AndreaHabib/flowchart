@@ -81,6 +81,7 @@ const elements = [
   },
   {
     id: "9",
+    targetPosition: "top",
     style: {
       backgroundColor: "white",
     },

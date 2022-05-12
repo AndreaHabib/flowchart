@@ -15,7 +15,7 @@ const elements = [
       backgroundColor: "white",
     },
     data: { label: "200 level elective*" },
-    position: { x: window.innerWidth / 2 - 400, y: 120 },
+    position: { x: window.innerWidth / 2 + 0, y: 300 },
   },
   {
     id: "3",
@@ -23,7 +23,7 @@ const elements = [
       backgroundColor: "white",
     },
     data: { label: "CSC 211" },
-    position: { x: window.innerWidth / 2 - 100, y: 120 },
+    position: { x: window.innerWidth / 2 - 350, y: 120 },
   },
   {
     id: "4",
@@ -77,7 +77,7 @@ const elements = [
       backgroundColor: "white",
     },
     data: { label: "CSC 326" },
-    position: { x: window.innerWidth / 2, y: 220 },
+    position: { x: window.innerWidth / 2 - 200, y: 220 },
   },
   {
     id: "9",
@@ -86,7 +86,7 @@ const elements = [
     },
     data: { label: "CSC 220" },
     targetPosition: "left",
-    position: { x: window.innerWidth / 2 + 150, y: 70 },
+    position: { x: window.innerWidth / 2 + 100, y: 70 },
   },
   {
     id: "10",
@@ -95,7 +95,7 @@ const elements = [
     },
     data: { label: "CSC 330" },
     targetPosition: "top",
-    position: { x: window.innerWidth / 2 - 100, y: 380 },
+    position: { x: window.innerWidth / 2 - 250, y: 320 },
   },
   {
     id: "11",
@@ -105,7 +105,7 @@ const elements = [
     selectable: false,
     data: { label: "CSC 332" },
     targetPosition: "top",
-    position: { x: window.innerWidth / 2 + 350, y: 420 },
+    position: { x: window.innerWidth / 2 + 200, y: 300 },
   },
   {
     id: "11a",
@@ -114,7 +114,7 @@ const elements = [
     },
     data: { label: "CSC 332" },
     targetPosition: "right",
-    position: { x: window.innerWidth / 2 + 350, y: 420 },
+    position: { x: window.innerWidth / 2 + 200, y: 300 },
   },
   {
     id: "12",
@@ -123,7 +123,7 @@ const elements = [
     },
     data: { label: "CSC 305" },
     targetPosition: "left",
-    position: { x: window.innerWidth / 2 + 600, y: 420 },
+    position: { x: window.innerWidth / 2 + 450, y: 300 },
   },
   {
     id: "start",
@@ -154,6 +154,20 @@ const elements = [
       backgroundColor: "white",
     },
     position: { x: window.innerWidth / 2 - 650, y: -100 },
+  },
+  {
+    id: "note2",
+    type: "output",
+    data: {
+      label: "CSC 332 & 305 OR (2) 200-level CSC electives",
+    },
+    selectable: false,
+    targetPosition: "bottom",
+    sourcePosition: "bottom",
+    style: {
+      backgroundColor: "white",
+    },
+    position: { x: window.innerWidth / 2 + 150, y: 380 },
   },
   {
     id: "e1-2",
@@ -195,11 +209,11 @@ const elements = [
     type: "smoothstep",
   },
   {
-    id: "e6-5a",
-    source: "6",
-    target: "5a",
+    id: "e3-7",
+    source: "3",
+    target: "7",
     arrowHeadType: "arrowclosed",
-    type: "smoothstep",
+    type: "smooth",
   },
   {
     id: "e3-8",
