@@ -10,6 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import GoogleIcon from "@mui/icons-material/Google";
 import { GitHub } from "@mui/icons-material";
+import ReCAPTCHA from "react-google-recaptcha";
 import {
   Box,
   Alert,
@@ -24,6 +25,7 @@ import {
 export default function Auth() {
   const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
+  const [recaptcha, setCaptcha] = useState(false);
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
@@ -38,6 +40,16 @@ export default function Auth() {
   const handlePass = (event) => {
     setInputs({ ...inputs, password: event.target.value });
   };
+
+  const onRecaptchaChange = (value) => {
+    if (value) {
+      setCaptcha(true);
+    }
+  };
+
+  function onError() {
+    setCaptcha(false);
+  }
 
   const switchToggle = () => {
     setToggle(!toggle);
@@ -179,13 +191,26 @@ export default function Auth() {
                 <CircularProgress />{" "}
               </Box>
             ) : undefined}
+            <Box sx={{ mt: 2, display: "flex", justifyContent: "center" }}>
+              <ReCAPTCHA
+                required
+                style={{ marginBottom: "10px" }}
+                sitekey={process.env.REACT_APP_GOOGLE_RECAPTCHA}
+                onChange={onRecaptchaChange}
+                render="explicit"
+                onErrored={onError}
+                onExpired={onError}
+              />
+            </Box>
             <Button
+              disabled={!recaptcha}
               variant="contained"
               onClick={toggle ? () => authLogin() : () => authRegister()}
             >
               {toggle ? "Login" : "Register"}
             </Button>
             <Button
+              disabled={!recaptcha}
               sx={{ mt: 2 }}
               variant="outlined"
               startIcon={<GoogleIcon />}
@@ -194,6 +219,7 @@ export default function Auth() {
               Sign in with Google
             </Button>
             <Button
+              disabled={!recaptcha}
               sx={{ mt: 2 }}
               variant="outlined"
               startIcon={<GitHub />}
