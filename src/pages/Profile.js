@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { Button } from "@mui/material";
-import { signOut, auth } from "../firebase";
+import { signOut, auth, getUserInfo } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
