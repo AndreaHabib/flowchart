@@ -157,10 +157,25 @@ export default function Auth() {
 
   return (
     <Fragment>
-      <Box sx={{ height: "85vh", width: "100vw" }}>
-        <Box sx={{ padding: "80px" }} component="form">
-          <FormGroup className="form">
-            <FormControl variant="standard" sx={{ width: "100%", m: 0.5 }}>
+      <Box sx={{ height: "85vh" }}>
+        <Box sx={{ pt: 5 }} component="form">
+          <FormGroup
+            className="form"
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
+            <Typography
+              variant="h6"
+              sx={{
+                textAlign: "center",
+                border: "1px solid",
+                borderColor: "primary.main",
+                borderRadius: "5px",
+                mb: 1,
+              }}
+            >
+              CSI Flowchart Auth
+            </Typography>
+            <FormControl variant="standard" sx={{ width: "100%", mb: 1 }}>
               <TextField
                 autoComplete="email"
                 variant="filled"
@@ -172,7 +187,7 @@ export default function Auth() {
                 aria-describedby="enter email"
               />
             </FormControl>
-            <FormControl variant="standard" sx={{ width: "100%", m: 0.5 }}>
+            <FormControl variant="standard" sx={{ width: "100%" }}>
               <TextField
                 autoComplete="current-password"
                 variant="filled"
