@@ -9,6 +9,7 @@ import {
   ListItem,
 } from "@mui/material";
 import HeaderMenu from "../component/HeaderMenu";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -23,6 +24,15 @@ export default function Home() {
             are eligible. Please follow the steps below to get started.
           </Typography>
         </Alert>
+        {/* <Alert sx={{ textAlign: "left" }} variant="outlined" severity="success">
+          <Typography variant="h6">Create Your Profile!</Typography>
+          <Typography mb={3} variant="body1">
+            You can create your profile and make your own flowchart!
+          </Typography>
+          <Button variant="contained" size="small" to="/auth" component={Link}>
+            Register
+          </Button>
+        </Alert> */}
         <Alert sx={{ textAlign: "left" }} variant="outlined" severity="info">
           <Typography variant="h6">Step 1:</Typography>
           <Typography mb={3} variant="body1">

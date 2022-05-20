@@ -23,6 +23,10 @@
   border-top: 10px solid rgb(0, 126, 101);
 }
 
+.authFooter {
+  background-color: #cd4932;
+}
+
 .footer {
   border-top: 10px solid rgb(172, 12, 7);
   background-color: #cd4932;
@@ -34,7 +38,6 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  height: 15vh;
   color: white;
 }

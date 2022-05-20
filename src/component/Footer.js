@@ -18,6 +18,8 @@ export default function Footer() {
       setClassName("footer1");
     } else if (location.pathname === "/flowchart-aas-cat2022-2023") {
       setClassName("footer5");
+    } else if (location.pathname === "/auth") {
+      setClassName("authFooter");
     } else {
       setClassName("footer");
     }

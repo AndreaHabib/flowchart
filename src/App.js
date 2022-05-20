@@ -15,6 +15,8 @@ import { ThemeProvider } from "@emotion/react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ScrollToTop from "./component/ScrollToTop";
+import Auth from "./pages/Auth";
+import Profile from "./pages/Profile";
 
 function App() {
   const theme = useTheme();
@@ -54,6 +56,8 @@ function App() {
         <BrowserRouter>
           <ScrollToTop />
           <Routes>
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/profile" element={<Profile />} />
             <Route
               path="flowchart-cat2018-2020"
               element={<FLOW_CHART x={x} y={y} />}
