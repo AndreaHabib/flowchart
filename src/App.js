@@ -57,7 +57,7 @@ function App() {
           <ScrollToTop />
           <Routes>
             <Route path="/auth" element={<Auth />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile" element={<Profile x={x} y={y} />} />
             <Route
               path="flowchart-cat2018-2020"
               element={<FLOW_CHART x={x} y={y} />}

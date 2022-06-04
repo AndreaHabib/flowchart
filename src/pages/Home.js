@@ -9,7 +9,6 @@ import {
   ListItem,
 } from "@mui/material";
 import HeaderMenu from "../component/HeaderMenu";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   return (

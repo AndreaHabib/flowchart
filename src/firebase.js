@@ -5,7 +5,9 @@ import {
   doc,
   setDoc,
   getDoc,
-} from "firebase/firestore/lite";
+  arrayUnion,
+  updateDoc,
+} from "firebase/firestore";
 import {
   getAuth,
   signInWithPopup,
@@ -29,16 +31,24 @@ const db = getFirestore(app);
 
 export const auth = getAuth(app);
 
-const getUsersDoc = () => {
-  const usersCol = collection(db, "users");
-  const userDoc = doc(usersCol, auth.currentUser.uid);
-  return userDoc;
+export async function getClassesTaken(uid) {
+  const userDoc = doc(db, "users", uid);
+  const user = await getDoc(userDoc);
+  return user.data()["isClassesTaken"];
+}
+
+export const onAddClass = async (length, classesTaken, uid, el1) => {
+  const classToBeTaken = length / 2 + 1;
+  const userDoc = doc(db, "users", uid);
+  await updateDoc(userDoc, {
+    classesTaken: arrayUnion(el1[classToBeTaken]),
+  });
 };
 
-export async function getUserInfo() {
-  const userDoc = getUsersDoc(auth.currentUser.uid);
+export async function getUserInfo(uid) {
+  const userDoc = doc(db, "users", uid);
   const user = await getDoc(userDoc);
-  return user.data();
+  return user.data()["classesTaken"].concat(user.data()["connections"]);
 }
 
 export async function login(email, password) {
@@ -50,10 +60,30 @@ export async function login(email, password) {
 }
 
 export async function register(email, password) {
-  const classesTaken = [];
-  return createUserWithEmailAndPassword(auth, email, password)
-    .then((user) => {
-      setDoc(doc(db, "users", user.user.uid), classesTaken);
+  return await createUserWithEmailAndPassword(auth, email, password)
+    .then(async (user) => {
+      const usersRef = collection(db, "users");
+      await setDoc(doc(usersRef, user.user.uid), {
+        classesTaken: [],
+        connections: [],
+        isClassesTaken: {
+          "CSC 126": false,
+          "CSC 211": false,
+          "CSC 220": false,
+          "CSC 228": false,
+          "CSC 305": false,
+          "CSC 315": false,
+          "CSC 326": false,
+          "CSC 330": false,
+          "CSC 332": false,
+          "CSC 346": false,
+          "CSC 347": false,
+          "CSC 382": false,
+          "CSC 430": false,
+          "CSC 446": false,
+          "CSC 490": false,
+        },
+      });
       return user;
     })
     .catch((error) => {
@@ -62,11 +92,32 @@ export async function register(email, password) {
 }
 
 export async function loginWithGoogle() {
-  const classesTaken = [];
   const provider = new GoogleAuthProvider();
-  return signInWithPopup(auth, provider)
-    .then((result) => {
-      setDoc(doc(db, "users", result.user.uid), classesTaken);
+  return await signInWithPopup(auth, provider)
+    .then(async (result) => {
+      const usersRef = collection(db, "users");
+      await setDoc(doc(usersRef, result.user.uid), {
+        classesTaken: [],
+        connections: [],
+        isClassesTaken: {
+          "CSC 126": false,
+          "CSC 211": false,
+          "CSC 220": false,
+          "CSC 228": false,
+          "CSC 305": false,
+          "CSC 315": false,
+          "CSC 326": false,
+          "CSC 330": false,
+          "CSC 332": false,
+          "CSC 346": false,
+          "CSC 347": false,
+          "CSC 382": false,
+          "CSC 430": false,
+          "CSC 446": false,
+          "CSC 490": false,
+        },
+      });
+      return result;
     })
     .catch((error) => {
       throw error;
@@ -74,11 +125,32 @@ export async function loginWithGoogle() {
 }
 
 export async function loginWithGitHub() {
-  const classesTaken = [];
   const provider = new GithubAuthProvider();
-  return signInWithPopup(auth, provider)
-    .then((result) => {
-      setDoc(doc(db, "users", result.user.uid), classesTaken);
+  return await signInWithPopup(auth, provider)
+    .then(async (result) => {
+      const usersRef = collection(db, "users");
+      await setDoc(doc(usersRef, result.user.uid), {
+        classesTaken: [],
+        connections: [],
+        isClassesTaken: {
+          "CSC 126": false,
+          "CSC 211": false,
+          "CSC 220": false,
+          "CSC 228": false,
+          "CSC 305": false,
+          "CSC 315": false,
+          "CSC 326": false,
+          "CSC 330": false,
+          "CSC 332": false,
+          "CSC 346": false,
+          "CSC 347": false,
+          "CSC 382": false,
+          "CSC 430": false,
+          "CSC 446": false,
+          "CSC 490": false,
+        },
+      });
+      return result;
     })
     .catch((error) => {
       throw error;
