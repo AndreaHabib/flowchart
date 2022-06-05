@@ -5,7 +5,6 @@ import {
   doc,
   setDoc,
   getDoc,
-  arrayUnion,
   updateDoc,
 } from "firebase/firestore";
 import {
@@ -37,19 +36,23 @@ export async function getClassesTaken(uid) {
   return user.data()["isClassesTaken"];
 }
 
-export const onAddClass = async (length, classesTaken, uid, el1) => {
-  const classToBeTaken = length / 2 + 1;
+export const onDeleteClass = async (className, uid, isClassesTaken) => {
   const userDoc = doc(db, "users", uid);
+  isClassesTaken[className] = false;
   await updateDoc(userDoc, {
-    classesTaken: arrayUnion(el1[classToBeTaken]),
+    isClassesTaken: isClassesTaken,
   });
+  window.location.reload();
 };
 
-export async function getUserInfo(uid) {
+export const onAddClass = async (className, uid, isClassesTaken) => {
   const userDoc = doc(db, "users", uid);
-  const user = await getDoc(userDoc);
-  return user.data()["classesTaken"].concat(user.data()["connections"]);
-}
+  isClassesTaken[className] = true;
+  await updateDoc(userDoc, {
+    isClassesTaken: isClassesTaken,
+  });
+  window.location.reload();
+};
 
 export async function login(email, password) {
   return signInWithEmailAndPassword(auth, email, password)
@@ -64,10 +67,9 @@ export async function register(email, password) {
     .then(async (user) => {
       const usersRef = collection(db, "users");
       await setDoc(doc(usersRef, user.user.uid), {
-        classesTaken: [],
-        connections: [],
         isClassesTaken: {
           "CSC 126": false,
+          "200 level elective*": false,
           "CSC 211": false,
           "CSC 220": false,
           "CSC 228": false,
@@ -97,10 +99,9 @@ export async function loginWithGoogle() {
     .then(async (result) => {
       const usersRef = collection(db, "users");
       await setDoc(doc(usersRef, result.user.uid), {
-        classesTaken: [],
-        connections: [],
         isClassesTaken: {
           "CSC 126": false,
+          "200 level elective*": false,
           "CSC 211": false,
           "CSC 220": false,
           "CSC 228": false,
@@ -130,10 +131,9 @@ export async function loginWithGitHub() {
     .then(async (result) => {
       const usersRef = collection(db, "users");
       await setDoc(doc(usersRef, result.user.uid), {
-        classesTaken: [],
-        connections: [],
         isClassesTaken: {
           "CSC 126": false,
+          "200 level elective*": false,
           "CSC 211": false,
           "CSC 220": false,
           "CSC 228": false,

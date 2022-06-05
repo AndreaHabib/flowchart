@@ -14,13 +14,13 @@ import Loading from "../component/Loading";
 import {
   signOut,
   auth,
-  getUserInfo,
   getClassesTaken,
   onAddClass,
+  onDeleteClass,
 } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { mathClasses, cscClasses } from "../flowcharts/classes/Classes";
+import { mathClasses, cscProfileClasses } from "../flowcharts/classes/Classes";
 import { default as el1 } from "../flowcharts/elements/Flowchart1";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 
@@ -40,7 +40,7 @@ export default function Profile(props) {
   const [mthChipData, setMthChipData] = useState(mathClasses);
 
   // eslint-disable-next-line
-  const [cscChipData, setCscChipData] = useState(cscClasses);
+  const [cscChipData, setCscChipData] = useState(cscProfileClasses);
 
   const onLoad = useCallback(
     (rfi) => {
@@ -54,12 +54,23 @@ export default function Profile(props) {
   const setUserData = useCallback(async (user) => {
     setLoading(true);
     setUser(user);
-    await getUserInfo(user.uid)
-      .then((result) => result)
-      .then((data) => setClassesTaken(data));
     await getClassesTaken(user.uid)
       .then((result) => result)
-      .then((data) => setIsClassesTaken(data));
+      .then((data) => {
+        let classes = [];
+        el1[26]["data"]["label"] =
+          "Start Here! You can click on CSC 126 to add your first class!";
+        classes.push(el1[26]);
+        if (data["CSC 126"]) {
+          classes.push(el1[0]);
+        }
+        if (data["200 level elective*"]) {
+          classes.push(el1[1]);
+          classes.push(el1[30]);
+        }
+        setClassesTaken(classes);
+        setIsClassesTaken(data);
+      });
     setLoading(false);
   }, []);
 
@@ -134,6 +145,17 @@ export default function Profile(props) {
                       placement="top"
                     >
                       <Chip
+                        onDelete={
+                          isClassesTaken[csc_class.label]
+                            ? () => {
+                                onDeleteClass(
+                                  csc_class.label,
+                                  user.uid,
+                                  isClassesTaken
+                                );
+                              }
+                            : null
+                        }
                         clickable={
                           !isClassesTaken[csc_class.label] &&
                           csc_class.label === "CSC 126"
@@ -144,13 +166,17 @@ export default function Profile(props) {
                           !isClassesTaken[csc_class.label] &&
                           csc_class.label !== "CSC 126"
                         }
-                        onClick={() =>
-                          onAddClass(
-                            classesTaken.length,
-                            csc_class.key,
-                            user.uid,
-                            el1
-                          )
+                        onClick={
+                          isClassesTaken[csc_class.label] ||
+                          (csc_class.label === "CSC 126" &&
+                            !isClassesTaken["CSC 126"])
+                            ? () =>
+                                onAddClass(
+                                  csc_class.label,
+                                  user.uid,
+                                  isClassesTaken
+                                )
+                            : null
                         }
                       />
                     </Tooltip>
