@@ -8,6 +8,7 @@ import {
   Paper,
   Typography,
   CardContent,
+  Skeleton,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import Loading from "../component/Loading";
@@ -61,12 +62,49 @@ export default function Profile(props) {
         el1[26]["data"]["label"] =
           "Start Here! You can click on CSC 126 to add your first class!";
         classes.push(el1[26]);
-        if (data["CSC 126"]) {
+        if (data["CSC 126"].isTaken) {
           classes.push(el1[0]);
         }
-        if (data["200 level elective*"]) {
+        if (data["200 level elective*"].isTaken) {
           classes.push(el1[1]);
           classes.push(el1[30]);
+        }
+        if (data["CSC 211"].isTaken) {
+          classes.push(el1[2]);
+          classes.push(el1[31]);
+        }
+        if (data["CSC 220"].isTaken) {
+          classes.push(el1[10]);
+          classes.push(el1[40]);
+        }
+        if (data["CSC 228"].isTaken) {
+          classes.push(el1[8]);
+          classes.push(el1[38]);
+        }
+        if (data["CSC 326"].isTaken) {
+          classes.push(el1[9]);
+          classes.push(el1[39]);
+        }
+        if (data["CSC 346 & 347"].isTaken) {
+          classes.push(el1[11]);
+          classes.push(el1[12]);
+          classes.push(el1[13]);
+          classes.push(el1[41]);
+          classes.push(el1[42]);
+          classes.push(el1[43]);
+        }
+        if (data["CSC 382"].isTaken) {
+          classes.push(el1[16]);
+          classes.push(el1[48]);
+          classes.push(el1[47]);
+        }
+        if (data["400 level elective*"].isTaken) {
+          classes.push(el1[23]);
+          classes.push(el1[56]);
+        }
+        if (data["CSC 446"].isTaken) {
+          classes.push(el1[19]);
+          classes.push(el1[51]);
         }
         setClassesTaken(classes);
         setIsClassesTaken(data);
@@ -91,7 +129,11 @@ export default function Profile(props) {
   return (
     <Fragment>
       <Grid
-        sx={{ backgroundColor: "#CD4931", p: 1 }}
+        sx={{
+          backgroundColor: "#CD4931",
+          p: 1,
+          borderBottom: "10px solid #AC0D07",
+        }}
         container
         justifyContent="flex-end"
       >
@@ -105,6 +147,63 @@ export default function Profile(props) {
       {loading ? (
         <Grid container justify="center" alignItems="center">
           <Loading loading={loading} text="Classes" />
+          <Grid container justifyContent="center" alignItems="center">
+            <Grid
+              sx={{
+                height: { xs: "50vh", sm: "50vh", md: "15vh", lg: "75vh" },
+              }}
+              item
+              xs={12}
+              sm={12}
+              md={2}
+              lg={3}
+            >
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                className="classes-card"
+                variant="outlined"
+              >
+                <Skeleton
+                  sx={{ bgcolor: "grey.400" }}
+                  variant="rectangular"
+                  width="90%"
+                  height="50%"
+                />
+              </Card>
+            </Grid>
+            <Grid
+              justifyContent="center"
+              alignItems="center"
+              item
+              xs={12}
+              sm={12}
+              md={10}
+              lg={9}
+            >
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                className="classes-card"
+                variant="outlined"
+              >
+                <Skeleton
+                  sx={{ bgcolor: "grey.400" }}
+                  variant="rectangular"
+                  width="90%"
+                  height="50vh"
+                />
+              </Card>
+            </Grid>
+          </Grid>
         </Grid>
       ) : (
         <Grid container justifyContent="center" alignItems="center">
@@ -146,7 +245,7 @@ export default function Profile(props) {
                     >
                       <Chip
                         onDelete={
-                          isClassesTaken[csc_class.label]
+                          isClassesTaken[csc_class.label].canBeUntaken
                             ? () => {
                                 onDeleteClass(
                                   csc_class.label,
@@ -157,19 +256,21 @@ export default function Profile(props) {
                             : null
                         }
                         clickable={
-                          !isClassesTaken[csc_class.label] &&
-                          csc_class.label === "CSC 126"
+                          !isClassesTaken[csc_class.label].isTaken ||
+                          isClassesTaken[csc_class.label].canBeTaken ||
+                          !isClassesTaken[csc_class.label].canBeUntaken
                         }
                         key={csc_class.key}
                         label={csc_class.label}
                         disabled={
-                          !isClassesTaken[csc_class.label] &&
-                          csc_class.label !== "CSC 126"
+                          (!isClassesTaken[csc_class.label].canBeUntaken &&
+                            !isClassesTaken[csc_class.label].isTaken &&
+                            !isClassesTaken[csc_class.label].canBeTaken) ||
+                          (!isClassesTaken[csc_class.label].canBeUntaken &&
+                            isClassesTaken[csc_class.label].isTaken)
                         }
                         onClick={
-                          isClassesTaken[csc_class.label] ||
-                          (csc_class.label === "CSC 126" &&
-                            !isClassesTaken["CSC 126"])
+                          isClassesTaken[csc_class.label].canBeTaken
                             ? () =>
                                 onAddClass(
                                   csc_class.label,

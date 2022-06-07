@@ -358,21 +358,21 @@ const cscProfileClasses = [
   },
   {
     key: 10,
-    tooltip: "Digital Circuits Design",
-    label: "CSC 346",
+    tooltip: "Digital Circuits Design & Laboratory",
+    label: "CSC 346 & 347",
     url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/300/CSC-346",
   },
   {
     key: 11,
-    tooltip: "Digital Circuits Laboratory",
-    label: "CSC 347",
-    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/300/CSC-347",
-  },
-  {
-    key: 12,
     tooltip: "Analysis of Algorithms",
     label: "CSC 382",
     url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/300/CSC-382",
+  },
+  {
+    key: 12,
+    tooltip: "Any 200 level elective",
+    label: "400 level elective*",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-430",
   },
   {
     key: 13,
