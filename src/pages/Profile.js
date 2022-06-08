@@ -4,12 +4,15 @@ import {
   Grid,
   Card,
   Tooltip,
+  Alert,
   Chip,
   Paper,
   Typography,
   CardContent,
   Skeleton,
+  Divider,
 } from "@mui/material";
+import { setFlowchart } from "./SetFlowchart/SetFlowchart";
 import { Link } from "react-router-dom";
 import Loading from "../component/Loading";
 import {
@@ -22,7 +25,6 @@ import {
 import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { mathClasses, cscProfileClasses } from "../flowcharts/classes/Classes";
-import { default as el1 } from "../flowcharts/elements/Flowchart1";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 
 const style = {
@@ -58,55 +60,7 @@ export default function Profile(props) {
     await getClassesTaken(user.uid)
       .then((result) => result)
       .then((data) => {
-        let classes = [];
-        el1[26]["data"]["label"] =
-          "Start Here! You can click on CSC 126 to add your first class!";
-        classes.push(el1[26]);
-        if (data["CSC 126"].isTaken) {
-          classes.push(el1[0]);
-        }
-        if (data["200 level elective*"].isTaken) {
-          classes.push(el1[1]);
-          classes.push(el1[30]);
-        }
-        if (data["CSC 211"].isTaken) {
-          classes.push(el1[2]);
-          classes.push(el1[31]);
-        }
-        if (data["CSC 220"].isTaken) {
-          classes.push(el1[10]);
-          classes.push(el1[40]);
-        }
-        if (data["CSC 228"].isTaken) {
-          classes.push(el1[8]);
-          classes.push(el1[38]);
-        }
-        if (data["CSC 326"].isTaken) {
-          classes.push(el1[9]);
-          classes.push(el1[39]);
-        }
-        if (data["CSC 346 & 347"].isTaken) {
-          classes.push(el1[11]);
-          classes.push(el1[12]);
-          classes.push(el1[13]);
-          classes.push(el1[41]);
-          classes.push(el1[42]);
-          classes.push(el1[43]);
-        }
-        if (data["CSC 382"].isTaken) {
-          classes.push(el1[16]);
-          classes.push(el1[48]);
-          classes.push(el1[47]);
-        }
-        if (data["400 level elective*"].isTaken) {
-          classes.push(el1[23]);
-          classes.push(el1[56]);
-        }
-        if (data["CSC 446"].isTaken) {
-          classes.push(el1[19]);
-          classes.push(el1[51]);
-        }
-        setClassesTaken(classes);
+        setClassesTaken(setFlowchart(data));
         setIsClassesTaken(data);
       });
     setLoading(false);
@@ -130,19 +84,69 @@ export default function Profile(props) {
     <Fragment>
       <Grid
         sx={{
-          backgroundColor: "#CD4931",
+          backgroundColor: "#007FFF",
           p: 1,
-          borderBottom: "10px solid #AC0D07",
+          borderBottom: "10px solid #007FFF",
         }}
         container
         justifyContent="flex-end"
       >
-        <Button sx={{ mr: 1 }} component={Link} to="/" variant="contained">
+        <Button
+          color="success"
+          size="small"
+          sx={{ mr: 1 }}
+          component={Link}
+          to="/"
+          variant="contained"
+        >
           Home
         </Button>
-        <Button variant="contained" onClick={signOut}>
+        <Button
+          size="small"
+          color="error"
+          variant="contained"
+          onClick={signOut}
+        >
           Sign out
         </Button>
+      </Grid>
+      <Grid justifyContent="center" container>
+        <Grid item xs={12}>
+          <Typography
+            variant="h4"
+            sx={{
+              textAlign: "center",
+              fontWeight: "bold",
+              marginTop: "1rem",
+              marginBottom: "1rem",
+            }}
+          >
+            Welcome to your personal planner!
+          </Typography>
+        </Grid>
+        <Grid sx={{ borderTop: "10px solid #007FFF" }} item xs={12}>
+          <Alert
+            action={
+              <Button
+                size="small"
+                rel="noreferrer noopener"
+                target="_blank"
+                component="a"
+                href="https://degreeworks.cuny.edu/Dashboard_si/dashboard"
+                variant="contained"
+                color="primary"
+              >
+                DegreeWorks
+              </Button>
+            }
+            severity="info"
+          >
+            <Typography variant="body1">
+              You may use DegreeWorks as reference to help you figure out the
+              classes that you have taken, or currently taking.
+            </Typography>
+          </Alert>
+        </Grid>
       </Grid>
       {loading ? (
         <Grid container justify="center" alignItems="center">
@@ -206,7 +210,12 @@ export default function Profile(props) {
           </Grid>
         </Grid>
       ) : (
-        <Grid container justifyContent="center" alignItems="center">
+        <Grid
+          sx={{ borderTop: "10px solid #007FFF" }}
+          container
+          justifyContent="center"
+          alignItems="center"
+        >
           <Grid
             sx={{ height: { xs: "50vh", sm: "50vh", md: "15vh", lg: "75vh" } }}
             item
@@ -236,6 +245,46 @@ export default function Profile(props) {
                   }}
                   component="ul"
                 >
+                  <Chip
+                    size="small"
+                    sx={{ m: 0.5 }}
+                    color="primary"
+                    label="Can Be Taken"
+                  />
+                  <Chip
+                    size="small"
+                    sx={{ m: 0.5 }}
+                    color="success"
+                    label="Taken And Can Be Untaken"
+                  />
+                  <Chip
+                    size="small"
+                    disabled
+                    sx={{ m: 0.5 }}
+                    color="error"
+                    label="Can Not Be Taken"
+                  />
+                  <Chip
+                    size="small"
+                    disabled
+                    sx={{ m: 0.5 }}
+                    color="warning"
+                    label="Taken But Cannot Be Untaken"
+                  />
+                </Paper>
+                <Divider />
+                <Paper
+                  elevation={0}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexWrap: "wrap",
+                    listStyle: "none",
+                    p: 0.5,
+                    m: 0,
+                  }}
+                  component="ul"
+                >
                   {cscChipData.map((csc_class) => (
                     <Tooltip
                       sx={{ m: 0.5 }}
@@ -244,6 +293,15 @@ export default function Profile(props) {
                       placement="top"
                     >
                       <Chip
+                        color={
+                          isClassesTaken[csc_class.label].isTaken
+                            ? isClassesTaken[csc_class.label].canBeUntaken
+                              ? "success"
+                              : "warning"
+                            : isClassesTaken[csc_class.label].canBeTaken
+                            ? "primary"
+                            : "error"
+                        }
                         onDelete={
                           isClassesTaken[csc_class.label].canBeUntaken
                             ? () => {

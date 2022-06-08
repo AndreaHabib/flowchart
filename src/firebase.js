@@ -15,6 +15,8 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
+import { onAdd } from "./methods/onAdd";
+import { onDelete } from "./methods/onDelete";
 
 const firebaseConfig = {
   apiKey: `${process.env.REACT_APP_API_KEY}`,
@@ -56,11 +58,6 @@ const isClassesTaken = {
     canBeTaken: false,
     canBeUntaken: false,
   },
-  "CSC 305": {
-    isTaken: false,
-    canBeTaken: false,
-    canBeUntaken: false,
-  },
   "CSC 315": {
     isTaken: false,
     canBeTaken: false,
@@ -76,7 +73,7 @@ const isClassesTaken = {
     canBeTaken: false,
     canBeUntaken: false,
   },
-  "CSC 332": {
+  "CSC 332 & 305": {
     isTaken: false,
     canBeTaken: false,
     canBeUntaken: false,
@@ -124,70 +121,7 @@ export const onDeleteClass = async (className, uid, isClassesTaken) => {
   isClassesTaken[className].isTaken = false;
   isClassesTaken[className].canBeTaken = true;
   isClassesTaken[className].canBeUntaken = false;
-  switch (className) {
-    case "CSC 126":
-      isClassesTaken["200 level elective*"].canBeTaken = false;
-      isClassesTaken["CSC 211"].canBeTaken = false;
-      isClassesTaken["CSC 220"].canBeTaken = false;
-      break;
-    case "200 level elective*":
-      if (
-        !isClassesTaken["CSC 211"].isTaken &&
-        !isClassesTaken["200 level elective*"].isTaken
-      ) {
-        isClassesTaken["CSC 126"].canBeUntaken = true;
-      }
-      break;
-    case "CSC 211":
-      if (
-        !isClassesTaken["CSC 220"].isTaken &&
-        !isClassesTaken["200 level elective*"].isTaken
-      ) {
-        isClassesTaken["CSC 126"].canBeUntaken = true;
-      }
-      isClassesTaken["CSC 228"].canBeTaken = false;
-      isClassesTaken["CSC 326"].canBeTaken = false;
-      break;
-    case "CSC 220":
-      if (
-        !isClassesTaken["CSC 211"].isTaken &&
-        !isClassesTaken["200 level elective*"].isTaken
-      ) {
-        isClassesTaken["CSC 126"].canBeUntaken = true;
-      }
-      isClassesTaken["CSC 346 & 347"].canBeTaken = false;
-      break;
-    case "CSC 228":
-    case "CSC 326":
-      if (
-        !isClassesTaken["CSC 326"].isTaken ||
-        !isClassesTaken["CSC 228"].isTaken
-      ) {
-        isClassesTaken["CSC 382"].canBeTaken = false;
-      }
-      if (
-        !isClassesTaken["CSC 228"].isTaken &&
-        !isClassesTaken["CSC 326"].isTaken
-      ) {
-        isClassesTaken["CSC 211"].canBeUntaken = true;
-      }
-      if (className === "CSC 326") {
-        isClassesTaken["400 level elective*"].canBeTaken = false;
-        isClassesTaken["CSC 330"].canBeTaken = false;
-        isClassesTaken["CSC 315"].canBeTaken = false;
-      }
-      break;
-    case "CSC 382":
-      isClassesTaken["CSC 228"].canBeUntaken = true;
-      isClassesTaken["CSC 326"].canBeUntaken = true;
-      break;
-    case "CSC 346 & 347":
-      isClassesTaken["CSC 220"].canBeUntaken = true;
-      break;
-    case "CSC 446":
-      isClassesTaken["CSC 346 & 347"].canBeUntaken = true;
-      break;
-  }
+  onDelete(isClassesTaken, className);
   await updateDoc(userDoc, {
     isClassesTaken: isClassesTaken,
   });
@@ -199,52 +133,7 @@ export const onAddClass = async (className, uid, isClassesTaken) => {
   isClassesTaken[className].isTaken = true;
   isClassesTaken[className].canBeTaken = false;
   isClassesTaken[className].canBeUntaken = true;
-  switch (className) {
-    case "CSC 126":
-      isClassesTaken["200 level elective*"].canBeTaken = true;
-      isClassesTaken["CSC 211"].canBeTaken = true;
-      isClassesTaken["CSC 220"].canBeTaken = true;
-      break;
-    case "200 level elective*":
-      isClassesTaken["CSC 126"].canBeUntaken = false;
-      break;
-    case "CSC 211":
-      isClassesTaken["CSC 126"].canBeUntaken = false;
-      isClassesTaken["CSC 228"].canBeTaken = true;
-      isClassesTaken["CSC 326"].canBeTaken = true;
-      break;
-    case "CSC 220":
-      isClassesTaken["CSC 126"].canBeUntaken = false;
-      isClassesTaken["CSC 346 & 347"].canBeTaken = true;
-      break;
-    case "CSC 228":
-    case "CSC 326":
-      isClassesTaken["CSC 211"].canBeUntaken = false;
-      if (
-        isClassesTaken["CSC 326"].isTaken &&
-        isClassesTaken["CSC 228"].isTaken
-      ) {
-        isClassesTaken["CSC 382"].canBeTaken = true;
-      }
-      if (className === "CSC 326") {
-        isClassesTaken["400 level elective*"].canBeTaken = true;
-        isClassesTaken["CSC 330"].canBeTaken = true;
-        isClassesTaken["CSC 315"].canBeTaken = true;
-      }
-      break;
-    case "CSC 382":
-      isClassesTaken["CSC 228"].canBeUntaken = false;
-      isClassesTaken["CSC 326"].canBeUntaken = false;
-      break;
-    case "CSC 346 & 347":
-      isClassesTaken["CSC 220"].canBeUntaken = false;
-      isClassesTaken["CSC 446"].canBeTaken = true;
-      break;
-    case "CSC 446":
-      isClassesTaken["CSC 346 & 347"].canBeUntaken = false;
-      break;
-  }
-
+  onAdd(isClassesTaken, className);
   await updateDoc(userDoc, {
     isClassesTaken: isClassesTaken,
   });
