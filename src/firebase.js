@@ -152,9 +152,11 @@ export async function register(email, password) {
   return await createUserWithEmailAndPassword(auth, email, password)
     .then(async (user) => {
       const usersRef = collection(db, "users");
-      await setDoc(doc(usersRef, user.user.uid), {
-        isClassesTaken: isClassesTaken,
-      });
+      if (!(await getDoc(doc(usersRef, user.user.uid)))) {
+        await setDoc(doc(usersRef, user.user.uid), {
+          isClassesTaken: isClassesTaken,
+        });
+      }
       return user;
     })
     .catch((error) => {
@@ -167,9 +169,11 @@ export async function loginWithGoogle() {
   return await signInWithPopup(auth, provider)
     .then(async (result) => {
       const usersRef = collection(db, "users");
-      await setDoc(doc(usersRef, result.user.uid), {
-        isClassesTaken: isClassesTaken,
-      });
+      if (!(await getDoc(doc(usersRef, result.user.uid)))) {
+        await setDoc(doc(usersRef, result.user.uid), {
+          isClassesTaken: isClassesTaken,
+        });
+      }
       return result;
     })
     .catch((error) => {
@@ -182,9 +186,15 @@ export async function loginWithGitHub() {
   return await signInWithPopup(auth, provider)
     .then(async (result) => {
       const usersRef = collection(db, "users");
-      await setDoc(doc(usersRef, result.user.uid), {
-        isClassesTaken: isClassesTaken,
-      });
+      if (!(await getDoc(doc(usersRef, result.user.uid)))) {
+        await setDoc(
+          doc(usersRef, result.user.uid),
+          {
+            isClassesTaken: isClassesTaken,
+          },
+          { merge: true }
+        );
+      }
       return result;
     })
     .catch((error) => {

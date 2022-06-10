@@ -108,5 +108,7 @@ export const onDelete = (isClassesTaken, className) => {
     case "CSC 446":
       isClassesTaken["CSC 346 & 347"].canBeUntaken = true;
       break;
+    default:
+      break;
   }
 };
