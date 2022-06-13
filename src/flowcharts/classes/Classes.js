@@ -7,30 +7,37 @@ const mathClasses = [
   },
   {
     key: 1,
+    tooltip:
+      "College Algebra and Trigonometry with Intermediate Algebra Review",
+    label: "MTH 125",
+    url: "https://iq2prod1.smartcatalogiq.com/en/Catalogs/College-of-Staten-Island/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/100/MTH-125",
+  },
+  {
+    key: 2,
     tooltip: "Discrete Mathematical Structures for Computer Science",
     label: "MTH 228",
     url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-228",
   },
   {
-    key: 2,
+    key: 3,
     tooltip: "Calculus Computer Laboratory",
     label: "MTH 229",
     url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-229",
   },
   {
-    key: 3,
+    key: 4,
     tooltip: "Calculus I with Pre-Calculus",
     label: "MTH 230",
     url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-230",
   },
   {
-    key: 4,
+    key: 5,
     tooltip: "Analytic Geometry and Calculus I",
     label: "MTH 231",
     url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-231",
   },
   {
-    key: 5,
+    key: 6,
     tooltip: "Calculus II",
     label: "MTH 232",
     url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-232",

@@ -63,7 +63,11 @@ function App() {
               element={<FLOW_CHART x={x} y={y} />}
             />
             <Route
-              path="flowchart-cat2021-2023"
+              path="flowchart-cat2021-2022"
+              element={<FLOW_CHART x={x} y={y} />}
+            />
+            <Route
+              path="flowchart-cat2022-2023"
               element={<FLOW_CHART x={x} y={y} />}
             />
             <Route

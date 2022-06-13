@@ -6,6 +6,7 @@ import { default as el1 } from "./elements/Flowchart1";
 import { default as el2 } from "./elements/Flowchart2";
 import { default as el3 } from "./elements/Flowchart3";
 import { default as el4 } from "./elements/Flowchart4";
+import { default as el5 } from "./elements/Flowchart5";
 import { green } from "@mui/material/colors";
 import { deepPurple } from "@mui/material/colors";
 import { teal } from "@mui/material/colors";
@@ -15,6 +16,7 @@ import "./styles/Flowchart2.css";
 import "./styles/Flowchart3.css";
 import "./styles/Flowchart4.css";
 import "./styles/Flowchart5.css";
+import "./styles/Flowchart6.css";
 import { mathClasses, cscClasses, cscElectives } from "./classes/Classes";
 import HeaderMenu from "../component/HeaderMenu";
 import {
@@ -36,6 +38,7 @@ import { SwitchPrereq as sw1 } from "./switches/SwitchPrereq1";
 import { SwitchPrereq as sw2 } from "./switches/SwitchPrereq2";
 import { SwitchPrereq as sw3 } from "./switches/SwitchPrereq3";
 import { SwitchPrereq as sw4 } from "./switches/SwitchPrereq4";
+import { SwitchPrereq as sw5 } from "./switches/SwitchPrereq5";
 import WarningAmber from "@mui/icons-material/WarningAmber";
 
 const style = {
@@ -122,15 +125,15 @@ export default function FLOW_CHART(props) {
       setTempElement(el1);
       setSwitchFun(() => sw1);
       setClassName("flowchart4");
-    } else if (location.pathname === "/flowchart-cat2021-2023") {
-      setYears("2021-2023");
+    } else if (location.pathname === "/flowchart-cat2021-2022") {
+      setYears("2021-2022");
       setPathway(
         "http://www.cs.csi.cuny.edu/content/CSC_BS_Pathways_checklist_2021-22-major-catalog.pdf"
       );
       setFlowchart(
         "https://drive.google.com/file/d/1TJcRvkwxBQTW5z38E1H0XHHXFASUT93L/view?usp=sharing"
       );
-      setTitle("Fall 2021 - Spring 2022, Fall 2022 - Spring 2023");
+      setTitle("Fall 2021 - Spring 2022");
       setWarningText([
         "* 12-14 CSC elective credits; this consists of either three 400-electives = 12 credits, or two 400-elective and two 200-electives = 14 credits. You may sub. one additional upper-level MTH course (beyond the two that you will take after MTH 232) for one 400-elective. This is limited to one instance.",
         "** You must earn a minimum “C” or higher grade in CSC courses which are pre-requisites to other CSC courses.",
@@ -144,6 +147,28 @@ export default function FLOW_CHART(props) {
       setTempElement(el1);
       setSwitchFun(() => sw1);
       setClassName("flowchart1");
+    } else if (location.pathname === "/flowchart-cat2022-2023") {
+      setYears("2022-2023");
+      setPathway(
+        "http://www.cs.csi.cuny.edu/content/CSC_BS_Pathways_checklist_2021-22-major-catalog.pdf"
+      );
+      setFlowchart(
+        "https://drive.google.com/file/d/1TJcRvkwxBQTW5z38E1H0XHHXFASUT93L/view?usp=sharing"
+      );
+      setTitle("Fall 2022 - Spring 2023");
+      setWarningText([
+        "* 12-14 CSC elective credits; this consists of either three 400-electives = 12 credits, or two 400-elective and two 200-electives = 14 credits. You may sub. one additional upper-level MTH course (beyond the two that you will take after MTH 232) for one 400-elective. This is limited to one instance.",
+        "** You must earn a minimum “C” or higher grade in CSC courses which are pre-requisites to other CSC courses.",
+        "",
+      ]);
+      setUrl(
+        "https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
+      );
+      setColor("");
+      setElements(el5);
+      setTempElement(el5);
+      setSwitchFun(() => sw5);
+      setClassName("flowchart6");
     } else if (location.pathname === "/flowchart-aas-cat2022-2023") {
       setYears("2022-2023");
       setPathway("http://www.cs.csi.cuny.edu/content/checklist_aascs.pdf");
@@ -346,7 +371,7 @@ export default function FLOW_CHART(props) {
                     }}
                     component="ul"
                   >
-                    {mthChipData.slice(0, 1).map((mth_class) => (
+                    {mthChipData.slice(0, 2).map((mth_class) => (
                       <ListItem key={mth_class.key}>
                         <Tooltip title={mth_class.tooltip} placement="top">
                           <Chip
@@ -374,7 +399,7 @@ export default function FLOW_CHART(props) {
                     }}
                     component="ul"
                   >
-                    {mthChipData.slice(1).map((mth_class) =>
+                    {mthChipData.slice(2).map((mth_class) =>
                       location.pathname === "/flowchart-aas-cat2022-2023" &&
                       mth_class.label === "MTH 232" ? null : (
                         <ListItem key={mth_class.key}>
