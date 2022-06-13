@@ -26,6 +26,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { mathClasses, cscProfileClasses } from "../flowcharts/classes/Classes";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
+import Dropdown from "../component/Dropdown";
 
 const style = {
   width: "97%",
@@ -230,6 +231,7 @@ export default function Profile(props) {
               variant="outlined"
             >
               <CardContent>
+                <Dropdown/>
                 <Typography gutterBottom variant="h6" component="div">
                   Choose the classes that you have taken.
                 </Typography>
