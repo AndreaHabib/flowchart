@@ -371,7 +371,7 @@ export default function FLOW_CHART(props) {
                     }}
                     component="ul"
                   >
-                    {mthChipData.slice(0, 2).map((mth_class) => (
+                    {mthChipData.slice(0, 1).map((mth_class) => (
                       <ListItem key={mth_class.key}>
                         <Tooltip title={mth_class.tooltip} placement="top">
                           <Chip
@@ -399,7 +399,7 @@ export default function FLOW_CHART(props) {
                     }}
                     component="ul"
                   >
-                    {mthChipData.slice(2).map((mth_class) =>
+                    {mthChipData.slice(1).map((mth_class) =>
                       location.pathname === "/flowchart-aas-cat2022-2023" &&
                       mth_class.label === "MTH 232" ? null : (
                         <ListItem key={mth_class.key}>

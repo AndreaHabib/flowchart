@@ -292,28 +292,14 @@ const elements = [
     position: { x: window.innerWidth / 2 - 200, y: 600 },
   },
   {
-    id: "note2",
-    type: "output",
-    data: {
-      label: "Either MTH 125 or MTH 123",
-    },
-    selectable: false,
+    id: "30",
+    data: { label: "MTH 125" },
     targetPosition: "right",
     sourcePosition: "right",
     style: {
       backgroundColor: "white",
     },
-    position: { x: window.innerWidth / 2 - 850, y: 15 },
-  },
-  {
-    id: "30",
-    data: { label: "MTH 125" },
-    targetPosition: "bottom",
-    sourcePosition: "bottom",
-    style: {
-      backgroundColor: "white",
-    },
-    position: { x: window.innerWidth / 2 - 450, y: -50 },
+    position: { x: window.innerWidth / 2 - 900, y: -10 },
   },
   {
     id: "e1-2",
@@ -339,7 +325,6 @@ const elements = [
     target: "4",
     arrowHeadType: "arrowclosed",
     type: "smoothstep",
-    animated: true,
   },
   {
     id: "e4-1",
@@ -347,7 +332,6 @@ const elements = [
     target: "1",
     arrowHeadType: "arrowclosed",
     type: "smoothstep",
-    animated: true,
   },
   {
     id: "e5-6",

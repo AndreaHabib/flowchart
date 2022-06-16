@@ -170,6 +170,16 @@ const elements = [
     position: { x: window.innerWidth / 2 + 150, y: 380 },
   },
   {
+    id: "30",
+    data: { label: "MTH 125" },
+    targetPosition: "right",
+    sourcePosition: "right",
+    style: {
+      backgroundColor: "white",
+    },
+    position: { x: window.innerWidth / 2 - 900, y: -10 },
+  },
+  {
     id: "e1-2",
     source: "1",
     target: "2",
@@ -252,6 +262,14 @@ const elements = [
     target: "11a",
     arrowHeadType: "arrowclosed",
     type: "smoothstep",
+  },
+  {
+    id: "e1-30",
+    source: "1",
+    target: "30",
+    arrowHeadType: "arrowclosed",
+    type: "smoothstep",
+    animated: true,
   },
 ];
 
