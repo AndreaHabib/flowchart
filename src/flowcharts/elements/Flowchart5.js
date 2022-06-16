@@ -292,6 +292,20 @@ const elements = [
     position: { x: window.innerWidth / 2 - 200, y: 600 },
   },
   {
+    id: "note2",
+    type: "output",
+    data: {
+      label: "OR",
+    },
+    selectable: false,
+    targetPosition: "right",
+    sourcePosition: "top",
+    style: {
+      backgroundColor: "white",
+    },
+    position: { x: window.innerWidth / 2 - 800, y: 20 },
+  },
+  {
     id: "30",
     data: { label: "MTH 125" },
     targetPosition: "right",
@@ -299,7 +313,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    position: { x: window.innerWidth / 2 - 900, y: -10 },
+    position: { x: window.innerWidth / 2 - 950, y: 20 },
   },
   {
     id: "e1-2",
@@ -494,14 +508,6 @@ const elements = [
     source: "17",
     target: "23",
     arrowHeadType: "arrowclosed",
-  },
-  {
-    id: "e1-30",
-    source: "1",
-    target: "30",
-    arrowHeadType: "arrowclosed",
-    type: "smoothstep",
-    animated: true,
   },
 ];
 
