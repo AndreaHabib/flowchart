@@ -480,11 +480,12 @@ export default function FLOW_CHART(props) {
                     component="ul"
                   >
                     {cscChipData.slice(4, 12).map((csc_class) =>
+                      /* prettier-ignore */
                       (location.pathname === "/flowchart-aas-cat2022-2023" &&
-                        csc_class.label === "CSC 346") ||
+                        (csc_class.label === "CSC 346" ||
                       csc_class.label === "CSC 347" ||
                       csc_class.label === "CSC 382" ||
-                      csc_class.label === "CSC 315" ? null : (
+                      csc_class.label === "CSC 315")) || (location.pathname === "/flowchart-cat2013-2018" && csc_class.label === "CSC 315") ? null : (
                         <Tooltip
                           sx={{ m: 0.5 }}
                           key={csc_class.key}
