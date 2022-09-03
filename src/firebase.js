@@ -38,6 +38,26 @@ const isClassesTaken = {
     canBeTaken: true,
     canBeUntaken: false,
   },
+  "MTH 123": {
+    isTaken: false,
+    canBeTaken: true,
+    canBeUntaken: false,
+  },
+  "MTH 230 & 229": {
+    isTaken: false,
+    canBeTaken: false,
+    canBeUntaken: false,
+  },
+  "MTH 231 & 229": {
+    isTaken: false,
+    canBeTaken: false,
+    canBeUntaken: false,
+  },
+  "MTH 232": {
+    isTaken: false,
+    canBeTaken: false,
+    canBeUntaken: false,
+  },
   "200 level elective*": {
     isTaken: false,
     canBeTaken: false,
@@ -152,7 +172,23 @@ export async function register(email, password) {
   return await createUserWithEmailAndPassword(auth, email, password)
     .then(async (user) => {
       const usersRef = collection(db, "users");
-      if (!(await getDoc(doc(usersRef, user.user.uid)))) {
+      await setDoc(doc(usersRef, user.user.uid), {
+        isClassesTaken: isClassesTaken,
+      });
+      return user;
+    })
+    .catch((error) => {
+      throw error;
+    });
+}
+
+export async function loginWithGoogle() {
+  const provider = new GoogleAuthProvider();
+  return await signInWithPopup(auth, provider)
+    .then(async (user) => {
+      const usersRef = collection(db, "users");
+      const docRef = await getDoc(doc(usersRef, user.user.uid));
+      if (!docRef.exists()) {
         await setDoc(doc(usersRef, user.user.uid), {
           isClassesTaken: isClassesTaken,
         });
@@ -164,38 +200,22 @@ export async function register(email, password) {
     });
 }
 
-export async function loginWithGoogle() {
-  const provider = new GoogleAuthProvider();
-  return await signInWithPopup(auth, provider)
-    .then(async (result) => {
-      const usersRef = collection(db, "users");
-      if (!(await getDoc(doc(usersRef, result.user.uid)))) {
-        await setDoc(doc(usersRef, result.user.uid), {
-          isClassesTaken: isClassesTaken,
-        });
-      }
-      return result;
-    })
-    .catch((error) => {
-      throw error;
-    });
-}
-
 export async function loginWithGitHub() {
   const provider = new GithubAuthProvider();
   return await signInWithPopup(auth, provider)
-    .then(async (result) => {
+    .then(async (user) => {
       const usersRef = collection(db, "users");
-      if (!(await getDoc(doc(usersRef, result.user.uid)))) {
+      const docRef = await getDoc(doc(usersRef, user.user.uid));
+      if (!docRef.exists()) {
         await setDoc(
-          doc(usersRef, result.user.uid),
+          doc(usersRef, user.user.uid),
           {
             isClassesTaken: isClassesTaken,
           },
           { merge: true }
         );
       }
-      return result;
+      return user;
     })
     .catch((error) => {
       throw error;

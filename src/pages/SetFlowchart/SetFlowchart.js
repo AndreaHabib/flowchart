@@ -1,12 +1,31 @@
 import { default as el1 } from "../../flowcharts/elements/Flowchart1";
 
+// /classes.push(el1[28]);
 export const setFlowchart = (data) => {
   let classes = [];
   el1[26]["data"]["label"] =
-    "Start Here! You can click on CSC 126 to add your first class!";
+    "Start Here! You can click on CSC 126 or MTH 123 to add your first class!";
   classes.push(el1[26]);
-  if (data["CSC 126"].isTaken) {
+  if (data["CSC 126"].isTaken || data["MTH 123"].isTaken) {
     classes.push(el1[0]);
+    classes.push(el1[3]);
+    classes.push(el1[27]);
+    classes.push(el1[33]);
+    classes.push(el1[34]);
+  }
+  if (data["MTH 230 & 229"].isTaken || data["MTH 231 & 229"].isTaken) {
+    classes.push(el1[4]);
+    classes.push(el1[5]);
+    classes.push(el1[6]);
+    classes.push(el1[32]);
+    classes.push(el1[35]);
+    classes.push(el1[36]);
+  }
+  if (data["MTH 232"].isTaken) {
+    classes.push(el1[7]);
+    classes.push(el1[28]);
+    classes.push(el1[37]);
+    classes.push(el1[46]);
   }
   if (data["200 level elective*"].isTaken) {
     classes.push(el1[1]);

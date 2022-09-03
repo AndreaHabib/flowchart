@@ -147,7 +147,10 @@ export default function Auth() {
     let isMounted = true;
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        if (isMounted) navigate("/profile");
+        if (isMounted) {
+          setLoading(true);
+          setTimeout(() => navigate("/profile"), 5000);
+        }
       }
     });
     return () => {
@@ -157,7 +160,7 @@ export default function Auth() {
 
   return (
     <Fragment>
-      <Box sx={{ height: "85vh" }}>
+      <Box sx={{ height: { xs: "80vh", sm: "80vh", md: "90vh", lg: "90vh" } }}>
         <Box sx={{ pt: 5 }} component="form">
           <FormGroup
             className="form"

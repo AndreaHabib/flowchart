@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment, useCallback } from "react";
 import {
   Button,
+  Box,
   Grid,
   Card,
   Tooltip,
@@ -24,7 +25,10 @@ import {
 } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { mathClasses, cscProfileClasses } from "../flowcharts/classes/Classes";
+import {
+  cscProfileClasses,
+  mathProfileClasses,
+} from "../flowcharts/classes/Classes";
 import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
 
 const style = {
@@ -40,7 +44,7 @@ export default function Profile(props) {
   const [reactflowInstance, setReactflowInstance] = useState(null);
   const [isClassesTaken, setIsClassesTaken] = useState(null);
   // eslint-disable-next-line
-  const [mthChipData, setMthChipData] = useState(mathClasses);
+  const [mthChipData, setMthChipData] = useState(mathProfileClasses);
 
   // eslint-disable-next-line
   const [cscChipData, setCscChipData] = useState(cscProfileClasses);
@@ -54,62 +58,69 @@ export default function Profile(props) {
     [reactflowInstance]
   );
 
-  const setUserData = useCallback(async (user) => {
-    setLoading(true);
-    setUser(user);
-    await getClassesTaken(user.uid)
-      .then((result) => result)
-      .then((data) => {
-        setClassesTaken(setFlowchart(data));
-        setIsClassesTaken(data);
-      });
-    setLoading(false);
-  }, []);
-
   useEffect(() => {
     let isMounted = true;
     onAuthStateChanged(auth, (user) => {
       if (!user) {
         if (isMounted) navigate("/auth");
       } else {
-        if (isMounted) setUserData(user);
+        if (isMounted) {
+          (async () => {
+            try {
+              setLoading(true);
+              setUser(user);
+              await getClassesTaken(user.uid)
+                .then((result) => result)
+                .then((data) => {
+                  setClassesTaken(setFlowchart(data));
+                  setIsClassesTaken(data);
+                });
+              setLoading(false);
+            } catch (error) {
+              setLoading(false);
+            }
+          })();
+        }
       }
     });
     return () => {
       isMounted = false;
     };
-  }, [navigate, setUserData]);
+  }, [navigate]);
 
   return (
     <Fragment>
-      <Grid
-        sx={{
-          backgroundColor: "#007FFF",
-          p: 1,
-          borderBottom: "10px solid #007FFF",
-        }}
-        container
-        justifyContent="flex-end"
-      >
-        <Button
-          color="success"
-          size="small"
-          sx={{ mr: 1 }}
-          component={Link}
-          to="/"
-          variant="contained"
+      <Box sx={{ width: "100%", backgroundColor: "#007FFF" }}>
+        <Grid
+          sx={{
+            width: "90%",
+            backgroundColor: "#007FFF",
+            p: 1,
+            borderBottom: "10px solid #007FFF",
+          }}
+          container
+          justifyContent="flex-end"
         >
-          Home
-        </Button>
-        <Button
-          size="small"
-          color="error"
-          variant="contained"
-          onClick={signOut}
-        >
-          Sign out
-        </Button>
-      </Grid>
+          <Button
+            color="success"
+            size="small"
+            sx={{ mr: 1 }}
+            component={Link}
+            to="/"
+            variant="contained"
+          >
+            Home
+          </Button>
+          <Button
+            size="small"
+            color="error"
+            variant="contained"
+            onClick={signOut}
+          >
+            Sign out
+          </Button>
+        </Grid>
+      </Box>
       <Grid justifyContent="center" container>
         <Grid item xs={12}>
           <Typography
@@ -285,61 +296,122 @@ export default function Profile(props) {
                   }}
                   component="ul"
                 >
-                  {cscChipData.map((csc_class) => (
-                    <Tooltip
-                      sx={{ m: 0.5 }}
-                      key={csc_class.key}
-                      title={csc_class.tooltip}
-                      placement="top"
-                    >
-                      <Chip
-                        color={
-                          isClassesTaken[csc_class.label].isTaken
-                            ? isClassesTaken[csc_class.label].canBeUntaken
-                              ? "success"
-                              : "warning"
-                            : isClassesTaken[csc_class.label].canBeTaken
-                            ? "primary"
-                            : "error"
-                        }
-                        onDelete={
-                          isClassesTaken[csc_class.label].canBeUntaken
-                            ? () => {
-                                onDeleteClass(
-                                  csc_class.label,
-                                  user.uid,
-                                  isClassesTaken
-                                );
-                              }
-                            : null
-                        }
-                        clickable={
-                          !isClassesTaken[csc_class.label].isTaken ||
-                          isClassesTaken[csc_class.label].canBeTaken ||
-                          !isClassesTaken[csc_class.label].canBeUntaken
-                        }
-                        key={csc_class.key}
-                        label={csc_class.label}
-                        disabled={
-                          (!isClassesTaken[csc_class.label].canBeUntaken &&
-                            !isClassesTaken[csc_class.label].isTaken &&
-                            !isClassesTaken[csc_class.label].canBeTaken) ||
-                          (!isClassesTaken[csc_class.label].canBeUntaken &&
-                            isClassesTaken[csc_class.label].isTaken)
-                        }
-                        onClick={
-                          isClassesTaken[csc_class.label].canBeTaken
-                            ? () =>
-                                onAddClass(
-                                  csc_class.label,
-                                  user.uid,
-                                  isClassesTaken
-                                )
-                            : null
-                        }
-                      />
-                    </Tooltip>
-                  ))}
+                  <Grid container justifyContent="center">
+                    <Grid sx={{ marginBottom: "20px" }}>
+                      {cscChipData.map((csc_class) => (
+                        <Tooltip
+                          sx={{ m: 0.5 }}
+                          key={csc_class.key}
+                          title={csc_class.tooltip}
+                          placement="top"
+                        >
+                          <Chip
+                            color={
+                              isClassesTaken[csc_class.label].isTaken
+                                ? isClassesTaken[csc_class.label].canBeUntaken
+                                  ? "success"
+                                  : "warning"
+                                : isClassesTaken[csc_class.label].canBeTaken
+                                ? "primary"
+                                : "error"
+                            }
+                            onDelete={
+                              isClassesTaken[csc_class.label].canBeUntaken
+                                ? () => {
+                                    onDeleteClass(
+                                      csc_class.label,
+                                      user.uid,
+                                      isClassesTaken
+                                    );
+                                  }
+                                : null
+                            }
+                            clickable={
+                              !isClassesTaken[csc_class.label].isTaken ||
+                              isClassesTaken[csc_class.label].canBeTaken ||
+                              !isClassesTaken[csc_class.label].canBeUntaken
+                            }
+                            key={csc_class.key}
+                            label={csc_class.label}
+                            disabled={
+                              (!isClassesTaken[csc_class.label].canBeUntaken &&
+                                !isClassesTaken[csc_class.label].isTaken &&
+                                !isClassesTaken[csc_class.label].canBeTaken) ||
+                              (!isClassesTaken[csc_class.label].canBeUntaken &&
+                                isClassesTaken[csc_class.label].isTaken)
+                            }
+                            onClick={
+                              isClassesTaken[csc_class.label].canBeTaken
+                                ? () =>
+                                    onAddClass(
+                                      csc_class.label,
+                                      user.uid,
+                                      isClassesTaken
+                                    )
+                                : null
+                            }
+                          />
+                        </Tooltip>
+                      ))}
+                    </Grid>
+                    <Grid>
+                      {mthChipData.map((mth_class) => (
+                        <Tooltip
+                          sx={{ m: 0.5 }}
+                          key={mth_class.key}
+                          title={mth_class.tooltip}
+                          placement="top"
+                        >
+                          <Chip
+                            color={
+                              isClassesTaken[mth_class.label].isTaken
+                                ? isClassesTaken[mth_class.label].canBeUntaken
+                                  ? "success"
+                                  : "warning"
+                                : isClassesTaken[mth_class.label].canBeTaken
+                                ? "primary"
+                                : "error"
+                            }
+                            onDelete={
+                              isClassesTaken[mth_class.label].canBeUntaken
+                                ? () => {
+                                    onDeleteClass(
+                                      mth_class.label,
+                                      user.uid,
+                                      isClassesTaken
+                                    );
+                                  }
+                                : null
+                            }
+                            clickable={
+                              !isClassesTaken[mth_class.label].isTaken ||
+                              isClassesTaken[mth_class.label].canBeTaken ||
+                              !isClassesTaken[mth_class.label].canBeUntaken
+                            }
+                            key={mth_class.key}
+                            label={mth_class.label}
+                            disabled={
+                              (!isClassesTaken[mth_class.label].canBeUntaken &&
+                                !isClassesTaken[mth_class.label].isTaken &&
+                                !isClassesTaken[mth_class.label].canBeTaken) ||
+                              (!isClassesTaken[mth_class.label].canBeUntaken &&
+                                isClassesTaken[mth_class.label].isTaken)
+                            }
+                            onClick={
+                              isClassesTaken[mth_class.label].canBeTaken
+                                ? () =>
+                                    onAddClass(
+                                      mth_class.label,
+                                      user.uid,
+                                      isClassesTaken
+                                    )
+                                : null
+                            }
+                          />
+                        </Tooltip>
+                      ))}
+                    </Grid>
+                  </Grid>
                 </Paper>
               </CardContent>
             </Card>
@@ -347,10 +419,6 @@ export default function Profile(props) {
           <Grid item xs={12} sm={12} md={10} lg={9}>
             <ReactFlow
               preventScrolling={false}
-              translateExtent={[
-                [-1500, -1500],
-                [2000, 1500],
-              ]}
               onLoad={onLoad}
               style={style}
               defaultPosition={[props.x, props.y]}

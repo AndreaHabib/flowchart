@@ -37,6 +37,33 @@ const mathClasses = [
   },
 ];
 
+const mathProfileClasses = [
+  {
+    key: 0,
+    tooltip: "College Algebra and Trigonometry",
+    label: "MTH 123",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/100/MTH-123",
+  },
+  {
+    key: 1,
+    tooltip: "Calculus I with Pre-Calculus",
+    label: "MTH 230 & 229",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-230",
+  },
+  {
+    key: 2,
+    tooltip: "Analytic Geometry and Calculus I",
+    label: "MTH 231 & 229",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-231",
+  },
+  {
+    key: 3,
+    tooltip: "Calculus II",
+    label: "MTH 232",
+    url: "https://csicuny.smartcatalogiq.com/Current/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-232",
+  },
+];
+
 const cscClasses = [
   {
     key: 0,
@@ -388,4 +415,10 @@ const cscProfileClasses = [
   },
 ];
 
-module.exports = { mathClasses, cscClasses, cscElectives, cscProfileClasses };
+module.exports = {
+  mathClasses,
+  cscClasses,
+  cscElectives,
+  cscProfileClasses,
+  mathProfileClasses,
+};

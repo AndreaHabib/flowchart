@@ -1,7 +1,8 @@
 import React, { Fragment, useState, useEffect } from "react";
 import "./styles/Footer.css";
-import { Typography, Link } from "@mui/material";
+import { Typography, Link, Box } from "@mui/material";
 import { useLocation } from "react-router-dom";
+import { width } from "@mui/system";
 
 export default function Footer() {
   const location = useLocation();
@@ -29,17 +30,24 @@ export default function Footer() {
 
   return (
     <Fragment>
-      <footer className={className}>
-        <Typography variant="h6">
-          CUNY2X - CSI Computer Science Department
-        </Typography>
-        <Typography variant="h6">
-          This is intended to be used only as a guide.
-        </Typography>
-        <Link color="inherit" href="https://andreahabib.netlify.app/">
-          By Andrea Habib
-        </Link>
-      </footer>
+      <Box
+        sx={{
+          height: { xs: "25vh", sm: "20vh", md: "15vh", lg: "10vh" },
+          width: "100%",
+        }}
+      >
+        <footer className={className}>
+          <Typography variant="h6">
+            CUNY2X - CSI Computer Science Department
+          </Typography>
+          <Typography variant="h6">
+            This is intended to be used only as a guide.
+          </Typography>
+          <Link color="inherit" href="https://andreahabib.netlify.app/">
+            By Andrea Habib
+          </Link>
+        </footer>
+      </Box>
     </Fragment>
   );
 }

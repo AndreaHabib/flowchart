@@ -268,10 +268,6 @@ export default function FLOW_CHART(props) {
         <ReactFlow
           onElementClick={onClickElement}
           preventScrolling={false}
-          translateExtent={[
-            [-1500, -1500],
-            [2000, 1500],
-          ]}
           onLoad={onLoad}
           style={style}
           defaultPosition={[props.x, props.y]}

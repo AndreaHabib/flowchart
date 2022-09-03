@@ -40,9 +40,9 @@
 footer {
   display: flex;
   width: 100%;
+  height: inherit;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 25vh;
   color: white;
 }
