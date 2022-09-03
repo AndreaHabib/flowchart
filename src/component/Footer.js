@@ -2,7 +2,6 @@ import React, { Fragment, useState, useEffect } from "react";
 import "./styles/Footer.css";
 import { Typography, Link, Box } from "@mui/material";
 import { useLocation } from "react-router-dom";
-import { width } from "@mui/system";
 
 export default function Footer() {
   const location = useLocation();
