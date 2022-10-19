@@ -85,7 +85,7 @@ export default function Home() {
           >
             <img
               style={{ width: "80%", height: "auto" }}
-              src="https://res.cloudinary.com/andreahabib/image/upload/v1645115452/Screen_Shot_2022-02-17_at_11.17.59_AM_j0gxlb.png"
+              src="https://res.cloudinary.com/andreahabib/image/upload/v1666200231/Screenshot_2022-10-19_132154_eelu0c.png"
               alt="degreeworks"
             ></img>
           </Box>
@@ -96,7 +96,7 @@ export default function Home() {
           >
             <img
               style={{ width: "100%", height: "auto" }}
-              src="https://res.cloudinary.com/andreahabib/image/upload/v1645382846/Screen_Shot_2022-02-20_at_1.42.55_PM_oaidcl.png"
+              src="https://res.cloudinary.com/andreahabib/image/upload/v1666200231/Screenshot_2022-10-19_132226_gm7re2.png"
               alt="degreeworks"
             ></img>
           </Box>
