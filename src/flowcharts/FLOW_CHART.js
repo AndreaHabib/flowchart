@@ -318,6 +318,7 @@ export default function FLOW_CHART(props) {
             style={{ background: color }}
             rel="noreferrer noopener"
             href={pathway}
+            disbaled={location.pathname === "/flowchart-aas-cat2022-2023"}
             variant="contained"
           >
             Pathway Checklist {years} Catalog
