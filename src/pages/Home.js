@@ -43,7 +43,7 @@ export default function Home() {
             size="small"
             rel="noreferrer noopener"
             target="_blank"
-            href="https://degreeworks.cuny.edu/Dashboard_si/dashboard"
+            href="https://degreeworks.cuny.edu/Dashboard_si/"
             component="a"
           >
             DegreeWorks
