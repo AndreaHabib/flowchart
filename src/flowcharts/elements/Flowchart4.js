@@ -14,7 +14,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "200 level elective*",Desc:"Elective" },
+    data: { label: "200 level elective*",Desc:"200 level Elective" },
     position: { x: window.innerWidth / 2 + 0, y: 300 },
   },
   {
@@ -121,9 +121,9 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 305", Desc:"Operating Systems Programming Laboratory" },
-    targetPosition: "left",
-    position: { x: window.innerWidth / 2 + 450, y: 300 },
+    data: { label: "CSC 305",Desc:"Operating Systems Programming Laboratory" },
+    sourcePosition : "left",
+    position: { x: window.innerWidth / 2 + 450 , y: 300 },
   },
   {
     id: "start",

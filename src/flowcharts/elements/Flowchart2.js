@@ -194,7 +194,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 305", Desc:"Operating Systems Programming Laboratory" },
+    data: { label: "CSC 305",Desc:"Operating Systems Programming Laboratory" },
     targetPosition: "left",
     position: { x: window.innerWidth / 2 + 600, y: 420 },
   },

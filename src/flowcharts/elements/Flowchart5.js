@@ -14,7 +14,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "200 level elective*" ,Desc:"Elective" },
+    data: { label: "200 level elective*" ,Desc:"200 level Elective" },
     position: { x: window.innerWidth / 2 - 400, y: 120 },
   },
   {
@@ -175,7 +175,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 446", Desc:"Computer Architecture" },
+    data: { label: "CSC 446", Desc:"Computer Architecture"  },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 + 550, y: 300 },
   },
@@ -203,8 +203,8 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 305",Desc:"Operating Systems Programming Laboratory" },
-    targetPosition: "left",
+    data: { label: "CSC 305", Desc:"Operating Systems Programming Laboratory" },
+    sourcePosition : "left",
     position: { x: window.innerWidth / 2 + 600, y: 420 },
   },
   {
@@ -307,7 +307,7 @@ const elements = [
   },
   {
     id: "30",
-    data: { label: "MTH 125" },
+    data: { label: "MTH 125", Desc:"College Algebra and Trigonometry with Intermediate Algebra Review" },
     targetPosition: "right",
     sourcePosition: "right",
     style: {
