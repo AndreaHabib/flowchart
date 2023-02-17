@@ -130,7 +130,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "MTH#", Desc:"MTH#" },
+    data: { label: "MTH#", Desc:" MTH#" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 - 900, y: 320 },
   },
@@ -139,7 +139,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "MTH#", Desc:"MTH#" },
+    data: { label: "MTH#", Desc:" MTH# " },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 - 650, y: 320 },
   },
@@ -175,7 +175,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 446", Desc:"Applied Cryptography" },
+    data: { label: "CSC 446", Desc:"Computer Architecture" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 + 550, y: 300 },
   },

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { useState, useCallback, useEffect } from "react";
-import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
+import ReactFlow, { Background, Controls } from "react-flow-renderer";
 import { useLocation } from "react-router-dom";
 import { default as el1 } from "./elements/Flowchart1";
 import { default as el2 } from "./elements/Flowchart2";
@@ -63,7 +63,6 @@ export default function FLOW_CHART(props) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showTooltip,setShowTooltip] = useState (false);
   const [ currentNode, setCurrentNode ] = useState({});
-  const [tooltipTimeoutId, setTooltipTimeoutId] = useState(null); 
 
   useEffect(() => {
     if (location.pathname === "/flowchart-cat2013-2018") {
@@ -220,30 +219,29 @@ export default function FLOW_CHART(props) {
     },
     [switchFun, tempElement]
   );
+  
+  //Mouse Enter handler
   const handleMouseEnter = (event,node) => {
-    
     setMousePosition({ x: event.pageX, y: event.pageY });
-    const timeoutId = setTimeout(() => {
+    setTimeout(() => {
       if(node){
         setCurrentNode(node);
         setShowTooltip(true);
       }
-    }, 200);
-  
-    setTooltipTimeoutId(timeoutId);
+    }, 50);
   };
-
+  //Mouse Move handler
   const handleNodeMouseMove = (event, node) =>{
+    setMousePosition({ x: event.pageX, y: event.pageY });
+    setCurrentNode(node);
     
-      
-      setMousePosition({ x: event.pageX, y: event.pageY });
-   
   }
-
+  //Mouse Leave handler
   const handleNodeMouseLeave= (event,node) =>{
     setMousePosition({ x: event.pageX, y: event.pageY });
-    setShowTooltip(false);
-  
+    if(node){
+      setShowTooltip(false);
+    }
   }
 
   return (
@@ -297,7 +295,7 @@ export default function FLOW_CHART(props) {
         <Legend color={location} />
         <ReactFlow
           onElementClick={onClickElement}
-          preventScrolling={false}
+          preventScrolling={true}
           onLoad={onLoad}
           style={style}
           defaultPosition={[props.x, props.y]}
@@ -307,14 +305,15 @@ export default function FLOW_CHART(props) {
           nodesConnectable={false}
           minZoom={0.6}
           defaultZoom={0.6}
-          maxZoom={0.6}
-          nodesDraggable={true}
+          maxZoom={1}
+          nodesDraggable={false}
           elements={elements_flow}
           onNodeMouseMove={handleNodeMouseMove}
           onNodeMouseEnter={handleMouseEnter}
           onNodeMouseLeave={handleNodeMouseLeave}
+          
         >
-          <MiniMap />
+          
           <Background />
           <Controls showZoom={false} />
         </ReactFlow>
@@ -322,15 +321,16 @@ export default function FLOW_CHART(props) {
             <Box
               style={{
                 position: "absolute",
-                top: mousePosition.y,
-                left: mousePosition.x,
-                zIndex: 10,
+                top: mousePosition.y-45,
+                left: mousePosition.x+35,
+                zIndex:100,
                 background:'#000',
-                opacity:"0.8",
+                opacity:"0.7",
                 borderRadius: '5px',
+                height:'auto',
               }}
             >
-            <p style={{color:'white'}}>{currentNode.data.Desc}</p>
+            <Typography variant="h6" style={{color:'white'}}>{currentNode.data.Desc}</Typography>
             </Box>
         )}
         <Typography mt={5} variant="h4">
