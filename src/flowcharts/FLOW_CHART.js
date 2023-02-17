@@ -44,6 +44,7 @@ import WarningAmber from "@mui/icons-material/WarningAmber";
 const style = {
   width: "97%",
   height: "75vh",
+  
 };
 
 export default function FLOW_CHART(props) {
@@ -59,6 +60,10 @@ export default function FLOW_CHART(props) {
   const [pathway, setPathway] = useState("");
   const [flowchart, setFlowchart] = useState("");
   const [years, setYears] = useState("");
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [showTooltip,setShowTooltip] = useState (false);
+  const [ currentNode, setCurrentNode ] = useState({});
+  const [tooltipTimeoutId, setTooltipTimeoutId] = useState(null); 
 
   useEffect(() => {
     if (location.pathname === "/flowchart-cat2013-2018") {
@@ -215,6 +220,31 @@ export default function FLOW_CHART(props) {
     },
     [switchFun, tempElement]
   );
+  const handleMouseEnter = (event,node) => {
+    
+    setMousePosition({ x: event.pageX, y: event.pageY });
+    const timeoutId = setTimeout(() => {
+      if(node){
+        setCurrentNode(node);
+        setShowTooltip(true);
+      }
+    }, 200);
+  
+    setTooltipTimeoutId(timeoutId);
+  };
+
+  const handleNodeMouseMove = (event, node) =>{
+    
+      
+      setMousePosition({ x: event.pageX, y: event.pageY });
+   
+  }
+
+  const handleNodeMouseLeave= (event,node) =>{
+    setMousePosition({ x: event.pageX, y: event.pageY });
+    setShowTooltip(false);
+  
+  }
 
   return (
     <Fragment>
@@ -273,18 +303,36 @@ export default function FLOW_CHART(props) {
           defaultPosition={[props.x, props.y]}
           onlyRenderVisibleElements={true}
           arrowHeadColor="black"
-          paneMoveable={true}
+          paneMoveable={false}
           nodesConnectable={false}
           minZoom={0.6}
           defaultZoom={0.6}
-          maxZoom={1}
-          nodesDraggable={false}
+          maxZoom={0.6}
+          nodesDraggable={true}
           elements={elements_flow}
+          onNodeMouseMove={handleNodeMouseMove}
+          onNodeMouseEnter={handleMouseEnter}
+          onNodeMouseLeave={handleNodeMouseLeave}
         >
           <MiniMap />
           <Background />
           <Controls showZoom={false} />
         </ReactFlow>
+        {showTooltip && (
+            <Box
+              style={{
+                position: "absolute",
+                top: mousePosition.y,
+                left: mousePosition.x,
+                zIndex: 10,
+                background:'#000',
+                opacity:"0.8",
+                borderRadius: '5px',
+              }}
+            >
+            <p style={{color:'white'}}>{currentNode.data.Desc}</p>
+            </Box>
+        )}
         <Typography mt={5} variant="h4">
           Tools for Planning out your CSC courses
         </Typography>

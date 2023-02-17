@@ -1,7 +1,7 @@
 const elements = [
   {
     id: "1",
-    data: { label: "CSC 126" },
+    data: { label: "CSC 126",Desc:"Intro to Computer Science" },
     targetPosition: "left",
     sourcePosition: "bottom",
     style: {
@@ -14,7 +14,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "200 level elective*" },
+    data: { label: "200 level elective*" , Desc:"200 level elective*"  },
     position: { x: window.innerWidth / 2 - 400, y: 120 },
   },
   {
@@ -22,7 +22,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 211" },
+    data: { label: "CSC 211" , Desc:"Intermediate Programming"  },
     position: { x: window.innerWidth / 2 - 100, y: 120 },
   },
   {
@@ -30,7 +30,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "MTH 123 ~" },
+    data: { label: "MTH 123 ~" ,Desc:"College Algebra and Trigonometry" },
     targetPosition: "right",
     sourcePosition: "bottom",
     position: { x: window.innerWidth / 2 - 650, y: 20 },
@@ -41,7 +41,7 @@ const elements = [
       backgroundColor: "white",
     },
     selectable: false,
-    data: { label: "MTH 231 or MTH 230" },
+    data: { label: "MTH 231 or MTH 230" ,Desc:"Calc I or Calc I with PreCalc"  },
     position: { x: window.innerWidth / 2 - 650, y: 120 },
   },
   {
@@ -49,7 +49,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "MTH 231 or MTH 230" },
+    data: { label: "MTH 231 or MTH 230" ,Desc:"Calc I or Calc I with PreCalc"  },
     targetPosition: "left",
     position: { x: window.innerWidth / 2 - 650, y: 120 },
   },
@@ -60,7 +60,7 @@ const elements = [
     },
     sourcePosition: "left",
     targetPosition: "right",
-    data: { label: "MTH 229" },
+    data: { label: "MTH 229",Desc:"Calculus Computer Laboratory(RLA)" },
     position: { x: window.innerWidth / 2 - 900, y: 120 },
   },
   {
@@ -68,7 +68,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "MTH 232" },
+    data: { label: "MTH 232" ,Desc:"Calculus II" },
     position: { x: window.innerWidth / 2 - 650, y: 220 },
   },
   {
@@ -76,7 +76,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC or MTH 228" },
+    data: { label: "CSC or MTH 228" , Desc:"Discrete Mathematical Structures for Computer Science" },
     position: { x: window.innerWidth / 2 - 400, y: 220 },
   },
   {
@@ -85,7 +85,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 326" },
+    data: { label: "CSC 326" , Desc:"Data Structures"  },
     position: { x: window.innerWidth / 2, y: 220 },
   },
   {
@@ -93,7 +93,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 220" },
+    data: { label: "CSC 220" , Desc:"Computers, Networking and Security" },
     targetPosition: "left",
     position: { x: window.innerWidth / 2 + 150, y: 70 },
   },
@@ -103,7 +103,7 @@ const elements = [
       backgroundColor: "white",
     },
     selectable: false,
-    data: { label: "CSC 346 or ENS 220" },
+    data: { label: "CSC 346 or ENS 220" ,Desc:"Digital Circuits Design or Introduction to Computer Engineering" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 + 350, y: 180 },
   },
@@ -112,7 +112,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 346 or ENS 220" },
+    data: { label: "CSC 346 or ENS 220",Desc:"Digital Circuits Design or Introduction to Computer Engineering"},
     targetPosition: "right",
     position: { x: window.innerWidth / 2 + 350, y: 180 },
   },
@@ -121,7 +121,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 347" },
+    data: { label: "CSC 347" ,Desc:"Digital Circuits Laboratory" },
     targetPosition: "left",
     position: { x: window.innerWidth / 2 + 600, y: 180 },
   },
@@ -130,7 +130,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "MTH#" },
+    data: { label: "MTH#", Desc:"MTH#" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 - 900, y: 320 },
   },
@@ -139,7 +139,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "MTH#" },
+    data: { label: "MTH#", Desc:"MTH#" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 - 650, y: 320 },
   },
@@ -148,7 +148,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 382" },
+    data: { label: "CSC 382", Desc:"Analysis of Algorithms" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 - 400, y: 320 },
   },
@@ -157,7 +157,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 330" },
+    data: { label: "CSC 330" ,Desc:"Object-Oriented Software Design"  },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 - 100, y: 380 },
   },
@@ -166,7 +166,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 315" },
+    data: { label: "CSC 315",Desc:"Introduction to Database Systems"  },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 + 120, y: 380 },
   },
@@ -175,7 +175,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 446" },
+    data: { label: "CSC 446", Desc:"Applied Cryptography" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 + 550, y: 300 },
   },
@@ -185,7 +185,7 @@ const elements = [
       backgroundColor: "white",
     },
     selectable: false,
-    data: { label: "CSC 332" },
+    data: { label: "CSC 332",Desc:"Operating Systems I" },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 + 350, y: 420 },
   },
@@ -194,7 +194,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 332" },
+    data: { label: "CSC 332",Desc:"Operating Systems I" },
     targetPosition: "right",
     position: { x: window.innerWidth / 2 + 350, y: 420 },
   },
@@ -203,7 +203,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 305" },
+    data: { label: "CSC 305",Desc:"Operating Systems Programming Laboratory" },
     targetPosition: "left",
     position: { x: window.innerWidth / 2 + 600, y: 420 },
   },
@@ -212,7 +212,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "400 level elective*" },
+    data: { label: "400 level elective*", Desc:"400 level elective" },
     position: { x: window.innerWidth / 2 - 300, y: 420 },
   },
   {
@@ -220,7 +220,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 490**" },
+    data: { label: "CSC 490**", Desc:"Seminar in Computer Science" },
     position: { x: window.innerWidth / 2 - 200, y: 540 },
   },
   {
@@ -228,7 +228,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 430" },
+    data: { label: "CSC 430", Desc:"Software Engineering" },
     position: { x: window.innerWidth / 2 + 100, y: 540 },
   },
   {
