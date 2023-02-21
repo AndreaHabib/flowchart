@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { useState, useCallback, useEffect } from "react";
-import ReactFlow, { MiniMap, Background, Controls } from "react-flow-renderer";
+import ReactFlow, { Background, Controls } from "react-flow-renderer";
 import { useLocation } from "react-router-dom";
 import { default as el1 } from "./elements/Flowchart1";
 import { default as el2 } from "./elements/Flowchart2";
@@ -44,6 +44,7 @@ import WarningAmber from "@mui/icons-material/WarningAmber";
 const style = {
   width: "97%",
   height: "75vh",
+  
 };
 
 export default function FLOW_CHART(props) {
@@ -59,6 +60,9 @@ export default function FLOW_CHART(props) {
   const [pathway, setPathway] = useState("");
   const [flowchart, setFlowchart] = useState("");
   const [years, setYears] = useState("");
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [showTooltip,setShowTooltip] = useState (false);
+  const [ currentNode, setCurrentNode ] = useState({});
 
   useEffect(() => {
     if (location.pathname === "/flowchart-cat2013-2018") {
@@ -215,6 +219,30 @@ export default function FLOW_CHART(props) {
     },
     [switchFun, tempElement]
   );
+  
+  //Mouse Enter handler
+  const handleMouseEnter = (event,node) => {
+    setMousePosition({ x: event.pageX, y: event.pageY });
+    setTimeout(() => {
+      if(node){
+        setCurrentNode(node);
+        setShowTooltip(true);
+      }
+    }, 50);
+  };
+  //Mouse Move handler
+  const handleNodeMouseMove = (event, node) =>{
+    setMousePosition({ x: event.pageX, y: event.pageY });
+    setCurrentNode(node);
+    
+  }
+  //Mouse Leave handler
+  const handleNodeMouseLeave= (event,node) =>{
+    setMousePosition({ x: event.pageX, y: event.pageY });
+    if(node){
+      setShowTooltip(false);
+    }
+  }
 
   return (
     <Fragment>
@@ -267,24 +295,44 @@ export default function FLOW_CHART(props) {
         <Legend color={location} />
         <ReactFlow
           onElementClick={onClickElement}
-          preventScrolling={false}
+          preventScrolling={true}
           onLoad={onLoad}
           style={style}
           defaultPosition={[props.x, props.y]}
           onlyRenderVisibleElements={true}
           arrowHeadColor="black"
-          paneMoveable={true}
+          paneMoveable={false}
           nodesConnectable={false}
           minZoom={0.6}
           defaultZoom={0.6}
           maxZoom={1}
           nodesDraggable={false}
           elements={elements_flow}
+          onNodeMouseMove={handleNodeMouseMove}
+          onNodeMouseEnter={handleMouseEnter}
+          onNodeMouseLeave={handleNodeMouseLeave}
+          
         >
-          <MiniMap />
+          
           <Background />
           <Controls showZoom={false} />
         </ReactFlow>
+        {showTooltip && (
+            <Box
+              style={{
+                position: "absolute",
+                top: mousePosition.y-45,
+                left: mousePosition.x+35,
+                zIndex:100,
+                background:'#000',
+                opacity:"0.7",
+                borderRadius: '5px',
+                height:'auto',
+              }}
+            >
+            <Typography variant="h6" style={{color:'white'}}>{currentNode.data.Desc}</Typography>
+            </Box>
+        )}
         <Typography mt={5} variant="h4">
           Tools for Planning out your CSC courses
         </Typography>

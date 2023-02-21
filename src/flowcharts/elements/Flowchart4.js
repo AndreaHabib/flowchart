@@ -1,7 +1,7 @@
 const elements = [
   {
     id: "1",
-    data: { label: "CSC 126" },
+    data: { label: "CSC 126", Desc:"Intro to Computer Science"},
     targetPosition: "left",
     sourcePosition: "bottom",
     style: {
@@ -14,7 +14,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "200 level elective*" },
+    data: { label: "200 level elective*",Desc:"200 level Elective" },
     position: { x: window.innerWidth / 2 + 0, y: 300 },
   },
   {
@@ -22,7 +22,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 211" },
+    data: { label: "CSC 211", Desc:"Intermediate Programming"},
     position: { x: window.innerWidth / 2 - 350, y: 120 },
   },
   {
@@ -30,7 +30,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "MTH 123 ~" },
+    data: { label: "MTH 123 ~" ,Desc:"College Algebra and Trig" },
     targetPosition: "right",
     sourcePosition: "bottom",
     position: { x: window.innerWidth / 2 - 650, y: 20 },
@@ -41,7 +41,7 @@ const elements = [
       backgroundColor: "white",
     },
     selectable: false,
-    data: { label: "MTH 231 or MTH 230" },
+    data: { label: "MTH 231 or MTH 230", Desc:"Calc I or Calc I with PreCalc"},
     position: { x: window.innerWidth / 2 - 650, y: 120 },
   },
   {
@@ -49,7 +49,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "MTH 231 or MTH 230" },
+    data: { label: "MTH 231 or MTH 230",Desc:"Calc I or Calc I with PreCalc" },
     targetPosition: "left",
     position: { x: window.innerWidth / 2 - 650, y: 120 },
   },
@@ -60,7 +60,7 @@ const elements = [
     },
     sourcePosition: "left",
     targetPosition: "right",
-    data: { label: "MTH 229" },
+    data: { label: "MTH 229", Desc:"Calculus Lab"},
     position: { x: window.innerWidth / 2 - 900, y: 120 },
   },
   {
@@ -68,7 +68,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC or MTH 228" },
+    data: { label: "CSC or MTH 228", Desc:"Discrete Math" },
     position: { x: window.innerWidth / 2 - 400, y: 220 },
   },
   {
@@ -76,7 +76,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 326" },
+    data: { label: "CSC 326", Desc:"Data Structures"  },
     position: { x: window.innerWidth / 2 - 200, y: 220 },
   },
   {
@@ -84,7 +84,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 220" },
+    data: { label: "CSC 220", Desc:"Computer Networking and Security"  },
     targetPosition: "left",
     position: { x: window.innerWidth / 2 + 100, y: 70 },
   },
@@ -93,7 +93,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 330" },
+    data: { label: "CSC 330", Desc:"Object Oriented Software Design"  },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 - 250, y: 320 },
   },
@@ -103,7 +103,7 @@ const elements = [
       backgroundColor: "white",
     },
     selectable: false,
-    data: { label: "CSC 332" },
+    data: { label: "CSC 332", Desc:"Operating Systems I"  },
     targetPosition: "top",
     position: { x: window.innerWidth / 2 + 200, y: 300 },
   },
@@ -112,7 +112,7 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 332" },
+    data: { label: "CSC 332",Desc:"Operating Systems I" },
     targetPosition: "right",
     position: { x: window.innerWidth / 2 + 200, y: 300 },
   },
@@ -121,9 +121,9 @@ const elements = [
     style: {
       backgroundColor: "white",
     },
-    data: { label: "CSC 305" },
-    targetPosition: "left",
-    position: { x: window.innerWidth / 2 + 450, y: 300 },
+    data: { label: "CSC 305",Desc:"Operating Systems Programming Laboratory" },
+    sourcePosition : "left",
+    position: { x: window.innerWidth / 2 + 450 , y: 300 },
   },
   {
     id: "start",
@@ -160,6 +160,7 @@ const elements = [
     type: "output",
     data: {
       label: "CSC 332 & 305 OR (2) 200-level CSC electives",
+      Desc: "Operating Systems I & Operating Systems Programming Laboratory OR (2) 200-level CSC electives"
     },
     selectable: false,
     targetPosition: "bottom",
@@ -174,6 +175,7 @@ const elements = [
     type: "output",
     data: {
       label: "OR",
+      Desc:"OR"
     },
     selectable: false,
     targetPosition: "right",
@@ -185,7 +187,7 @@ const elements = [
   },
   {
     id: "30",
-    data: { label: "MTH 125" },
+    data: { label: "MTH 125", Desc:"College Algebra and Trigonometry with Intermediate Algebra Review(MQ)(STEM)" },
     targetPosition: "right",
     sourcePosition: "right",
     style: {
