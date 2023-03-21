@@ -301,7 +301,7 @@ export default function FLOW_CHART(props) {
           defaultPosition={[props.x, props.y]}
           onlyRenderVisibleElements={true}
           arrowHeadColor="black"
-          paneMoveable={false}
+          paneMoveable={true}
           nodesConnectable={false}
           minZoom={0.6}
           defaultZoom={0.6}
