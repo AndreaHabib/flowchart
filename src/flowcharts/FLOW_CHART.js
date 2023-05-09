@@ -7,8 +7,10 @@ import { default as el2 } from "./elements/Flowchart2";
 import { default as el3 } from "./elements/Flowchart3";
 import { default as el4 } from "./elements/Flowchart4";
 import { default as el5 } from "./elements/Flowchart5";
+import {default as el6} from "./elements/Flowchart6";
 import { green } from "@mui/material/colors";
 import { deepPurple } from "@mui/material/colors";
+import { orange } from '@mui/material/colors';
 import { teal } from "@mui/material/colors";
 import Legend from "../component/Legend";
 import "./styles/Flowchart1.css";
@@ -39,7 +41,9 @@ import { SwitchPrereq as sw2 } from "./switches/SwitchPrereq2";
 import { SwitchPrereq as sw3 } from "./switches/SwitchPrereq3";
 import { SwitchPrereq as sw4 } from "./switches/SwitchPrereq4";
 import { SwitchPrereq as sw5 } from "./switches/SwitchPrereq5";
+import { SwitchPrereq as sw6 } from "./switches/SwitchPrereq6";
 import WarningAmber from "@mui/icons-material/WarningAmber";
+import { PushPin } from "@mui/icons-material";
 
 const style = {
   width: "97%",
@@ -191,6 +195,25 @@ export default function FLOW_CHART(props) {
       setTempElement(el4);
       setSwitchFun(() => sw4);
       setClassName("flowchart5");
+    }
+    else if (location.pathname === "/flowchart-cat2023-2024") {
+      setYears("2023-2024");
+      setPathway("https://drive.google.com/file/d/166ySyzhCuNV-jnYJXWWIVp5eddXw0DpG/view?usp=sharing");
+      setFlowchart("https://drive.google.com/file/d/1paO8L9ubN6L2Mv5LPQznmWiUP42qkhFa/view?usp=sharing");
+      setTitle("Fall 2023 - Spring 2024");
+      setWarningText([
+        "~ depending on your grade in MTH 123, you may take MTH 130 next, or MTH 230 in place of MTH 231. ",
+        "You must earn a minimum “C” or higher grade in CSC courses which are pre-requisites to other CSC course",
+        "",
+      ]);
+      setUrl(
+        "https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
+      );
+      setColor(orange);
+      setElements(el6);
+      setTempElement(el6);
+      setSwitchFun(() => sw6);
+      setClassName("flowchart6");
     }
   }, [location]);
 
@@ -371,8 +394,23 @@ export default function FLOW_CHART(props) {
           >
             Pathway Checklist {years} Catalog
           </Button>
-          {/* ooga booga - g */}
-          <Button
+
+           {location.pathname === "/flowchart-cat2023-2024" ? 
+       (<>
+    <Button
+            target="_blank"
+            component="a"
+            sx={{ m: 0.5 }}
+            style={{ background: color }}
+            rel="noreferrer noopener"
+            href="https://drive.google.com/file/d/1MN0AA-Bi1pw76JPc6DygYiO81pWGgNP_/view?usp=sharing"
+            variant="contained"
+          >
+            Sample Degree Milestone Map
+          </Button>
+       </>):(
+       <>
+    <Button
             target="_blank"
             component="a"
             sx={{ m: 0.5 }}
@@ -383,6 +421,11 @@ export default function FLOW_CHART(props) {
           >
             Sample Degree Milestone Map
           </Button>
+       </>) 
+      }
+          {/* ooga booga - g */}
+      
+       
           <Button
             disabled={location.pathname === "/flowchart-aas-cat2022-2023"}
             target="_blank"
@@ -393,6 +436,7 @@ export default function FLOW_CHART(props) {
             href={flowchart}
             variant="contained"
           >
+
             Catalog {years} CSC Prerequisites Flowchart
           </Button>
         </Paper>

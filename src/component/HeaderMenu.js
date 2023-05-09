@@ -79,6 +79,11 @@ export default function HeaderMenu() {
             Flowchart 2022-2023
           </MenuItem>
           <MenuItem
+            onClick={() => handleNavigate("flowchart-cat2023-2024")}
+          >
+           Flowchart 2023-2024
+          </MenuItem>
+          <MenuItem
             onClick={() => handleNavigate("flowchart-aas-cat2022-2023")}
           >
             Associates (AAS) Flowchart 2022-2023

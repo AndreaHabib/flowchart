@@ -82,6 +82,10 @@ function App() {
               path="flowchart-aas-cat2022-2023"
               element={<FLOW_CHART x={x} y={y} />}
             />
+            <Route
+              path="flowchart-cat2023-2024"
+              element={<FLOW_CHART x={x} y={y} />}
+            />
             <Route path="*" element={<Home />} />
           </Routes>
           <Footer />
