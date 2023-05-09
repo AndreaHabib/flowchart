@@ -10,6 +10,7 @@ export const SwitchPrereq = (updateElements, element) => {
       backgroundColor: "#dc143c",
       color: "white",
     };
+    
     updateElements[31].style = {
       ...updateElements[31].style,
       backgroundColor: "#dc143c",
