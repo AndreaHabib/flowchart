@@ -7,14 +7,14 @@
 }
 
 .flowchart6 .react-flow {
-  border: 5px solid #bf987b;
+  border: 5px solid #b23c17;
   border-radius: 18px;
   margin-top: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .flowchart6 .classes-card {
-  border: 5px solid #bf987b !important;
+  border: 5px solid #b23c17 !important;
   margin: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  background-color: #bf987b;
+  background-color: #b23c17;
   border-bottom: 10px solid rgb(140, 93, 56);
 }
 

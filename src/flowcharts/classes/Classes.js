@@ -79,9 +79,15 @@ const cscClasses = [
   },
   {
     key: 2,
-    tooltip: "Computers, Networking and Security",
+    tooltip: "Computer Organization",
     label: "CSC 220",
     url: "https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-220",
+  },
+   {
+    key: 15,
+    tooltip: "Networking and Security",
+    label: "CSC 221",
+    url: "https://csicuny.smartcatalogiq.com/en/current/undergraduate-catalog/courses/csc-computer-science/200/csc-221/",
   },
   {
     key: 3,
@@ -341,10 +347,11 @@ const cscProfileClasses = [
     label: "CSC 211",
     url: "https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-211",
   },
+ 
   {
     key: 3,
     tooltip: "Computers, Networking and Security",
-    label: "CSC 220",
+    label: "CSC 221",
     url: "https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Courses/CSC-Computer-Science/200/CSC-220",
   },
   {
