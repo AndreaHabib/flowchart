@@ -69,49 +69,52 @@ export default function FLOW_CHART(props) {
   const [ currentNode, setCurrentNode ] = useState({});
 
   useEffect(() => {
-    if (location.pathname === "/flowchart-cat2013-2018") {
-      setYears("2013-2018");
-      setPathway(
-        "https://docs.google.com/document/d/1RJb8bq-f9Atk7jfLt2n-higf2kUA-oHMmFuHtE2UoM4/edit?usp=sharing"
-      );
-      setFlowchart(
-        "https://drive.google.com/file/d/1cHunbWo2OYLeat7zT-pni-hEIEtTYH-C/view?usp=sharing"
-      );
-      setTitle("Fall 2013 - Spring 2014 through Fall 2017 - Spring 2018");
-      setWarningText([
-        "* 12-14 CSC elective credits; this consists of either three 400-electives = 12 credits, or two 400-elective and two 200-electives = 14 credits. You may sub. one additional upper-level MTH course (beyond the two that you will take after MTH 232) for one 400-elective. This is limited to one instance.",
-        "** You must earn a minimum “C” or higher grade in CSC courses which are pre-requisites to other CSC courses.",
-        " If your major catalog year is 2015-16, 2016-17, or 2017-18, one of your CSC electives must have a database component: CSC 226, 315, or 424 fit this criteria. CSC 315 is considered a 400-elective per dept. chairperson.",
-      ]);
-      setUrl("");
-      setColor(green["500"]);
-      setElements(el2);
-      setTempElement(el2);
-      setSwitchFun(() => sw2);
-      setClassName("flowchart3");
-    } else if (location.pathname === "/flowchart-cat2018-2020") {
-      setYears("2018-2020");
-      setPathway(
-        "https://drive.google.com/file/d/1rXvHfgEx0nHZp_5HxVJJ9xOPPm5MxBnk/view?usp=sharing"
-      );
-      setFlowchart(
-        "https://drive.google.com/file/d/1JY0IewKGbLJo-1TNqxx9LKbJBBWEqt0-/view?usp=sharing"
-      );
-      setTitle("Fall 2018 - Spring 2019, Fall 2019 - Spring 2020");
-      setWarningText([
-        "* 8-10 CSC elective credits; this consists of either two 400-electives = 8 credits, or one 400-elective and two 200-electives = 10 credits. You may sub. one additional upper-level MTH course (beyond the two that you will take after MTH 232) for one 400-elective. This is limited to one instance.",
-        "** You must earn a minimum “C” or higher grade in CSC courses which are pre-requisites to other CSC courses.",
-        "If your major catalog year is 2018 - 2019, 2019 - 2020 one of your CSC electives must have a database component: CSC 226, 315, or 424 fit this criteria. CSC 315 is considered a 400-elective per dept. chairperson.",
-      ]);
-      setUrl(
-        "https://csicuny.smartcatalogiq.com/2019-2020/Undergraduate-Catalog"
-      );
-      setColor("#ef6c00");
-      setElements(el3);
-      setTempElement(el3);
-      setSwitchFun(() => sw3);
-      setClassName("flowchart2");
-    } else if (location.pathname === "/flowchart-cat2020-2021") {
+    // if (location.pathname === "/flowchart-cat2013-2018") {
+    //   setYears("2013-2018");
+    //   setPathway(
+    //     "https://docs.google.com/document/d/1RJb8bq-f9Atk7jfLt2n-higf2kUA-oHMmFuHtE2UoM4/edit?usp=sharing"
+    //   );
+    //   setFlowchart(
+    //     "https://drive.google.com/file/d/1cHunbWo2OYLeat7zT-pni-hEIEtTYH-C/view?usp=sharing"
+    //   );
+    //   setTitle("Fall 2013 - Spring 2014 through Fall 2017 - Spring 2018");
+    //   setWarningText([
+    //     "* 12-14 CSC elective credits; this consists of either three 400-electives = 12 credits, or two 400-elective and two 200-electives = 14 credits. You may sub. one additional upper-level MTH course (beyond the two that you will take after MTH 232) for one 400-elective. This is limited to one instance.",
+    //     "** You must earn a minimum “C” or higher grade in CSC courses which are pre-requisites to other CSC courses.",
+    //     " If your major catalog year is 2015-16, 2016-17, or 2017-18, one of your CSC electives must have a database component: CSC 226, 315, or 424 fit this criteria. CSC 315 is considered a 400-elective per dept. chairperson.",
+    //   ]);
+    //   setUrl("");
+    //   setColor(green["500"]);
+    //   setElements(el2);
+    //   setTempElement(el2);
+    //   setSwitchFun(() => sw2);
+    //   setClassName("flowchart3");
+    // } else if (location.pathname === "/flowchart-cat2018-2020") {
+    //   setYears("2018-2020");
+    //   setPathway(
+    //     "https://drive.google.com/file/d/1rXvHfgEx0nHZp_5HxVJJ9xOPPm5MxBnk/view?usp=sharing"
+    //   );
+    //   setFlowchart(
+    //     "https://drive.google.com/file/d/1JY0IewKGbLJo-1TNqxx9LKbJBBWEqt0-/view?usp=sharing"
+    //   );
+    //   setTitle("Fall 2018 - Spring 2019, Fall 2019 - Spring 2020");
+    //   setWarningText([
+    //     "* 8-10 CSC elective credits; this consists of either two 400-electives = 8 credits, or one 400-elective and two 200-electives = 10 credits. You may sub. one additional upper-level MTH course (beyond the two that you will take after MTH 232) for one 400-elective. This is limited to one instance.",
+    //     "** You must earn a minimum “C” or higher grade in CSC courses which are pre-requisites to other CSC courses.",
+    //     "If your major catalog year is 2018 - 2019, 2019 - 2020 one of your CSC electives must have a database component: CSC 226, 315, or 424 fit this criteria. CSC 315 is considered a 400-elective per dept. chairperson.",
+    //   ]);
+    //   setUrl(
+    //     "https://csicuny.smartcatalogiq.com/2019-2020/Undergraduate-Catalog"
+    //   );
+    //   setColor("#ef6c00");
+    //   setElements(el3);
+    //   setTempElement(el3);
+    //   setSwitchFun(() => sw3);
+    //   setClassName("flowchart2");
+    // } 
+    
+    
+    if(location.pathname === "/flowchart-cat2020-2021") {
       setYears("2020-2021");
       setPathway(
         "https://drive.google.com/file/d/1rXvHfgEx0nHZp_5HxVJJ9xOPPm5MxBnk/view?usp=sharing"
@@ -200,14 +203,18 @@ export default function FLOW_CHART(props) {
       setYears("2023-2024");
       setPathway("https://drive.google.com/file/d/166ySyzhCuNV-jnYJXWWIVp5eddXw0DpG/view?usp=sharing");
       setFlowchart("https://drive.google.com/file/d/1paO8L9ubN6L2Mv5LPQznmWiUP42qkhFa/view?usp=sharing");
-      setTitle("Fall 2024 - Spring 2023");
+
+      setTitle("Fall 2023 - Spring 2024");
+
       setWarningText([
         "~ depending on your grade in MTH 123, you may take MTH 130 next, or MTH 230 in place of MTH 231. ",
         "You must earn a minimum “C” or higher grade in CSC courses which are pre-requisites to other CSC course",
         "",
       ]);
       setUrl(
-        "https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
+
+        "https://csi-undergraduate.catalog.cuny.edu/programs/CSC-BS"
+
       );
       setColor(orange);
       setElements(el6);
@@ -394,8 +401,23 @@ export default function FLOW_CHART(props) {
           >
             Pathway Checklist {years} Catalog
           </Button>
-          {/* ooga booga - g */}
-          <Button
+
+           {location.pathname === "/flowchart-cat2023-2024" ? 
+       (<>
+    <Button
+            target="_blank"
+            component="a"
+            sx={{ m: 0.5 }}
+            style={{ background: color }}
+            rel="noreferrer noopener"
+            href="https://drive.google.com/file/d/1MN0AA-Bi1pw76JPc6DygYiO81pWGgNP_/view?usp=sharing"
+            variant="contained"
+          >
+            Sample Degree Milestone Map
+          </Button>
+       </>):(
+       <>
+    <Button
             target="_blank"
             component="a"
             sx={{ m: 0.5 }}
@@ -406,6 +428,11 @@ export default function FLOW_CHART(props) {
           >
             Sample Degree Milestone Map
           </Button>
+       </>) 
+      }
+          {/* ooga booga - g */}
+      
+       
           <Button
             disabled={location.pathname === "/flowchart-aas-cat2022-2023"}
             target="_blank"
@@ -416,6 +443,7 @@ export default function FLOW_CHART(props) {
             href={flowchart}
             variant="contained"
           >
+
             Catalog {years} CSC Prerequisites Flowchart
           </Button>
         </Paper>
