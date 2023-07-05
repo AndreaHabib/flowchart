@@ -210,7 +210,7 @@ export default function FLOW_CHART(props) {
         "",
       ]);
       setUrl(
-        "https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
+        "https://csi-undergraduate.catalog.cuny.edu/programs/CSC-BS"
       );
       setColor(orange);
       setElements(el6);
@@ -288,7 +288,7 @@ export default function FLOW_CHART(props) {
               {location.pathname === "/flowchart-cat2013-2018" ? undefined : (
                 <ListItem>
                   <Typography variant="body2">
-                    The flowchart is based on the official CS curriculum at CSI{" "}
+                    This flowchart is based on the official CS curriculum at CSI{" "}
                     <a target="_blank" rel="noreferrer noopener" href={url}>
                       {title} Catalog.
                     </a>
@@ -516,7 +516,7 @@ export default function FLOW_CHART(props) {
                 target="_blank"
                 style={{ background: color }}
                 component="a"
-                href="https://csicuny.smartcatalogiq.com/current/Undergraduate-Catalog/Courses/MTH-Mathematics"
+                href="https://csi-undergraduate.catalog.cuny.edu/departments/MATH-CSI/courses"
                 variant="contained"
               >
                 View MTH Catalog
@@ -637,11 +637,7 @@ export default function FLOW_CHART(props) {
                 target="_blank"
                 component="a"
                 style={{ background: color }}
-                href={
-                  location.pathname === "/flowchart-cat2013-2018"
-                    ? "https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
-                    : url
-                }
+                href= "https://csi-undergraduate.catalog.cuny.edu/departments/CSC-CSI/courses"
                 variant="contained"
               >
                 View CSC Catalog
