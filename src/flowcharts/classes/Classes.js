@@ -83,6 +83,12 @@ const cscClasses = [
     label: "CSC 220",
     url: "https://csi-undergraduate.catalog.cuny.edu/courses/0626651",
   },
+   {
+    key: 15,
+    tooltip: "Networking and Security",
+    label: "CSC 221",
+    url: "https://csicuny.smartcatalogiq.com/en/current/undergraduate-catalog/courses/csc-computer-science/200/csc-221/",
+  },
   {
     key: 3,
     tooltip: "Discrete Mathematical Structures for Computer Science",
@@ -347,6 +353,7 @@ const cscProfileClasses = [
     label: "CSC 211",
     url: "https://csi-undergraduate.catalog.cuny.edu/courses/0626631",
   },
+ 
   {
     key: 3,
     tooltip: "Computer Organization",
@@ -358,6 +365,7 @@ const cscProfileClasses = [
     tooltip: "Networking and Security",
     label: "CSC 221",
     url: "https://csi-undergraduate.catalog.cuny.edu/courses/1545761",
+
   },
   {
     key: 4,
