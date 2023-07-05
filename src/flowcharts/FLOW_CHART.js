@@ -210,7 +210,7 @@ export default function FLOW_CHART(props) {
         "",
       ]);
       setUrl(
-        "https://csicuny.smartcatalogiq.com/en/Current/Undergraduate-Catalog/Divisions-Schools-Departments-and-Programs/Division-of-Science-and-Technology/Department-of-Computer-Science/Computer-Science-and-Computer-Technology/Computer-Science-BS"
+        "https://csi-undergraduate.catalog.cuny.edu/programs/CSC-BS"
       );
       setColor(orange);
       setElements(el6);
