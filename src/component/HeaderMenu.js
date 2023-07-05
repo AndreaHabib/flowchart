@@ -60,12 +60,12 @@ export default function HeaderMenu() {
           Select Prereq Flowchart
         </DialogTitle>
         <DialogContent>
-          <MenuItem onClick={() => handleNavigate("flowchart-cat2013-2018")}>
+          {/* <MenuItem onClick={() => handleNavigate("flowchart-cat2013-2018")}>
             Flowchart 2013-2018
           </MenuItem>
           <MenuItem onClick={() => handleNavigate("flowchart-cat2018-2020")}>
             Flowchart 2018-2019
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem onClick={() => handleNavigate("flowchart-cat2018-2020")}>
             Flowchart 2019-2020
           </MenuItem>
