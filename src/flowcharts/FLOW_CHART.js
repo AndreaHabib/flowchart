@@ -203,14 +203,18 @@ export default function FLOW_CHART(props) {
       setYears("2023-2024");
       setPathway("https://drive.google.com/file/d/166ySyzhCuNV-jnYJXWWIVp5eddXw0DpG/view?usp=sharing");
       setFlowchart("https://drive.google.com/file/d/1paO8L9ubN6L2Mv5LPQznmWiUP42qkhFa/view?usp=sharing");
+
       setTitle("Fall 2023 - Spring 2024");
+
       setWarningText([
         "~ depending on your grade in MTH 123, you may take MTH 130 next, or MTH 230 in place of MTH 231. ",
         "You must earn a minimum “C” or higher grade in CSC courses which are pre-requisites to other CSC course",
         "",
       ]);
       setUrl(
+
         "https://csi-undergraduate.catalog.cuny.edu/programs/CSC-BS"
+
       );
       setColor(orange);
       setElements(el6);
