@@ -66,24 +66,24 @@ export default function HeaderMenu() {
           <MenuItem onClick={() => handleNavigate("flowchart-cat2018-2020")}>
             Flowchart 2018-2019
           </MenuItem> */}
-          <MenuItem onClick={() => handleNavigate("flowchart-cat2023-2024")}>
-            Flowchart 2023-2024
-          </MenuItem>
-          <MenuItem onClick={() => handleNavigate("flowchart-cat2022-2023")}>
-            Flowchart 2022-2023
-          </MenuItem>
-          <MenuItem onClick={() => handleNavigate("flowchart-aas-cat2022-2023")}>
-            Associates (AAS) Flowchart 2022-2023
-          </MenuItem>
-          <MenuItem onClick={() => handleNavigate("flowchart-cat2021-2022")}>
-            Flowchart 2021-2022
-          </MenuItem>
-          <MenuItem onClick={() => handleNavigate("flowchart-cat2020-2021")}>
-            Flowchart 2020-2021
-          </MenuItem>
-          <MenuItem onClick={() => handleNavigate("flowchart-cat2018-2020")}>
-            Flowchart 2019-2020
-          </MenuItem>
+            <MenuItem onClick={() => handleNavigate("flowchart-cat2023-2024")}>
+                Flowchart 2023-2024
+            </MenuItem>
+            <MenuItem onClick={() => handleNavigate("flowchart-cat2022-2023")}>
+                Flowchart 2022-2023
+            </MenuItem>
+            <MenuItem onClick={() => handleNavigate("flowchart-aas-cat2022-2023")}>
+                Associates (AAS) Flowchart 2022-2023
+            </MenuItem>
+            <MenuItem onClick={() => handleNavigate("flowchart-cat2021-2022")}>
+                Flowchart 2021-2022
+            </MenuItem>
+            <MenuItem onClick={() => handleNavigate("flowchart-cat2020-2021")}>
+                Flowchart 2020-2021
+            </MenuItem>
+            <MenuItem onClick={() => handleNavigate("flowchart-cat2018-2020")}>
+                Flowchart 2019-2020
+            </MenuItem>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Close</Button>

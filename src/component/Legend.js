@@ -32,6 +32,10 @@ export default function Legend() {
     }else if (location.pathname === "/flowchart-aas-cat2022-2023") {
       color = "#009688";
     }
+    else if (location.pathname === "/flowchart-cat2023-2024") {
+      color = "#c2441d";
+    }
+
     setArrows([
       {
         key: 0,
