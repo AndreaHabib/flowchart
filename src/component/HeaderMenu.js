@@ -72,9 +72,6 @@ export default function HeaderMenu() {
             <MenuItem onClick={() => handleNavigate("flowchart-cat2022-2023")}>
                 Flowchart 2022-2023
             </MenuItem>
-            <MenuItem onClick={() => handleNavigate("flowchart-aas-cat2022-2023")}>
-                Associates (AAS) Flowchart 2022-2023
-            </MenuItem>
             <MenuItem onClick={() => handleNavigate("flowchart-cat2021-2022")}>
                 Flowchart 2021-2022
             </MenuItem>
@@ -83,6 +80,9 @@ export default function HeaderMenu() {
             </MenuItem>
             <MenuItem onClick={() => handleNavigate("flowchart-cat2018-2020")}>
                 Flowchart 2019-2020
+            </MenuItem>
+            <MenuItem onClick={() => handleNavigate("flowchart-aas-cat2022-2023")}>
+                Associates (AAS) Flowchart 2022-2023
             </MenuItem>
         </DialogContent>
         <DialogActions>
