@@ -31,7 +31,7 @@ export default function Footer() {
     <Fragment>
       <Box
         sx={{
-          height: { xs: "25vh", sm: "20vh", md: "15vh", lg: "10vh" },
+          height: { xs: "25vh", sm: "20vh", md: "15vh", lg: "15vh" },
           width: "100%",
         }}
       >
