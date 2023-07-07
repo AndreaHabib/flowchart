@@ -1,3 +1,10 @@
 .flowcharts {
   z-index: 1;
 }
+#title{
+  font-size: 23px;
+}
+#form-dialog-title{
+  font-size: 17px;
+  font-weight: bold;
+}
