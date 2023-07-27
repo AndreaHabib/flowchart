@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment, useCallback } from "react";
+import React, {  useRef,useState, useEffect, Fragment, useCallback } from "react";
 import {
   Button,
   Box,
@@ -45,7 +45,10 @@ export default function Profile(props) {
   const [isClassesTaken, setIsClassesTaken] = useState(null);
   // eslint-disable-next-line
   const [mthChipData, setMthChipData] = useState(mathProfileClasses);
+  
+  // checking the value with use effect to work only only when mounted.
 
+  const mountedRef = useRef()                 // ← the "flag"
   // eslint-disable-next-line
   const [cscChipData, setCscChipData] = useState(cscProfileClasses);
 
@@ -60,11 +63,14 @@ export default function Profile(props) {
 
   useEffect(() => {
     let isMounted = true;
+    // mountedRef.current = true
     onAuthStateChanged(auth, (user) => {
       if (!user) {
         if (isMounted) navigate("/auth");
       } else {
         if (isMounted) {
+  
+          
           (async () => {
             try {
               setLoading(true);
@@ -74,6 +80,9 @@ export default function Profile(props) {
                 .then((data) => {
                   setClassesTaken(setFlowchart(data));
                   setIsClassesTaken(data);
+
+                  console.log(data);
+                  console.log("mounted true:::")
                 });
               setLoading(false);
             } catch (error) {
@@ -82,13 +91,19 @@ export default function Profile(props) {
           })();
         }
       }
-    });
+    }, [isClassesTaken]);
     return () => {
       isMounted = false;
     };
   }, [navigate]);
 
   return (
+
+    
+
+
+
+
     <Fragment>
       <Box sx={{ width: "100%", backgroundColor: "#007FFF" }}>
         <Grid
@@ -296,64 +311,10 @@ export default function Profile(props) {
                   }}
                   component="ul"
                 >
+
                   <Grid container justifyContent="center">
-                    <Grid sx={{ marginBottom: "20px" }}>
-                      {cscChipData.map((csc_class) => (
-                        <Tooltip
-                          sx={{ m: 0.5 }}
-                          key={csc_class.key}
-                          title={csc_class.tooltip}
-                          placement="top"
-                        >
-                          <Chip
-                            color={
-                              isClassesTaken[csc_class.label].isTaken
-                                ? isClassesTaken[csc_class.label].canBeUntaken
-                                  ? "success"
-                                  : "warning"
-                                : isClassesTaken[csc_class.label].canBeTaken
-                                ? "primary"
-                                : "error"
-                            }
-                            onDelete={
-                              isClassesTaken[csc_class.label].canBeUntaken
-                                ? () => {
-                                    onDeleteClass(
-                                      csc_class.label,
-                                      user.uid,
-                                      isClassesTaken
-                                    );
-                                  }
-                                : null
-                            }
-                            clickable={
-                              !isClassesTaken[csc_class.label].isTaken ||
-                              isClassesTaken[csc_class.label].canBeTaken ||
-                              !isClassesTaken[csc_class.label].canBeUntaken
-                            }
-                            key={csc_class.key}
-                            label={csc_class.label}
-                            disabled={
-                              (!isClassesTaken[csc_class.label].canBeUntaken &&
-                                !isClassesTaken[csc_class.label].isTaken &&
-                                !isClassesTaken[csc_class.label].canBeTaken) ||
-                              (!isClassesTaken[csc_class.label].canBeUntaken &&
-                                isClassesTaken[csc_class.label].isTaken)
-                            }
-                            onClick={
-                              isClassesTaken[csc_class.label].canBeTaken
-                                ? () =>
-                                    onAddClass(
-                                      csc_class.label,
-                                      user.uid,
-                                      isClassesTaken
-                                    )
-                                : null
-                            }
-                          />
-                        </Tooltip>
-                      ))}
-                    </Grid>
+
+              
                     <Grid>
                       {mthChipData.map((mth_class) => (
                         <Tooltip
@@ -410,8 +371,135 @@ export default function Profile(props) {
                           />
                         </Tooltip>
                       ))}
+                          {cscChipData.map((csc_class) => (
+
+                        
+
+          
+<Tooltip
+  sx={{ m: 0.5 }}
+  key={csc_class.key}
+  title={csc_class.tooltip}
+  placement="top"
+>
+
+
+
+
+
+<Chip
+color={
+  isClassesTaken[csc_class.label]?(
+      isClassesTaken[csc_class.label].isTaken
+        ? isClassesTaken[csc_class.label].canBeUntaken
+          ? "success"
+          : "warning"
+        : isClassesTaken[csc_class.label].canBeTaken
+        ? "primary"
+        : "error"):"secondary"
+    }
+    onDelete={
+      isClassesTaken[csc_class.label]?(
+      isClassesTaken[csc_class.label].canBeUntaken
+        ? () => {
+            onDeleteClass(
+              csc_class.label,
+              user.uid,
+              isClassesTaken
+            );
+          }
+        : null
+        ):null
+    }
+    clickable={
+      isClassesTaken[csc_class.label]?(
+        
+      !isClassesTaken[csc_class.label].isTaken ||
+      isClassesTaken[csc_class.label].canBeTaken ||
+      !isClassesTaken[csc_class.label].canBeUntaken
+      ):(console.log("error class not added", isClassesTaken[csc_class.label]) 
+      
+  
+      )
+      
+      
+
+    }
+    key={csc_class.key}
+    label={csc_class.label}
+
+/> 
+</Tooltip>
+
+))}
                     </Grid>
+
+                    
                   </Grid>
+
+                  <Grid sx={{ marginBottom: "20px" }}>
+                      {/* {cscChipData.map((csc_class) => (
+
+                        
+
+          
+                        <Tooltip
+                          sx={{ m: 0.5 }}
+                          key={csc_class.key}
+                          title={csc_class.tooltip}
+                          placement="top"
+                        >
+
+
+
+
+                      
+                        <Chip
+                        color={
+                          isClassesTaken[csc_class.label]?(
+                              isClassesTaken[csc_class.label].isTaken
+                                ? isClassesTaken[csc_class.label].canBeUntaken
+                                  ? "success"
+                                  : "warning"
+                                : isClassesTaken[csc_class.label].canBeTaken
+                                ? "primary"
+                                : "error"):"secondary"
+                            }
+                            onDelete={
+                              isClassesTaken[csc_class.label]?(
+                              isClassesTaken[csc_class.label].canBeUntaken
+                                ? () => {
+                                    onDeleteClass(
+                                      csc_class.label,
+                                      user.uid,
+                                      isClassesTaken
+                                    );
+                                  }
+                                : null
+                                ):null
+                            }
+                            clickable={
+                              isClassesTaken[csc_class.label]?(
+                                
+                              !isClassesTaken[csc_class.label].isTaken ||
+                              isClassesTaken[csc_class.label].canBeTaken ||
+                              !isClassesTaken[csc_class.label].canBeUntaken
+                              ):(console.log("error class not added", isClassesTaken[csc_class.label]) 
+                              
+                          
+                              )
+                              
+                              
+                     
+                            }
+                            key={csc_class.key}
+                            label={csc_class.label}
+                     
+                   /> 
+                        </Tooltip>
+                   
+                      ))} */}
+                    </Grid>
                 </Paper>
               </CardContent>
             </Card>

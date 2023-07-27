@@ -4,6 +4,7 @@ import {
   collection,
   doc,
   setDoc,
+  addDoc,
   getDoc,
   updateDoc,
 } from "firebase/firestore";
@@ -28,7 +29,7 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+ const db = getFirestore(app);
 
 export const auth = getAuth(app);
 
@@ -130,10 +131,21 @@ const isClassesTaken = {
   },
 };
 
+
+
 export async function getClassesTaken(uid) {
   const userDoc = doc(db, "users", uid);
+
   const user = await getDoc(userDoc);
+if (user.exists()) {
+  console.log("Document data:", user.data());
   return user.data()["isClassesTaken"];
+} else {
+  // docSnap.data() will be undefined in this case
+  console.log("No such document!");
+}
+  console.log(userDoc)
+ 
 }
 
 export const onDeleteClass = async (className, uid, isClassesTaken) => {
@@ -174,12 +186,20 @@ export async function register(email, password) {
       const usersRef = collection(db, "users");
       await setDoc(doc(usersRef, user.user.uid), {
         isClassesTaken: isClassesTaken,
-      });
+      }).catch((e) => {  console.log(e); });
+
+      const docRef = await getDoc(doc(usersRef, user.user.uid));
+      console.log(docRef)
+
       return user;
     })
     .catch((error) => {
       throw error;
-    });
+    })
+
+
+
+
 }
 
 export async function loginWithGoogle() {
